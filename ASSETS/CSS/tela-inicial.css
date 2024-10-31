@@ -1,0 +1,69 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+*{
+   margin: 0;
+   padding: 0;
+   
+}
+
+
+.icone-esquerda{
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    list-style: none;
+    display: flex ;
+    gap: 5px;
+   
+    padding: 30px, 0;
+    margin: 0;
+    justify-content: left;
+
+
+    position: fixed; /* Posiciona o elemento em relação à janela do navegador */
+            top: 0; /* Alinha o elemento ao topo da tela */
+
+            position: fixed; /* Posiciona o elemento em relação à janela do navegador */
+            top: 0; /* Alinha o elemento ao topo da tela */
+            left: 0; /* Alinha o elemento ao canto esquerdo da tela */
+            
+}
+
+
+.icone-direita {
+   
+    list-style: none;
+    display: flex;
+    gap: 5px;
+    padding: 300px, 0;
+    margin: 0;
+    color: ;
+        position: absolute;
+        right: 0; /* Posiciona o elemento à direita da tela */
+
+
+
+        
+            position: fixed; /* Posiciona o elemento em relação à janela do navegador */
+            top: 0; /* Alinha o elemento ao topo da tela */
+            left: 0; /* Alinha o elemento ao canto esquerdo da tela */
+
+
+            justify-content: flex-end; /* Alinha os itens filhos à direita */
+            gap: 5px; /* Adiciona um espaço de 5 pixels entre os itens filhos */
+        
+    
+      
+}
+
+
+
+/*
+    list-style: none; /* Remove os marcadores padrão das listas (como pontos ou números) 
+    display: flex; /* Define o layout dos itens da lista como flexível 
+    gap: 5px; /* Define um espaço de 5 pixels entre os itens da lista 
+    justify-content: space-around; /* Distribui os itens da lista com espaços iguais ao redor de cada item 
+    padding: 30px, 0; /* Define um preenchimento de 30 pixels no topo e na base dos itens da lista (a vírgula deve ser substituída por um espaço ou ponto e vírgula) 
+    margin: 0; /* Remove qualquer margem padrão ao redor dos itens da lista 
+    padding: 0; Remove qualquer preenchimento padrão ao redor dos itens da lista (sobrescreve a linha anterior de padding)
+*/
+
