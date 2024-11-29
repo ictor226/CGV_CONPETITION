@@ -1,15 +1,9 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
-* {
+*{
     margin: 0;
     padding: 0;
     
-}
-
-.nav-inicio {
-    background-color: rgb(0, 0, 0);
-    width: 100%;
-    height: 70px;   
 }
 .icone-esquerda {
     gap: 295px;
@@ -19,15 +13,15 @@
     padding: 30px, 0;
     margin: 0;
     justify-content: left;
-    position: fixed;/* Posiciona o elemento em relação à janela do navegador */
-    top: 15px;/* Alinha o elemento ao topo da tela */
-    left: 15px;/* Alinha o elemento ao canto esquerdo da tela */
+    position: fixed;
+    top: 15px;
+    left: 15px;
     font-size: 40px;
 }
 li a{
     text-decoration: none;
     color: white;
-    
+
 }
 .icone-direita {
     list-style: none;
@@ -36,46 +30,37 @@ li a{
     padding: 300px, 0;
     margin: 0;
     position: absolute;
-    right: 30px;/* Posiciona o elemento à direita da tela */
-    top: 15px;/* Alinha o elemento ao topo da tela */ 
-    left: 0;/* Alinha o elemento ao canto esquerdo da tela */
-    justify-content: flex-end;/* Alinha os itens filhos à direita */
+    right: 30px; 
+    top: 15px; 
+    left: 0;
+    justify-content: flex-end;
     font-size: 30px;
 }
-
-
-
-
-
 .vidio-inicio {
-    position: relative; /* Define o contêiner como relativo para que o iframe possa ser posicionado dentro dele */
-    width: 100%; /* Define a largura do contêiner como 100% do elemento pai */
-    height: 0; /* Define a altura inicial como 0 para usar o padding-bottom para proporção */
-    padding-bottom: 55.25%; /* Define a altura do contêiner com base na proporção 16:9 (9/16 = 0.5625) */
+    /*position: relative; */
+    width: 100%; 
+    height: 21%;  
 }
-
 .vidio-inicio video{
-    position: absolute; /* Posiciona o iframe de forma absoluta dentro do contêiner */
-    top: 70px; /* Alinha o topo do iframe com o topo do contêiner */
-    left: 0; /* Alinha a esquerda do iframe com a esquerda do contêiner */
-    width: 100%; /* Define a largura do iframe como 100% do contêiner */
-    height: 100%; /* Define a altura do iframe como 100% do contêiner */
+   /*position: absolute; */
+    top: 70px; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
     
 }
+/*---------------------------------------------------------TELA 02-----------------------------------------------------*/
+
+.tela2-produtos-destaque{
+    color: #e20702;
+}
+
+.img-tela02{
+    width: 100%; 
+    height: 21%;  
+}
 
 
 
 
 
-
-
-
-/*
-    list-style: none; /* Remove os marcadores padrão das listas (como pontos ou números) 
-    display: flex; /* Define o layout dos itens da lista como flexível 
-    gap: 5px; /* Define um espaço de 5 pixels entre os itens da lista 
-    justify-content: space-around; /* Distribui os itens da lista com espaços iguais ao redor de cada item 
-    padding: 30px, 0; /* Define um preenchimento de 30 pixels no topo e na base dos itens da lista (a vírgula deve ser substituída por um espaço ou ponto e vírgula) 
-    margin: 0; /* Remove qualquer margem padrão ao redor dos itens da lista 
-    padding: 0; Remove qualquer preenchimento padrão ao redor dos itens da lista (sobrescreve a linha anterior de padding)
-*/
