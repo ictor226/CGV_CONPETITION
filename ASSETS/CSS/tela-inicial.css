@@ -126,15 +126,14 @@ li a {
     padding: 14px; /* Espaçamento interno */
     width: 300px; /* Largura do elemento */
     text-align: center; /* Centraliza o texto */
-    margin: 370px; /* Espaçamento externo ao redor do elemento */
-    margin-left: 90px;
+    margin: 45px; /* Espaçamento externo ao redor do elemento */
+    margin-left: 5px;
     color: #ffffff;
     border-width: 2px; /* Largura da borda */
     border-style: solid; /* Estilo da borda (solid, dashed, dotted, etc.) */
     border-color: rgb(255, 255, 255); /* Cor da borda */
     background-color: #000000;
-    
-    
+    margin-top: 350px  
 }
 .foto-produto{
     margin-left: -15px;
@@ -142,11 +141,111 @@ li a {
     
     height:250px;
     width: 330px;
-}
-.hr-produto{
-    margin-left: -15px;
-    width: 329px;
+    height: auto;
 }
 .h4-tela02{
     margin-top: 18px;
+}
+
+.container {
+    display: flex; /* Ativa o Flexbox */
+    justify-content: space-between; /* Espaça os itens igualmente */
+}
+
+.item {
+   
+    padding: 5px; /* Espaçamento interno */
+    margin: 5px; /* Espaçamento externo */
+   
+    text-align: center; /* Centraliza o texto */
+}
+.container02 {
+    display: flex; /* Ativa o Flexbox */
+    justify-content: space-between; /* Espaça os itens igualmente */
+}
+
+.item02 {
+   
+    padding: 5px; /* Espaçamento interno */
+    margin: 5px; /* Espaçamento externo */
+   
+    text-align: center; /* Centraliza o texto */
+}
+.col-4 { 
+    
+    border: 2px solid black; /* Borda sólida de 2 pixels */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 14px; /* Espaçamento interno */
+    width: 300px; /* Largura do elemento */
+    text-align: center; /* Centraliza o texto */
+    margin: 45px; /* Espaçamento externo ao redor do elemento */
+    margin-left: 5px;
+    color: #ffffff;
+    border-width: 2px; /* Largura da borda */
+    border-style: solid; /* Estilo da borda (solid, dashed, dotted, etc.) */
+    border-color: rgb(255, 255, 255); /* Cor da borda */
+    background-color: #000000;
+    margin-top: 50px
+    
+    
+}
+.col-5 { 
+    
+    border: 2px solid black; /* Borda sólida de 2 pixels */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 14px; /* Espaçamento interno */
+    width: 300px; /* Largura do elemento */
+    text-align: center; /* Centraliza o texto */
+    margin: 45px; /* Espaçamento externo ao redor do elemento */
+    margin-left: 5px;
+    color: #ffffff;
+    border-width: 2px; /* Largura da borda */
+    border-style: solid; /* Estilo da borda (solid, dashed, dotted, etc.) */
+    border-color: rgb(255, 255, 255); /* Cor da borda */
+    background-color: #000000;
+    margin-top: 50px
+}
+
+.container03 {
+    display: flex; /* Ativa o Flexbox */
+    justify-content: space-between; /* Espaça os itens igualmente */
+}
+
+.item03 {
+   
+    padding: 5px; /* Espaçamento interno */
+    margin: 5px; /* Espaçamento externo */
+   
+    text-align: center; /* Centraliza o texto */
+}
+/* TELA 03 */
+
+.tela-envio{
+    
+    
+    display: grid;
+    grid-template-columns: auto 1fr; /* Coloca a imagem e o texto em colunas */
+    align-items: center; /* Alinha verticalmente ao centro */
+    gap: 20px; /* Espaçamento entre a imagem e o texto */
+    color: black;
+}
+.img-envio{
+    height: auto;
+    width: auto;
+    
+   
+}
+.h2-tela-03{
+    margin-left: -700px;
+    margin-top: -450px
+    
+}
+.h4-tela-03{
+    margin-left: 850px;
+    margin-top: -450px;
+    
+    font-size: 30px;
+    line-height: 1.5;
+    
+    
 }
