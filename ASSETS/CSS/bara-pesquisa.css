@@ -1,0 +1,44 @@
+/* Estilos gerais */
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    position: relative;
+}
+
+.search-container {
+    position: relative;
+}
+
+/* Estilo do campo de pesquisa */
+#search-bar {
+    display: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    margin-right: 5px;
+    transition: width 0.3s ease, right 0.3s ease;
+    width: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+}
+
+/* Quando a barra de pesquisa for expandida */
+#search-bar.show {
+    display: inline-block;
+    width: 200px; /* Largura quando expandido */
+    right: 100%; /* Expande para a esquerda */
+}
+
+/* Estilo do ícone de pesquisa */
+#search-icon {
+    font-size: 20px;
+    cursor: pointer;
+}
