@@ -1,31 +1,45 @@
 # ***tela inicial*** 
+        
+- [ ] **barra de navegação -> 4 icones**
+<br>
+- 1 icone de menu com outras infos quando clicar nele
+- 1 icone de barra de pesquisa
+- 1 icone de carrinho, para ver os produtos adicionados
+- 1 icone   de login para ver a sua conta 
+
+<br>
        
- 
-       nav-bar  -> 4 icones e uma img (logo) 
----
-       banner  -> video 
----
-       buttons -> opções de redirecionamento (Todos os produtos e Ajuda)
----
-       section de produtos -> titulo acima e três colunas de cards de produtos clicaveis abaixo
----
-       section envio -> resumo sobre o nosso envio rapido com titulo e mini-texto
----
-       section sinopse -> infos da loja, com titulo e mini-texto
----
-       rodapé -> informações de contato (redes sociais, suporte,links, noticias)
+- [ ]   **sessão de produtos**  
+-  1 titulo "Produtos em destaque"
+-  três colunas de cards de cada produto, sendo clicaveis e indo para a pagina de cada um deles    
+<br>
 
 
+- [ ] **section envio**  
+-  titulo "Envio imediato!"
+-  mini-texto sobre o nosso envio rapido 
 
-# ***tela login*** 
+<br>
 
+- [ ] **section sinopse**  
+- titulo "Sobre nós"
+- mini-texto sobre a nossa loja
 
-        imagem de fundo -> imagem em tela cheia abaixo de tudo
----
-        icone -> icone de voltar para a tela inicial na esquerda
----
-        forms -> titulo (login), campo de email e senha (COM VALIDAÇÕES DOS CAMPOS), com botões de login por fora do site e 1 button de (ENTRAR)
+<br>
 
+- [ ] **rodapé** 
+-  botoes das redes sociais (facebook, instagram e gmail)
+-  infos sobre suporte ao cliente (gmail, numero de telefone e Whatsapp)
+- links (politicas de privacidade, termos de uso politica de devolução e troca)
+- noticias e atualizações da loja (colocar email para receber notificações)
+
+<br>
+
+- [ ] **tela login**
+- icone de seta para voltar para a tela inicial (vai ficar na esquerda)
+- formulario de email (tendo validação se o email esta correto e cadastrado)
+- formulario de senha (validação se é valido a senha e se esta correta)
+- 
 
 # ***tela Cadastro***
         
