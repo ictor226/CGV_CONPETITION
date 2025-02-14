@@ -217,8 +217,72 @@ background-color: #000;
 
 /* tela 04 */
 
+.img-sobre{
+    width: 100%;
+    height: 21%;
+}
+
 .hr-tela04{
     margin-top: -20px;
     height: 1px;
     background-color: #000;
     }
+
+.dit-h{
+    color: #f3f3f3;
+    line-height: 1.5;
+    font-size: 50px;
+   
+    
+}
+
+.h2-tela04{
+    margin-top: -550px;
+    margin-left: 50px;
+    
+
+}
+#h6-tela04{
+  
+    align-items: center;
+    width: 1000px;
+    margin-left: 150px;
+    
+    
+}
+/* tela 05 */
+
+
+.img-rodape-02{
+
+    width: 100%;
+    height: 550px;
+    margin-top: 182px;
+    
+    
+}
+.logo-05{
+     background-color: #00000057;
+     transform: translateY(-350px);
+     margin-left: 550px;
+
+ 
+}
+
+
+
+.info{
+   margin-top: -330px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 1250px;
+    margin-left: 100px;
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 1.8;
+}
+#edt-icons{
+    text-decoration: none;
+    color: #ffffff;
+    line-height: 1.8;
+}
