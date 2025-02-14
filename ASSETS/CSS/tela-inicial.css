@@ -1,288 +1,264 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
-.nav-inicio{  
+.nav-inicio {
+  /* Remove a estilização padrão da lista (como marcadores ou números) */
+  list-style: none;
 
-/* Remove a estilização padrão da lista (como marcadores ou números) */
-list-style: none;
+  /* Define o contêiner para usar o modelo de layout flexbox */
+  display: flex;
 
-/* Define o contêiner para usar o modelo de layout flexbox */
-display: flex;
+  align-items: center;
 
-align-items: center;
+  justify-content: space-around;
 
-justify-content: space-around;
+  gap: 180px;
 
-gap: 180px;
+  /* Remove qualquer margem padrão do contêiner */
+  margin: 0;
 
-/* Remove qualquer margem padrão do contêiner */
-margin: 0;
+  /* Define o tamanho da fonte do texto dentro do contêiner para 30 pixels */
+  font-size: 30px;
 
-/* Define o tamanho da fonte do texto dentro do contêiner para 30 pixels */
-font-size: 30px;
-
-background-color: #000000;
-
-
+  background-color: #000000;
 }
-
 
 li a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
-
-
 .vidio-inicio {
-    width: 100%;
-    height: 21%;
+  width: 100%;
+  height: 21%;
 }
 
 .vidio-inicio video {
-    top: 70px;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 .produ {
-    font-size: 18px;
-    color: #000000;
-    text-align: center;
-    font-size: 35px;
-    margin-top: -50px;
-    
-    
+  font-size: 18px;
+  color: #000000;
+  text-align: center;
+  font-size: 35px;
+  margin-top: -50px;
 }
 /* tela 2 */
 
 .button-container {
-    position: relative;
-    z-index: 1;
-    padding: 20px;
-    color: white;
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  color: white;
 }
 
 .button_tela02 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .button-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .button_tela02 {
-    padding: 10px 20px;
-    background-color: #000000;
-    color: #ffffff;
-    border: 2px solid #ffffff;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, border-color 0.3s;
-    height: 70px;
-    width: 137px;
-    position: relative;
-    top: 200px; /* Move o elemento 200 pixels para baixo */
+  padding: 10px 20px;
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+  height: 70px;
+  width: 137px;
+  position: relative;
+  top: 200px; /* Move o elemento 200 pixels para baixo */
 }
 
 .button_tela02:hover {
-    background-color: #f3f3f3;
-    border-color: #ffffff;
+  background-color: #f3f3f3;
+  border-color: #ffffff;
 }
 
 .button_tela02:nth-child(2) {
-    margin-left: 30px;
-    margin-right: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
-.H1-TELA02{
-    color: #f3f3f3;
-    text-align: center;
-    position: relative;
-    top:200px; /* Move o elemento 20 pixels para baixo */
-    
+.H1-TELA02 {
+  color: #f3f3f3;
+  text-align: center;
+  position: relative;
+  top: 200px; /* Move o elemento 20 pixels para baixo */
 }
 
 /* Produtos - Cards */
-.container, .container02, .container03 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 50px;
-    margin-top: 100px;
-    position: relative;  /* O elemento será posicionado de acordo com o seu fluxo normal */
-    top: 200px;  /* Move o elemento 50px para baixo em relação à sua posição original */
-
-    
-
+.container,
+.container02,
+.container03 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 100px;
+  position: relative; /* O elemento será posicionado de acordo com o seu fluxo normal */
+  top: 200px; /* Move o elemento 50px para baixo em relação à sua posição original */
 }
 
-.item, .item02, .item03 {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 250px;
-    background-color: #000;
-    color: white;
-    padding: 14px;
-    border: 2px solid white;
-    border-radius: 10px;
-    
+.item,
+.item02,
+.item03 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 250px;
+  background-color: #000;
+  color: white;
+  padding: 14px;
+  border: 2px solid white;
+  border-radius: 10px;
 }
 
 .foto-produto {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 768px) {
-    .nav-inicio {
-        flex-direction: column;
-        gap: 10px;
-    }
+  .nav-inicio {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-    .button-container {
-        flex-direction: column;
-        gap: 10px;
-    }
+  .button-container {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-    .container, .container02, .container03 {
-        flex-direction: column;
-        align-items: center;
-    }
+  .container,
+  .container02,
+  .container03 {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .item, .item02, .item03 {
-        width: 90%;
-    }
+  .item,
+  .item02,
+  .item03 {
+    width: 90%;
+  }
 
-    .tela-envio {
-        grid-template-columns: 1fr;
-    }
+  .tela-envio {
+    grid-template-columns: 1fr;
+  }
 
-    .h2-tela-03, .h4-tela-03 {
-        text-align: center;
-    }
+  .h2-tela-03,
+  .h4-tela-03 {
+    text-align: center;
+  }
 }
 
 /* TELA 03 */
 
-.hr-tela03{
-margin-top: 400px;
-height: 1px;
-background-color: #000;
+.hr-tela03 {
+  margin-top: 400px;
+  height: 1px;
+  background-color: #000;
 }
 
 .h4-tela02 {
-    font-size: 18px;
-    
+  font-size: 18px;
 }
 
-.tela-envio{
-    
-    
-    display: grid;
-    grid-template-columns: auto 1fr; /* Coloca a imagem e o texto em colunas */
-    align-items: center; /* Alinha verticalmente ao centro */
-    gap: 20px; /* Espaçamento entre a imagem e o texto */
-    color: black;
-    margin-top: -1px;
+.tela-envio {
+  display: grid;
+  grid-template-columns: auto 1fr; /* Coloca a imagem e o texto em colunas */
+  align-items: center; /* Alinha verticalmente ao centro */
+  gap: 20px; /* Espaçamento entre a imagem e o texto */
+  color: black;
+  margin-top: -1px;
 }
-.img-envio{
-    height: auto;
-    width: auto;
-    
+.img-envio {
+  height: auto;
+  width: auto;
 }
-.h2-tela-03{
-    margin-left: -700px;
-    margin-top: -450px
-    
+.h2-tela-03 {
+  margin-left: -700px;
+  margin-top: -450px;
 }
-.h4-tela-03{
-    margin-left: 850px;
-    margin-top: -450px;
-    
-    font-size: 30px;
-    line-height: 1.5; 
+.h4-tela-03 {
+  margin-left: 850px;
+  margin-top: -450px;
+
+  font-size: 30px;
+  line-height: 1.5;
 }
 
 /* tela 04 */
 
-.img-sobre{
-    width: 100%;
-    height: 21%;
+.img-sobre {
+  width: 100%;
+  height: 21%;
 }
 
-.hr-tela04{
-    margin-top: -20px;
-    height: 1px;
-    background-color: #000;
-    }
-
-.dit-h{
-    color: #f3f3f3;
-    line-height: 1.5;
-    font-size: 50px;
-   
-    
+.hr-tela04 {
+  margin-top: -20px;
+  height: 1px;
+  background-color: #000;
 }
 
-.h2-tela04{
-    margin-top: -550px;
-    margin-left: 50px;
-    
-
+.dit-h {
+  color: #f3f3f3;
+  line-height: 1.5;
+  font-size: 50px;
 }
-#h6-tela04{
-  
-    align-items: center;
-    width: 1000px;
-    margin-left: 150px;
-    
-    
+
+.h2-tela04 {
+  margin-top: -550px;
+  margin-left: 50px;
+}
+#h6-tela04 {
+  align-items: center;
+  width: 1000px;
+  margin-left: 150px;
 }
 /* tela 05 */
 
-
-.img-rodape-02{
-
-    width: 100%;
-    height: 550px;
-    margin-top: 182px;
-    
-    
+.img-rodape-02 {
+  width: 100%;
+  height: 550px;
+  margin-top: 182px;
 }
-.logo-05{
-     background-color: #00000057;
-     transform: translateY(-350px);
-     margin-left: 550px;
-
- 
+.logo-05 {
+  background-color: #00000057;
+  transform: translateY(-350px);
+  margin-left: 550px;
 }
 
-
-
-.info{
-   margin-top: -330px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    width: 1250px;
-    margin-left: 100px;
-    color: #ffffff;
-    font-size: 20px;
-    line-height: 1.8;
+.info {
+  margin-top: -330px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 1250px;
+  margin-left: 100px;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1.8;
 }
-#edt-icons{
-    text-decoration: none;
-    color: #ffffff;
-    line-height: 1.8;
+#edt-icons {
+  text-decoration: none;
+  color: #ffffff;
+  line-height: 1.8;
 }
