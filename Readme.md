@@ -39,36 +39,50 @@
 - icone de seta para voltar para a tela inicial (vai ficar na esquerda)
 - formulario de email (tendo validação se o email esta correto e cadastrado)
 - formulario de senha (validação se é valido a senha e se esta correta)
-- 
+- icone do google para fazer login, ele manda na tela do google contas
+- icone do facebook para faer login, ele manda na tela do facebook contas
 
-# ***tela Cadastro***
-        
-
-         imagem de fundo -> imagem em tela cheia abaixo de tudo 
----
-        icone -> icone de voltar para a tela inicial na esquerda
----
-        forms -> titulo "area de cadastro", com campos de nome sobrenome, email, senha, telefone, cidade/estado, nome da rua, Numero, cep,complemento (COM VALIDAÇÕES DOS CAMPOS), com botões de Cadastro por fora do site e 1 button de (Cadastro)
-
-# ***tela Usuario***
-
-     imagem de fundo -> imagem em tela cheia abaixo de tudo 
----
-        icone -> icone de voltar para a tela inicial na esquerda
----
-        forms -> titulo "area de usuario", com campos de nome sobrenome, email, senha, telefone, cidade/estado, nome da rua, Numero, cep,complemento (COM VALIDAÇÕES DOS CAMPOS), com botões de Cadastro por fora do site e 1 button de (salvar)
----
-       campo com foto de perfil -> img
----
-     informações -> cpf e telefone
+<br>
 
 
-# ***tela produto***
 
-        produto -> com 4 colunas de cards do produtos com imagem do produto, sendo clicaveis e redirecionaveis para a tela de cada produto
+-[ ] **tela Cadastro**
+-  icone -> icone de voltar para a tela inicial (fica na esquerda)
+- formulario de nome e sobrenome (validação de só letras)
+- formulario de Email (validação de email correto)    
+- formulario de senha (validação de senha correta)
+- formulario de Telefone (validação de telefone existente)
+- formulario de cidade (validação de cidade existente)
+- formulario de rua (validação de rua existente)
+- formulario de numero de casa
+- formulario de cep (validação se o cep bate com as outras infos)
+- formulario de complemento 
+- botão de se CADASTRAR se os formularios estiverem tudo certo
 
-# ***tela cadastro de produtos***
+<br>
 
-      campo imgem -> adiciona uma imagem do produto
----
-      campo de formulario -> para adicionar informações mais descritivas do produto  como (nome do produto, preço, parcelamento, verção do produto decrição e um botão Cadastrar)
+-[ ] **tela Usuario**
+- icone de voltar para a tela inicial (na esquerda)
+- formulario de nome e sobrenome (validação de só letras)    
+- formulario de Email (validação de email correto) 
+- formulario de senha (validação de senha correta)
+- formulario de Telefone (validação de telefone existente)
+- formulario de cidade (validação de cidade existente)
+- formulario de rua (validação de rua existente)
+- formulario de cep (validação se o cep bate com as outras infos)
+- botão de SALVAR MUDANÇAS se os formularios forem alterados 
+
+<br>
+
+-[ ] **tela produto**
+- 4 colunas com cards de produtos e sendo clicaveis (vai mandar para a tela de cada produto)
+
+<br>
+
+-[ ] **tela cadastro de produtos**
+- formulario de nome do produto (validação de nao ter caracteres especiais)
+- formulario de preço (validação de nao ter letras)
+- formulario de parcelamento (validação de quantidade maxima de parcelas)
+- formulario de versão do produto 
+- formulario de decrição
+- botão de cadastrar produto
