@@ -26,19 +26,10 @@
 ---
         forms -> titulo (login), campo de email e senha (COM VALIDAÇÕES DOS CAMPOS), com botões de login por fora do site e 1 button de (ENTRAR)
 
-# ***tela login***
-
-
-        imagem de fundo -> imagem em tela cheia abaixo de tudo 
----
-        icone -> icone de voltar para a tela inicial na esquerda
----
-        forms -> titulo "Login", campo de senha (COM VALIDAÇÕES DOS CAMPOS), com botões de login por fora do site e 1 button de (ENTRAR)
-
 
 # ***tela Cadastro***
         
-        
+
          imagem de fundo -> imagem em tela cheia abaixo de tudo 
 ---
         icone -> icone de voltar para a tela inicial na esquerda
@@ -53,7 +44,6 @@
 ---
         forms -> titulo "area de usuario", com campos de nome sobrenome, email, senha, telefone, cidade/estado, nome da rua, Numero, cep,complemento (COM VALIDAÇÕES DOS CAMPOS), com botões de Cadastro por fora do site e 1 button de (salvar)
 ---
-      
        campo com foto de perfil -> img
 ---
      informações -> cpf e telefone
@@ -61,9 +51,9 @@
 
 # ***tela produto***
 
-        produto -> com todos os cards do produtos com imagem do produto, botão de comprar, descrição do produto
+        produto -> com 4 colunas de cards do produtos com imagem do produto, sendo clicaveis e redirecionaveis para a tela de cada produto
 
-# ***tela Usuario***
+# ***tela cadastro de produtos***
 
       campo imgem -> adiciona uma imagem do produto
 ---
