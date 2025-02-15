@@ -15,7 +15,7 @@
 
   justify-content: space-around;
 
-  gap: 180px;
+  gap: 60px;
 
   /* Remove qualquer margem padrão do contêiner */
   margin: 0;
@@ -25,6 +25,65 @@
 
   background-color: #000000;
 }
+
+.search-container{
+
+
+  margin-left: 700px;
+}
+
+
+/* hambur */
+button.menu-oculto{
+  border: none;
+  font-size: 2rem;
+  padding: 8px;
+  color: #ffffff;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+div.menu-oculto{
+  background-color: #000000;
+  position: fixed;
+  height: 70%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  width: 0px;
+  overflow-x: hidden;
+
+  padding-top: 60px;
+  transition: 0.5s;
+  border-radius: 0 20px 20px 0;
+
+
+}
+
+div.menu-oculto a{
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 8px 8px 8px 32px;
+  display: block;
+  transition: 0.3s;
+  color: #d9d9d9;
+}
+
+div.menu-oculto button.fechar{
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 2rem;
+  background-color: inherit;
+  color: #d9d9d9;
+  border: none;
+  padding: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+
 
 li a {
   text-decoration: none;
