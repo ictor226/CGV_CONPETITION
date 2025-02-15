@@ -6,39 +6,43 @@
     <link rel="stylesheet" href="./ASSETS/CSS/bara-pesquisa.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./ASSETS/CSS/tela-inicial.css">
+
+
+
     <title>CGV COMPETITION</title>
 </head>
 
 <body>
     <header>
 
+        
 
         <nav class="nav-inicio">
-
             <div class="nav-inicio">
-                <li><a href="#"><i class="bi bi-list"></i></a></li>
-                <br>
-                <li><a href="#"></a><img src="./ASSETS/img/tela inicial/cf8d9fb9-7f78-4042-ad6d-e5ad3a6520c6 1.png"
-                        alt="" width="250" height="45"></li>
+                <button class="menu-oculto" onclick="javascript:abrirNav()"><i class="bi bi-list"></i></button>
+                
+            
+            <div id="offcanvas" class="menu-oculto">
+                <button class="fechar" onclick="javascript:fecharNav()"><i class="bi bi-x"></i></button>
+            </div>
+                <li><a href="#"><img src="./ASSETS/img/tela inicial/cf8d9fb9-7f78-4042-ad6d-e5ad3a6520c6 1.png" alt="" width="250" height="45"></a></li>
             </div>
 
+        
             <ul class="nav-inicio">
-
-
-                <nav>
-                    <ul>
-                        <li class="search-container">
-                            <a href="javascript:void(0)" id="search-icon"><i class="bi bi-search"></i></a>
-                            <input type="text" id="search-bar" placeholder="Buscar produtos">
-                            <script src="./javaScript/icopesquisa.js"></script>
-                        </li>
-                    </ul>
-                </nav>
+                <li class="search-container">
+                    <a href="javascript:void(0)" id="search-icon"><i class="bi bi-search"></i></a>
+                    <input type="text" id="search-bar" placeholder="Buscar produtos">
+                </li>
                 <li><a href="#"><i class="bi bi-cart2"></i></a></li>
                 <li><a href="#"><i class="bi bi-person-circle"></i></a></li>
             </ul>
         </nav>
-
+        
+        <!-- Script para adicionar a funcionalidade de abrir a barra de pesquisa -->
+        
+        
+        
 
 
         <div class="vidio-inicio" utoplay loop muted playsinline>
@@ -260,5 +264,6 @@
         height="45" class="logo-05">
 
 </body>
-
+<script src="./javaScript/icopesquisa.js"></script>
+<script src="./javaScript/offCanvas.js"></script>
 </html>
