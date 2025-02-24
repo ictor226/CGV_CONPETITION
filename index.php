@@ -1,50 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./ASSETS/CSS/bara-pesquisa.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./ASSETS/CSS/tela-inicial.css">
-
-
-
-    <title>CGV COMPETITION</title>
-</head>
-
-<body>
-    <header>
-
-        
-
-        <nav class="nav-inicio">
-            <div class="nav-inicio">
-                <button class="menu-oculto" onclick="javascript:abrirNav()"><i class="bi bi-list"></i></button>
+<?php
+    include './INCLUDES/Header.php';
                 
-            
-            <div id="offcanvas" class="menu-oculto">
-                <button class="fechar" onclick="javascript:fecharNav()"><i class="bi bi-x"></i></button>
-            </div>
-                <li><a href="#"><img src="./ASSETS/img/tela inicial/cf8d9fb9-7f78-4042-ad6d-e5ad3a6520c6 1.png" alt="" width="250" height="45"></a></li>
-            </div>
 
-        
-            <ul class="nav-inicio">
-                <li class="search-container">
-                    <a href="javascript:void(0)" id="search-icon"><i class="bi bi-search"></i></a>
-                    <input type="text" id="search-bar" placeholder="Buscar produtos">
-                </li>
-                <li><a href="#"><i class="bi bi-cart2"></i></a></li>
-                <li><a href="./tela-login.html"><i class="bi bi-person-circle"></i></a></li>
-            </ul>
-        </nav>
-        
-        <!-- Script para adicionar a funcionalidade de abrir a barra de pesquisa -->
-        
-        
-        
-
-
+?>
         <div class="vidio-inicio" utoplay loop muted playsinline>
             <figure class="video-container">
                 <video autoplay loop muted playsinline>

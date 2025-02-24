@@ -1,0 +1,78 @@
+body {
+    background-color: #343434;
+}
+
+.container-cart {
+    display: flex; /* Usando flexbox para centralizar */
+    flex-direction: column; /* Alinha os itens em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    margin-top: 5%; /* Margem superior */
+}
+
+.text-cart {
+    text-align: center;
+}
+
+.carrinho-container {
+    display: flex; /* Usando flexbox para centralizar */
+    justify-content: center; /* Centraliza horizontalmente */
+    width: 100%; /* Para ocupar toda a largura do contêiner pai */
+}
+
+.carrinho {
+    background-color: #515155;
+    height: 500px;
+    width: 70%; /* Largura do carrinho */
+    display: flex; /* Para garantir que o conteúdo interno também use flexbox */
+    justify-content: center; /* Centraliza o conteúdo interno */
+    align-items: center; /* Centraliza verticalmente o conteúdo interno */
+}
+
+.produtos-cart {
+    display: flex;
+    flex-direction: row; /* Alinha a imagem e os textos em linha */
+    align-items: center; /* Centraliza verticalmente a imagem e os textos */
+    padding: 10px; /* Adiciona um pouco de espaço ao redor */
+    background-color: #FFFFFF;
+    border: 1px solid #ccc; /* Borda leve */
+    border-radius: 5px; /* Bordas arredondadas */
+    margin-top: -230px;
+    width: 770px;
+}
+
+.produtos-cart img {
+    margin-right: 30px /* Espaço entre a imagem e os textos */
+}
+
+.cart-texts {
+    display: flex;
+    flex-direction: column; /* Alinha os textos em coluna */
+    align-items: flex-start; /* Alinha os textos à esquerda */
+    margin-right: 5px; /* Espaço entre os textos e o input */
+}
+
+.cart-text1 {
+    text-align: left; /* Alinha o texto à esquerda */
+    font-size: 15px;
+    margin: 5px 0; /* Margem vertical entre os textos */
+}
+
+.img-cart-1 {
+    width: 100px;
+    height: 100px;
+}
+
+.quantity-input {
+    width: 50px; /* Largura do input */
+    height: 30px; /* Altura do input */
+    border: none; /* Remove a borda */
+    text-align: center; /* Centraliza o texto dentro do input */
+    margin-left: 40%; /* Espaço à esquerda do input */
+    background-color: #f0f0f0; /* Cor de fundo do input */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+.price-cart{
+    padding: 30px;
+    
+}
