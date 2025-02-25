@@ -6,12 +6,28 @@ body {
     display: flex; /* Usando flexbox para centralizar */
     flex-direction: column; /* Alinha os itens em coluna */
     align-items: center; /* Centraliza horizontalmente */
-    margin-top: 5%; /* Margem superior */
+    margin-top: 2%; /* Margem superior */
 }
 
 .text-cart {
     text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 32px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(0, 0, 0, 0.30);
+    font-family: "jacques Francois";
+    font-style: normal;
+    font-weight: 380;
+    line-height: normal;
 }
+
+
+.text-cart-1{
+    color: #e20702;
+}
+
 
 .carrinho-container {
     display: flex; /* Usando flexbox para centralizar */
@@ -21,11 +37,12 @@ body {
 
 .carrinho {
     background-color: #515155;
-    height: 500px;
+    height: 200px;
     width: 70%; /* Largura do carrinho */
     display: flex; /* Para garantir que o conteúdo interno também use flexbox */
     justify-content: center; /* Centraliza o conteúdo interno */
     align-items: center; /* Centraliza verticalmente o conteúdo interno */
+    
 }
 
 .produtos-cart {
@@ -36,8 +53,11 @@ body {
     background-color: #FFFFFF;
     border: 1px solid #ccc; /* Borda leve */
     border-radius: 5px; /* Bordas arredondadas */
-    margin-top: -230px;
+    margin-top: -10px;
     width: 770px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(0, 0, 0, 0.30);
 }
 
 .produtos-cart img {
@@ -73,6 +93,5 @@ body {
 }
 
 .price-cart{
-    padding: 30px;
-    
+    padding: 30px
 }
