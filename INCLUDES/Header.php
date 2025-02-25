@@ -7,46 +7,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./ASSETS/CSS/tela-inicial.css">
     <link rel="stylesheet" href="./ASSETS/CSS/cart.css">
+    <link rel="stylesheet" href="./ASSETS/CSS/header.css">
 
     <title>
-    <?php
-    if (isset ($titulo) &&  !empty($titulo)){
-        echo $titulo;
+        <?php
+        if (isset($titulo) &&  !empty($titulo)) {
+            echo $titulo;
+        } else {
 
-    } else{
+            echo 'CGV COMPETITION';
+        }
+        ?>
 
-        echo 'CGV COMPETITION';
-    }
-    ?>
-    
     </title>
 
 </head>
+<header>
+    <nav>
+        <button class="menu-oculto" onclick="javascript:abrirNav()">
+            <i class="bi bi-list"></i>
+        </button>
+        <ul class="menu">
+            <li><a href="./index.php">Projetos</a></li>
+            <li><a href="#">Todos os produtos</a></li>
+            <li><a href="#">Ajuda</a></li>
+        </ul>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Buscar produtos...">
+            <button id="search-icon" onclick="toggleSearch()">
+                <i class="bi bi-search"></i>
+            </button>
+        </div>
+        <ul class="menu-icones">
+            <li><a href="./cart.php"><i class="bi bi-cart"></i></a></li>
+            <li><a href="./tela-login.html"><i class="bi bi-person-circle"></i></a></li>
+        </ul>
+    </nav>
 
-<body>
-    <header>
+    <button class="menu-oculto" onclick="Javascript:abrirNav()">
 
-        
+    </button>
 
-        <nav class="nav-inicio">
-            <div class="nav-inicio">
-                <button class="menu-oculto" onclick="javascript:abrirNav()"><i class="bi bi-list"></i></button>
-                
-            
-            <div id="offcanvas" class="menu-oculto">
-                <button class="fechar" onclick="javascript:fecharNav()"><i class="bi bi-x"></i></button>
-            </div>
-                <li><a href="./index.php"><img src="./ASSETS/img/tela inicial/cf8d9fb9-7f78-4042-ad6d-e5ad3a6520c6 1.png" alt="" width="250" height="45"></a></li>
-            </div>
+    <div id="offcanvas" class="menu-oculto">
+        <button class="fechar" onclick="Javascript:fecharNav()">
+            <i class="bi bi-x"></i>
 
-        
-            <ul class="nav-inicio">
-                <li class="search-container">
-                    <a href="javascript:void(0)" id="search-icon"><i class="bi bi-search"></i></a>
-                    <input type="text" id="search-bar" placeholder="Buscar produtos">
-                </li>
-                <li><a href="./cart.php"><i class="bi bi-cart2"></i></a></li>
-                <li><a href="./tela-login.html"><i class="bi bi-person-circle"></i></a></li>
-            </ul>
-        </nav>
-        
+            <a href="index.html">Projetos</a>
+            <a href="#">Todos os Projetos</a>
+            <a href="#">Sobre</a>
+
+        </button>
+    </div>
+
+</header>

@@ -23,13 +23,7 @@
 
 
     <!-- Conteúdo que ficará sobre a imagem -->
-    <div class="button-container">
-
-        <button class="button_tela02">PROJETOS</button>
-        <button class="button_tela02">TODOS OS PROUTOS</button>
-        <button class="button_tela02">AJUDA</button>
-
-    </div>
+   
 
     <h1 class="produ">PRODUTOS EM DESTAQUE</h1>
 

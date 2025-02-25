@@ -4,7 +4,7 @@
 <body>
     <section class="container-cart">
         <div class="text-cart">
-            <h5>CARRINHO DE COMPRAS </h5>
+            <h5 class="text-cart-1">CARRINHO DE COMPRAS </h5>
             <h6>VOCÊ TEM 5 ITENS</h6>
         </div>
         
@@ -13,7 +13,7 @@
                 <div class="produtos-cart">
                     <img class="img-cart-1" src="ASSETS/img/tela inicial/nitro.png" alt="nitro">
                     <div class="cart-texts">
-                        <p class="cart-text1">conector recarga</p>
+                        <p class="cart-text1">nitro</p>
                         <p class="cart-text1" style="font-size: 12px;">versão 2024</p>
                     </div>
                     <input type="number" class="quantity-input" min="1" value="1"> <!-- Input number -->
@@ -27,9 +27,9 @@
         <div class="carrinho-container"> <!-- Contêiner para centralizar o carrinho -->
             <section class="carrinho">
                 <div class="produtos-cart">
-                    <img class="img-cart-1" src="ASSETS/img/tela inicial/nitro.png" alt="nitro">
+                    <img class="img-cart-1" src="./ASSETS/img/tela inicial/turbo.png" alt="nitro">
                     <div class="cart-texts">
-                        <p class="cart-text1">conector recarga</p>
+                        <p class="cart-text1">turbo</p>
                         <p class="cart-text1" style="font-size: 12px;">versão 2024</p>
                     </div>
                     <input type="number" class="quantity-input" min="1" value="1"> <!-- Input number -->
@@ -43,9 +43,9 @@
         <div class="carrinho-container"> <!-- Contêiner para centralizar o carrinho -->
             <section class="carrinho">
                 <div class="produtos-cart">
-                    <img class="img-cart-1" src="ASSETS/img/tela inicial/nitro.png" alt="nitro">
+                    <img class="img-cart-1" src="ASSETS/img/tela inicial/kit turbo.png" alt="nitro">
                     <div class="cart-texts">
-                        <p class="cart-text1">conector recarga</p>
+                        <p class="cart-text1">kit turbo</p>
                         <p class="cart-text1" style="font-size: 12px;">versão 2024</p>
                     </div>
                     <input type="number" class="quantity-input" min="1" value="1"> <!-- Input number -->
@@ -59,9 +59,9 @@
         <div class="carrinho-container"> <!-- Contêiner para centralizar o carrinho -->
             <section class="carrinho">
                 <div class="produtos-cart">
-                    <img class="img-cart-1" src="ASSETS/img/tela inicial/nitro.png" alt="nitro">
+                    <img class="img-cart-1" src="ASSETS/img/tela inicial/roda.png" alt="nitro">
                     <div class="cart-texts">
-                        <p class="cart-text1">conector recarga</p>
+                        <p class="cart-text1">roda nismo</p>
                         <p class="cart-text1" style="font-size: 12px;">versão 2024</p>
                     </div>
                     <input type="number" class="quantity-input" min="1" value="1"> <!-- Input number -->
@@ -74,9 +74,9 @@
         <div class="carrinho-container"> <!-- Contêiner para centralizar o carrinho -->
             <section class="carrinho">
                 <div class="produtos-cart">
-                    <img class="img-cart-1" src="ASSETS/img/tela inicial/nitro.png" alt="nitro">
+                    <img class="img-cart-1" src="ASSETS/img/tela inicial/kit turbo.png" alt="nitro">
                     <div class="cart-texts">
-                        <p class="cart-text1">conector recarga</p>
+                        <p class="cart-text1">kit turbo</p>
                         <p class="cart-text1" style="font-size: 12px;">versão 2024</p>
                     </div>
                     <input type="number" class="quantity-input" min="1" value="1"> <!-- Input number -->

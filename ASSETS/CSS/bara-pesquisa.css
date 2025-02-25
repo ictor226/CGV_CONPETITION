@@ -1,86 +1,110 @@
-/* Estilo Global */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Barra de navegação */
-  nav .nav-inicio {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: space-between; /* Alinha os ícones e logo corretamente */
-    align-items: center;
-    font-size: 30px;
-    background-color: #000000;
-  }
-  
-  nav li {
-    display: inline-block;
-    position: relative;
-  }
-  
-  /* Barra de pesquisa */
-  .search-container {
-    display: flex;
-    align-items: center; /* Alinha o campo de pesquisa e ícone verticalmente */
-    position: relative; /* Necessário para o posicionamento da barra */
-  }
-  
-  #search-bar {
-    padding: 5px 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    width: 0;  /* Começa com largura 0 */
-    transition: width 0.5s ease;  /* Transição suave para aumentar a largura */
-    margin-right: 10px;  /* Espaço entre o campo de pesquisa e o ícone */
-    visibility: hidden; /* Começa invisível */
-    position: absolute; /* Posiciona a barra de pesquisa sobre o ícone */
-    right: 0; /* A barra começa à direita do ícone */
-  }
-  
-  #search-icon {
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-  }
-  
-  /* Quando a barra de pesquisa for expandida */
-  #search-bar.show {
-    width: 200px;  /* Largura final quando a barra estiver expandida */
-    visibility: visible; /* Torna o campo visível */
-    right: 100%; /* A barra se move para a esquerda do ícone */
-  }
-  
-  /* Ícones */
-  nav li a {
-    text-decoration: none;
-    color: white;
-  }
-  
-  nav li a i {
-    font-size: 30px;
-    color: white;
-  }
-  
-  /* Responsividade para telas menores */
-  @media (max-width: 768px) {
-    .nav-inicio {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #000000; /* Cor de fundo do header */
+}
+
+nav {
+  padding: 20px; /* Espaçamento superior e inferior */
+  display: flex; /* Usando flexbox para layout */
+  justify-content: space-between; /* Espaça os itens uniformemente */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  gap: 30px;
+}
+
+.menu {
+  list-style: none; /* Remove marcadores da lista */
+  display: flex; /* Usando flexbox para layout */
+  gap: 15px; /* Espaçamento entre os itens do menu */
+  justify-content: center; /* Centraliza os itens do menu */
+  flex-grow: 1; /* Permite que o menu ocupe o espaço disponível */
+}
+
+.menu li a {
+  text-decoration: none; /* Remove o sublinhado do link */
+  color: #ffffff; /* Cor do texto dos links */
+  padding: 8px 16px; /* Espaçamento interno dos links */
+  border-radius: 8px; /* Bordas arredondadas */
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
+}
+
+.menu li a:hover {
+  background-color: #ffffff; /* Cor de fundo ao passar o mouse */
+  color: rgb(0, 0, 0); /* Cor do texto ao passar o mouse */
+}
+
+.search-container {
+  display: flex;
+  align-items: center; /* Alinha o campo de pesquisa e ícone verticalmente */
+  position: relative; /* Necessário para o posicionamento da barra */
+}
+
+#search-bar {
+  padding: 10px 15px; /* Espaçamento interno */
+  font-size: 14px; /* Tamanho da fonte */
+  border: 1px solid #ccc; /* Borda padrão */
+  border-radius: 5px; /* Bordas arredondadas */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  width: 0; /* Começa com largura 0 */
+  transition: width 0.5s ease, visibility 0.5s ease; /* Transição suave para aumentar a largura */
+  margin-left: 10px; /* Espaço entre o campo de pesquisa e o ícone */
+  visibility: hidden; /* Começa invisível */
+}
+
+#search-icon {
+  background: #000; /* Cor de fundo do ícone */
+  color: white; /* Cor do ícone */
+  border: none; /* Remove a borda do botão */
+  border-radius: 5px; /* Bordas arredondadas */
+  padding: 10px; /* Espaçamento interno do botão */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  transition: background-color 0.3s, transform 0.3s; /* Transição suave para a cor de fundo */
+  font-size: 1.5rem; /* Aumenta o tamanho do ícone */
+}
+
+#search-icon:hover {
+  background: #444; /* Cor de fundo ao passar o mouse */
+}
+
+/* Quando a barra de pesquisa for expandida */
+#search-bar.show {
+  width: 200px; /* Largura final quando a barra estiver expandida */
+  visibility: visible; /* Torna o campo visível */
+}
+
+/* Quando a barra de pesquisa é mostrada, move o ícone para a esquerda */
+#search-bar.show + #search-icon {
+  margin-left: 10px; /* Ajuste o valor conforme necessário */
+}
+
+/* Ícones */
+nav li a {
+  text-decoration: none;
+  color: white;
+}
+
+nav li a i {
+  font-size: 30px; /* Tamanho do ícone de navegação */
+  color: white;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .menu {
       flex-direction: column;
       gap: 10px;
-    }
-  
-    .search-container {
+  }
+
+  .search-container {
       width: 100%;
       justify-content: center;
-    }
-  
-    #search-bar {
-      width: 100%;
-    }
   }
-  
+
+  #search-bar {
+      width: 100%;
+  }
+}

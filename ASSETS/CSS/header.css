@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Para melhor controle de layout */
+    font-family: "Inter", sans-serif;
+}
+
+header {
+    background-color: #000000; /* Cor de fundo do header */
+}
+
+nav {
+    padding: 20px; /* Espaçamento superior e inferior */
+    display: flex; /* Usando flexbox para layout */
+    justify-content: space-between; /* Espaça os itens uniformemente */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+}
+
+.menu {
+    list-style: none; /* Remove marcadores da lista */
+    display: flex; /* Usando flexbox para layout */
+    gap: 20px; /* Espaçamento entre os itens do menu */
+    justify-content: center; /* Centraliza os itens do menu */
+    flex-grow: 1; /* Permite que o menu ocupe o espaço disponível */
+    color: #E20702; /* Cor do texto */
+    
+    -webkit-text-stroke-width: 1px; /* Contorno do texto */
+    -webkit-text-stroke-color: #000; /* Cor do contorno do texto */
+    font-family: "League Gothic"; /* Fonte do menu */
+    font-style: normal; /* Estilo da fonte */
+    font-weight: 400; /* Peso da fonte */
+    line-height: normal; /* Altura da linha */
+    transform: skew(-10deg); /* Inclina o texto para a esquerda */
+}
+
+.menu li a {
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: #ffffff; /* Cor do texto dos links */
+    padding: 8px 16px; /* Espaçamento interno dos links */
+    border-radius: 8px; /* Bordas arredondadas */
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+    transition: background-color 0.5s, color 0.5s; /* Transição suave para a cor de fundo e do texto */
+}
+
+.menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Fundo branco com 50% de opacidade ao passar o mouse */
+    color: rgb(0, 0, 0); /* Cor do texto ao passar o mouse */
+    transition: 1s; /* Transição suave */
+}
+
+.menu-icones {
+    list-style: none; /* Remove marcadores da lista */
+    display: flex; /* Usando flexbox para layout */
+    gap: 30px; /* Espaçamento entre os ícones */
+}
+
+button.menu-oculto {
+    border: none; /* Remove a borda do botão */
+    font-size: 2rem; /* Tamanho da fonte do botão */
+    padding: 5px; /* Espaçamento interno do botão */
+    color: #ffffff; /* Cor do texto do botão */
+    background-color: inherit; /* Mantém o fundo transparente */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+/* Estilos para o menu oculto */
+div.menu-oculto {
+    background-color: #000000; /* Cor de fundo do menu oculto */
+    position: fixed; /* Fixa o menu na tela */
+    height: 100%; /* Altura total da tela */
+    top: 0; /* Alinha ao topo */
+    left: 0; /* Alinha à esquerda */
+    z-index: 1; /* Coloca o menu acima de outros elementos */
+    width: 0; /* Largura inicial do menu oculto */
+    overflow-x: hidden; /* Oculta o conteúdo que transborda */
+    padding-top: 60px; /* Espaçamento superior do menu */
+    transition: 0.5s; /* Transição suave para abrir/fechar */
+}
+
+div.menu-oculto a {
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-size: 1.2rem; /* Tamanho da fonte dos links no menu oculto */
+    padding: 8px 32px; /* Espaçamento interno dos links */
+    display: block; /* Faz com que o link ocupe toda a largura */
+    transition: 0.3s; /* Transição suave para hover */
+    color: #ffffff; /* Cor do texto dos links no menu oculto */
+}
+
+div.menu-oculto button.fechar {
+    position: absolute; /* Posiciona o botão de fechar */
+    top: 0; /* Alinha ao topo */
+    right: 20px; /* Alinha à direita */
+    font-size: 2rem; /* Tamanho da fonte do botão de fechar */
+    background-color: inherit; /* Mantém o fundo transparente */
+    border: none; /* Remove a borda do botão */
+    color: #d9d9d9; /* Cor do texto do botão de fechar */
+    padding: 0; /* Remove o padding do botão */
+    transition: 0.3s; /* Transição suave para hover */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
