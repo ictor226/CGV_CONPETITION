@@ -29,8 +29,8 @@
         </button>
         <ul class="menu">
             <li><a href="./index.php">Projetos</a></li>
-            <li><a href="#">Todos os produtos</a></li>
-            <li><a href="#">Ajuda</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Produtos</a></li>
         </ul>
         <div class="search-container">
             <input type="text" id="search-bar" placeholder="Buscar produtos...">
@@ -53,8 +53,10 @@
             <i class="bi bi-x"></i>
 
             <a href="index.html">Projetos</a>
-            <a href="#">Todos os Projetos</a>
             <a href="#">Sobre</a>
+            <a href="#">Produtos</a>
+
+            <hr>
 
         </button>
     </div>

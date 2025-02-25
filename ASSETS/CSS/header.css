@@ -24,6 +24,8 @@ nav {
     flex-grow: 1; /* Permite que o menu ocupe o espaço disponível */
     color: #E20702; /* Cor do texto */
     
+    margin-left: 40px;
+
     -webkit-text-stroke-width: 1px; /* Contorno do texto */
     -webkit-text-stroke-color: #000; /* Cor do contorno do texto */
     font-family: "League Gothic"; /* Fonte do menu */
@@ -75,6 +77,7 @@ div.menu-oculto {
     overflow-x: hidden; /* Oculta o conteúdo que transborda */
     padding-top: 60px; /* Espaçamento superior do menu */
     transition: 0.5s; /* Transição suave para abrir/fechar */
+    text-align: right; /* Alinha o texto à direita */
 }
 
 div.menu-oculto a {
