@@ -1,8 +1,12 @@
 <?php
     include './INCLUDES/Header.php';
-                
+             
 
 ?>
+<body>
+<div class="test01">
+    
+
         <div class="vidio-inicio" utoplay loop muted playsinline>
             <figure class="video-container">
                 <video autoplay loop muted playsinline>
@@ -24,7 +28,7 @@
 
     <!-- Conteúdo que ficará sobre a imagem -->
    
-
+    
     <h1 class="produ">PRODUTOS EM DESTAQUE</h1>
 
     <section class="produtos">
@@ -136,6 +140,7 @@
             </div>
         </div>
     </section>
+    
     <!-- TELA 03 -->
     <hr class="hr-tela03">
     <section class="tela-envio">
@@ -212,8 +217,7 @@
 
     </section>
 
-    <a href="#"></a><img src="./ASSETS/img/tela inicial/cf8d9fb9-7f78-4042-ad6d-e5ad3a6520c6 1.png" alt="" width="250"
-        height="45" class="logo-05">
+    </div>
 
 </body>
 <script src="./javaScript/icopesquisa.js"></script>

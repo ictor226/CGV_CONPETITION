@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "inter", sans-serif;
+}
+
+#form-group-senha{
+    position: relative;
+}
+
+.form-group i{
+    font-size: 25px;
+    cursor: pointer;
+    position: absolute;
+    right: 5%;
+    padding: 8px 0px 0px 0px;
+}
+

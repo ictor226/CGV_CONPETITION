@@ -28,7 +28,7 @@
             <i class="bi bi-list"></i>
         </button>
         <ul class="menu">
-            <li><a href="./index.php">Projetos</a></li>
+            <li><a href="./index.php">Inicio</a></li>
             <li><a href="#">Sobre</a></li>
             <li><a href="#">Produtos</a></li>
         </ul>
