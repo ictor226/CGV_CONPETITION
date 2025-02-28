@@ -1,13 +1,12 @@
 <?php
     include './INCLUDES/Header.php';
              
-
 ?>
 <body>
-<div class="test01">
+<div class="background-site">
     
 
-        <div class="vidio-inicio" utoplay loop muted playsinline>
+        <div class="video-inicio" utoplay loop muted playsinline>
             <figure class="video-container">
                 <video autoplay loop muted playsinline>
                     <source src="./ASSETS/img/tela inicial/CGV COMPETITON.mp4" type="video/mp4">

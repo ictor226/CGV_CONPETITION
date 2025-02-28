@@ -52,9 +52,9 @@
         <button class="fechar" onclick="Javascript:fecharNav()">
             <i class="bi bi-x"></i>
 
-            <a href="index.html">Projetos</a>
-            <a href="#">Sobre</a>
-            <a href="#">Produtos</a>
+            <a href="index.html">Exemplo</a>
+            <a href="#">Exemplo</a>
+            <a href="#">Exemplo</a>
 
             <hr>
 
