@@ -1,53 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Para melhor controle de layout */
-    font-family: "Inter", sans-serif;
+    font-family: "inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    list-style: none;
 }
 
-header {
-    background-color: #000000; /* Cor de fundo do header */
+header nav{
+    padding: 20px 50px 10px 50px;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
 }
 
-nav {
-    padding: 20px; /* Espaçamento superior e inferior */
-    display: flex; /* Usando flexbox para layout */
-    justify-content: space-between; /* Espaça os itens uniformemente */
-    align-items: center; /* Alinha os itens verticalmente ao centro */
+.menu{
+    display: flex;
+    gap:50px;
+    font-size: 20px;
 }
 
-.menu {
-    list-style: none; /* Remove marcadores da lista */
-    display: flex; /* Usando flexbox para layout */
-    gap: 20px; /* Espaçamento entre os itens do menu */
-    justify-content: center; /* Centraliza os itens do menu */
-    flex-grow: 1; /* Permite que o menu ocupe o espaço disponível */
-    color: #E20702; /* Cor do texto */
-    
-    margin-left: 40px;
-
-    -webkit-text-stroke-width: 1px; /* Contorno do texto */
-    -webkit-text-stroke-color: #000; /* Cor do contorno do texto */
-    font-family: "League Gothic"; /* Fonte do menu */
-    font-style: normal; /* Estilo da fonte */
-    font-weight: 400; /* Peso da fonte */
-    line-height: normal; /* Altura da linha */
-    transform: skew(-10deg); /* Inclina o texto para a esquerda */
+.menu li a{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 8px;
+    text-transform: uppercase;
+    transition: 0.6s;
+    border-radius: 10px;
 }
 
-.menu li a {
-    text-decoration: none; /* Remove o sublinhado do link */
-    color: #ffffff; /* Cor do texto dos links */
-    padding: 8px 16px; /* Espaçamento interno dos links */
-    border-radius: 8px; /* Bordas arredondadas */
-    text-transform: uppercase; /* Transforma o texto em maiúsculas */
-    transition: background-color 0.5s, color 0.5s; /* Transição suave para a cor de fundo e do texto */
-}
-
-.menu li a:hover {
-    background-color: rgba(255, 255, 255, 0.5); /* Fundo branco com 50% de opacidade ao passar o mouse */
-    color: rgb(0, 0, 0); /* Cor do texto ao passar o mouse */
-    transition: 1s; /* Transição suave */
+.menu li a:hover{
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    transition: 0.6s;
+    border-radius: 10px;
 }
 
 .menu-icones {
