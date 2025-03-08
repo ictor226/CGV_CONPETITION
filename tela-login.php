@@ -22,7 +22,7 @@
 <div class="estrutura">
     <div class="login-form">
         <h2 class="titulo-login">Login</h2>
-        <h4>Não tem login? <a href="./tela-cadastro.html">Registre-se Aqui.</a></h4>
+        <h4>Não tem login? <a href="./tela-cadastro.php">Registre-se Aqui.</a></h4>
         <form>
             <div class="form-group">
                 <input type="email" id="email" placeholder="Email:">
