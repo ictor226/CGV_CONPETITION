@@ -27,20 +27,20 @@
             <form>
                 <div class="form-group">
                     <label for="nome"></label>
-                    <input type="text" id="nome" placeholder="Nome e Sobrenome:" title="Escreva o seu Nome" required>
+                    <input type="text" id="nome"c name="nome-sobrenome"  placeholder="Nome e Sobrenome:" title="Escreva o seu Nome" required>
                 </div>
                 <div class="form-group">
                     <label for="email"></label>
-                    <input type="email" id="email" placeholder="Email:" title="Escreva o seu Email" required>
+                    <input type="email" id="email" placeholder="Email:" name="email" title="Escreva o seu Email" required>
                 </div>
                 <div class="form-group" id="form-group-senha">
-                    <input type="password" id="senha" placeholder="Senha:" title="Escreva a sua Senha escolhida"
+                    <input type="password" id="senha" placeholder="Senha:" name="senha"  title="Escreva a sua Senha escolhida"
                         required>
                     <i class="bi bi-eye-fill" id="btn-senha" onclick="mostrarSenha()"></i>
                 </div>
                 <div class="form-group">
                     <label for="telefone"></label>
-                    <input type="tel" id="telefone" pattern="^\(\d{2}\) \d{9}$" placeholder="Telefone:" required
+                    <input type="tel" name="telefone" id="telefone" pattern="^\(\d{2}\) \d{9}$" placeholder="Telefone:" required
                         title="Escreva o seu Telefone" maxlength="14"
                         oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\d{2})(\d{0,9})/, '($1) $2');">
                 </div>
