@@ -19,16 +19,19 @@
         <li><a href="./index.php"><i class="bi bi-arrow-left-square-fill"></i></a></li>
     </ul>
 
+
+    <form action="./user-login.php"  method="POST">
+
 <div class="estrutura">
     <div class="login-form">
         <h2 class="titulo-login">Login</h2>
         <h4>Não tem login? <a href="./tela-cadastro.php">Registre-se Aqui.</a></h4>
         <form>
             <div class="form-group">
-                <input type="email" id="email" placeholder="Email:">
+                <input type="email" id="email" name="email" placeholder="Email:">
             </div>
             <div class="form-group" id="form-group-senha">
-                <input type="password" id="senha" placeholder="Senha:" >
+                <input type="password" id="senha" name="senha" placeholder="Senha:" >
                 <i class="bi bi-eye-fill" id="btn-senha" onclick="mostrarSenha()"></i>
             </div>
             <h4 class="titulo-login">Esqueceu sua senha? <a href="">Clique Aqui.</a></h4>
@@ -45,6 +48,8 @@
         
         <a href="" class="login-facebook"><i class="bi bi-facebook"></i></a>
     </div>
+    </form>
+
 </div>
     <script src="./javaScript/VerSenha.js"></script>
 </body>
