@@ -40,7 +40,7 @@
         </div>
         <ul class="menu-icones">
             <li><a href="./cart.php"><i class="bi bi-cart"></i></a></li>
-            <li><a href="./tela-login.html"><i class="bi bi-person-circle"></i></a></li>
+            <li><a href="./tela-login.php"><i class="bi bi-person-circle"></i></a></li>
         </ul>
     </nav>
 
@@ -52,7 +52,7 @@
         <button class="fechar" onclick="Javascript:fecharNav()">
             <i class="bi bi-x"></i>
 
-            <a href="index.html">Exemplo</a>
+            <a href="./cad.php">cadastrar produto</a>
             <a href="#">Exemplo</a>
             <a href="#">Exemplo</a>
 

@@ -13,7 +13,7 @@
 </head>
 
 <ul class="voltar-icon">
-    <li><a href="./tela-login.html"><i class="bi bi-arrow-left-square-fill"></i></a></li>
+    <li><a href="./tela-login.php"><i class="bi bi-arrow-left-square-fill"></i></a></li>
 </ul>
 
 <body>
@@ -23,7 +23,7 @@
     <div class="estrutura">
         <div class="login-form">
             <h2 class="titulo-login">Cadastrar-se</h2>
-            <h4>já possui um login? <a href="./tela-login.html">Clique Aqui.</a></h4>
+            <h4>já possui um login? <a href="./tela-login.php">Clique Aqui.</a></h4>
             <form>
                 <div class="form-group">
                     <label for="nome"></label>
