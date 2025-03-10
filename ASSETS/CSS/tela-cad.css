@@ -15,9 +15,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 /* Para Firefox */
-input[type="number"] {
-    -moz-appearance: textfield;
-}
+
 
 body, .estrutura{
     background: url(../img/login/cadastro.png) no-repeat center center;
