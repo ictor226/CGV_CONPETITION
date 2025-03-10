@@ -1,90 +1,130 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 * {
-    font-family: "inter", sans-serif;
+    font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-header nav{
-    padding: 20px 50px 10px 50px;
-    display: flex; 
-    justify-content: space-around;
-    align-items: center;
-}
-
-.menu{
+header nav {
+    padding: 30px 50px;
     display: flex;
-    gap:50px;
-    font-size: 20px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
 }
 
-.menu li a{
+.logo h1 {
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+    font-size: 18px;
+}
+
+.menu li a {
     text-decoration: none;
-    color: #ffffff;
-    padding: 8px;
+    color: #fff;
+    padding: 8px 16px;
     text-transform: uppercase;
-    transition: 0.6s;
-    border-radius: 10px;
+    transition: 0.3s;
+    border-radius: 5px;
 }
 
-.menu li a:hover{
-    background-color: #ffffff;
+.menu li a:hover {
+    background-color: #fff;
     color: rgb(0, 0, 0);
-    transition: 0.6s;
-    border-radius: 10px;
 }
 
 .menu-icones {
-    list-style: none; /* Remove marcadores da lista */
-    display: flex; /* Usando flexbox para layout */
-    gap: 30px; /* Espaçamento entre os ícones */
+    display: flex;
+    gap: 20px;
+}
+
+.menu-icones a {
+    font-size: 1.6rem;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.menu-icones a:hover {
+    color: #f1f1f1;
 }
 
 button.menu-oculto {
-    border: none; /* Remove a borda do botão */
-    font-size: 2rem; /* Tamanho da fonte do botão */
-    padding: 5px; /* Espaçamento interno do botão */
-    color: #ffffff; /* Cor do texto do botão */
-    background-color: inherit; /* Mantém o fundo transparente */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    border: none;
+    font-size: 2rem;
+    padding: 5px;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
 }
 
-/* Estilos para o menu oculto */
-div.menu-oculto {
-    background-color: #000000; /* Cor de fundo do menu oculto */
-    position: fixed; /* Fixa o menu na tela */
-    height: 100%; /* Altura total da tela */
-    top: 0; /* Alinha ao topo */
-    left: 0; /* Alinha à esquerda */
-    z-index: 1; /* Coloca o menu acima de outros elementos */
-    width: 0; /* Largura inicial do menu oculto */
-    overflow-x: hidden; /* Oculta o conteúdo que transborda */
-    padding-top: 60px; /* Espaçamento superior do menu */
-    transition: 0.5s; /* Transição suave para abrir/fechar */
-    text-align: right; /* Alinha o texto à direita */
+/* Menu oculto */
+#offcanvas {
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    text-align: right;
+    z-index: 2;
 }
 
-div.menu-oculto a {
-    text-decoration: none; /* Remove o sublinhado do link */
-    font-size: 1.2rem; /* Tamanho da fonte dos links no menu oculto */
-    padding: 8px 32px; /* Espaçamento interno dos links */
-    display: block; /* Faz com que o link ocupe toda a largura */
-    transition: 0.3s; /* Transição suave para hover */
-    color: #ffffff; /* Cor do texto dos links no menu oculto */
+#offcanvas a {
+    padding: 8px 32px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
 }
 
-div.menu-oculto button.fechar {
-    position: absolute; /* Posiciona o botão de fechar */
-    top: 0; /* Alinha ao topo */
-    right: 20px; /* Alinha à direita */
-    font-size: 2rem; /* Tamanho da fonte do botão de fechar */
-    background-color: inherit; /* Mantém o fundo transparente */
-    border: none; /* Remove a borda do botão */
-    color: #d9d9d9; /* Cor do texto do botão de fechar */
-    padding: 0; /* Remove o padding do botão */
-    transition: 0.3s; /* Transição suave para hover */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+#offcanvas a:hover {
+    color: #f1f1f1;
+}
+
+#offcanvas button.fechar {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 2.5rem;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* Esconde o menu principal em telas pequenas */
+    }
+
+    .menu-icones {
+        display: none; /* Esconde os ícones de menu em telas pequenas */
+    }
+
+    .menu-oculto {
+        display: block;
+    }
+}
+
+/* Remove o sublinhado roxo e o contorno roxo dos links */
+.menu li a:focus, 
+.menu li a:hover,
+.menu-icones a:focus,
+.menu-icones a:hover {
+    text-decoration: none;  /* Remove o sublinhado */
+    outline: none;  /* Remove o contorno roxo */
 }
