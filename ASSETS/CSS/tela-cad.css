@@ -32,6 +32,12 @@ body, .estrutura{
     margin-bottom: 30px;
 }
 
+.form-group-duo {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os campos */
+    
+}
+
 .estrutura h4{
     margin-bottom: 20px;
 }
