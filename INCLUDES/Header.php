@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="./ASSETS/CSS/cart.css">
     <link rel="stylesheet" href="./ASSETS/CSS/header.css">
     <link rel="stylesheet" href="./ASSETS/CSS/footer.css">
+    <link rel="stylesheet" href="./ASSETS/CSS/info-produto.css">
 
 </head>
 
