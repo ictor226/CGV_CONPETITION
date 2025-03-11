@@ -1,0 +1,69 @@
+/* Footer */
+.img-rodape-02 {
+    width: 100%;
+    height: 550px;
+    margin-top: 182px;
+    object-fit: cover; 
+}
+
+.info {
+    margin-top: -330px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    color: #fff;  /* Usando hexadecimal para simplificar */
+    font-size: var(--font-size-medium);
+    line-height: 1.8;
+    padding: 0 20px;    
+}
+
+.info h5, 
+.info a, 
+.quick-links {
+    color: inherit; 
+    text-decoration: none;
+}
+
+.social-media {
+    display: flex;              
+    flex-direction: column;             
+    gap: 10px;                   
+    margin-top: 20px;           
+}
+
+.social-media a {
+    color: #fff;               
+    text-decoration: none;      
+    transition: color 0.3s ease; 
+}
+
+.quick-links {
+    font-size: var(--font-size-medium); 
+}
+
+#edt-icons {
+    line-height: 1.8;
+    transition: color 0.3s ease; 
+}
+
+#edt-icons:hover {
+    color: var(--highlight-color); 
+}
+
+@media (max-width: 768px) {
+    .info {
+        grid-template-columns: 1fr 1fr; 
+        margin-top: -150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .info {
+        grid-template-columns: 1fr;
+    }
+
+    .img-rodape-02 {
+        height: 400px; 
+    }
+}
