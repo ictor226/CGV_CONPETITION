@@ -20,116 +20,21 @@ include './INCLUDES/Header.php';
         <h1 class="produ">PRODUTOS EM DESTAQUE</h1>
 
         <section class="produtos">
-            <div class="container">
-                <div class="item">
-                    <figure>
-                        <img src="./ASSETS/img/tela inicial/nitro.png" alt="KIT NITRO NOS COMPLETO" class="foto-produto">
-                        <figcaption>
-                            <h4 class="h4-tela02">KIT NITRO NOS COMPLETO</h4>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="item">
-                    <figure>
-                        <img src="./ASSETS/img/tela inicial/kit turbo.png" alt="KIT NITRO NOS COMPLETO"
-                            class="foto-produto">
-                        <figcaption>
-                            <h4 class="h4-tela02">KIT NITRO NOS COMPLETO</h4>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="item">
-                    <figure>
-                        <img src="./ASSETS/img/tela inicial/turbo.png" alt="KIT NITRO NOS COMPLETO" class="foto-produto">
-                        <figcaption>
-                            <h4 class="h4-tela02">KIT NITRO NOS COMPLETO</h4>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="item">
-                    <figure>
-                        <img src="./ASSETS/img/tela inicial/roda.png" alt="KIT NITRO NOS COMPLETO" class="foto-produto">
-                        <figcaption>
-                            <h4 class="h4-tela02">KIT NITRO NOS COMPLETO</h4>
-                        </figcaption>
-                    </figure>
-                </div>
+        <a href="./info-produto.php"><div class="container"></a> 
+               <a href="./info-produto.php"><button class="btn-produto-card">
+                    <div class="item">
+                        <figure>
+                            <img src="./ASSETS/img/tela inicial/nitro.png" alt="KIT NITRO NOS COMPLETO" class="foto-produto">
+                            <figcaption>
+                                <h4 class="h4-tela02">KIT NITRO NOS COMPLETO</h4>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </button>
             </div>
 
-            <div class="container02">
-                <div class="item02">
-                    <figure>
-                        <img src="./ASSETS/img/tela inicial/nitro.png" alt="KIT NITRO NOS COMPLETO" class="foto-produto">
-                        <figcaption>
-                            <h4 class="h4-tela02">KIT NITRO NOS COMPLETO</h4>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="item02">
-                    <figure>
-                        <img src="./ASSETS/img/tela inicial/kit turbo.png" alt="KIT NITRO NOS COMPLETO"
-                            class="foto-produto">
-                        <figcaption>
-                            <h4 class="h4-tela02">KIT NITRO NOS COMPLETO</h4>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="item02">
-                    <figure>
-                        <img src="./ASSETS/img/tela inicial/turbo.png" alt="KIT NITRO NOS COMPLETO" class="foto-produto">
-                        <figcaption>
-                            <h4 class="h4-tela02">KIT NITRO NOS COMPLETO</h4>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="item02">
-                    <figure>
-                        <img src="./ASSETS/img/tela inicial/roda.png" alt="KIT NITRO NOS COMPLETO" class="foto-produto">
-                        <figcaption>
-                            <h4 class="h4-tela02">KIT NITRO NOS COMPLETO</h4>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-
-            <div class="container03">
-                <div class="item03">
-                    <figure>
-                        <img src="./ASSETS/img/tela inicial/nitro.png" alt="KIT NITRO NOS COMPLETO" class="foto-produto">
-                        <figcaption>
-                            <h4 class="h4-tela02">KIT NITRO NOS COMPLETO</h4>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="item03">
-                    <figure>
-                        <img src="./ASSETS/img/tela inicial/kit turbo.png" alt="KIT NITRO NOS COMPLETO"
-                            class="foto-produto">
-                        <figcaption>
-                            <h4 class="h4-tela02">KIT NITRO NOS COMPLETO</h4>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="item03">
-                    <figure>
-                        <img src="./ASSETS/img/tela inicial/turbo.png" alt="KIT NITRO NOS COMPLETO" class="foto-produto">
-                        <figcaption>
-                            <h4 class="h4-tela02">KIT NITRO NOS COMPLETO</h4>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="item03">
-                    <figure>
-                        <img src="./ASSETS/img/tela inicial/roda.png" alt="KIT NITRO NOS COMPLETO" class="foto-produto">
-                        <figcaption>
-                            <h4 class="h4-tela02">KIT NITRO NOS COMPLETO</h4>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
         </section>
 
-        <!-- TELA 03 -->
         <hr class="hr-tela03">
         <section class="tela-envio">
             <img src="./ASSETS/img/tela inicial/envio.png" class="img-envio">
@@ -154,8 +59,9 @@ include './INCLUDES/Header.php';
     </div>
 
     <?php
- include './includes/footer.php';
+    include './includes/footer.php';
     ?>
 
 </body>
+
 </html>
