@@ -58,6 +58,9 @@ header nav {
     color: #f1f1f1;
 }
 
+
+/* Menu oculto */
+
 button.menu-oculto {
     border: none;
     font-size: 2rem;
@@ -65,9 +68,9 @@ button.menu-oculto {
     color: #fff;
     background-color: transparent;
     cursor: pointer;
+    
 }
 
-/* Menu oculto */
 #offcanvas {
     width: 0;
     height: 100%;
