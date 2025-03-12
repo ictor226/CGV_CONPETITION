@@ -7,7 +7,7 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="ASSETS/CSS/tela-cad.css"">
+    <link rel="stylesheet" href="ASSETS/CSS/tela-cad.css">
     <link rel="stylesheet" href="./ASSETS/CSS/ver-senha.css">
     <link rel="stylesheet" href="./javaScript/VerSenha.js">
 </head>
@@ -17,15 +17,14 @@
 </ul>
 
 <body>
-
+    <form action="./cad-user.php" method="post">
     <div class="estrutura">
         <div class="login-form">
             <h2 class="titulo-login">Cadastrar-se</h2>
             <h4>já possui um login? <a href="./tela-login.php">Clique Aqui.</a></h4>
-            <form>
                 <div class="form-group">
                     <label for="nome"></label>
-                    <input type="text" id="nome"c name="nome-sobrenome"  placeholder="Nome e Sobrenome:" title="Escreva o seu Nome" required>
+                    <input type="text" id="nome" name="nome"  placeholder="Nome e Sobrenome:" title="Escreva o seu Nome" required>
                 </div>
                 <div class="form-group">
                     <label for="email"></label>
@@ -45,14 +44,14 @@
                 </div>
                 <div class="form-group">
                     <label for="cep"></label>
-                    <input type="text" id="cep" name="cep" placeholder="CEP:" required maxlength="10"
+                    <input type="text" id="cep" name="cep" placeholder="cep:" required maxlength="10"
                         title="Escreva o seu CEP"
                         oninput="this.value = this.value.replace(/[^1-9]/g, '').replace(/(\d{5})(\d{0,3})/, '$1-$2');"
                         required>
                 </div>   
                 <div class="form-group">
                     <label for="state"></label>
-                    <select id="state" name="state" required
+                    <select id="estado" name="estado" required
                         style="width: 315px; padding: 8px; margin-bottom: 15px; margin-top: 5px; border-radius: 5px; border-color: transparent; font-size: 16px; appearance: none; -webkit-appearance: none; -moz-appearance: none;">
                         <option value="">Selecione um Estado:</option>
                         <option value="AC">Acre/Rio Branco</option>
@@ -98,7 +97,6 @@
                 <div class="form-group">
                     <button type="submit">cadastrar</button>
                 </div>
-            </form>
         </div>
         <div class="editHr">
             <span>Ou continue com:</span>
@@ -109,6 +107,7 @@
             <a href="" class="login-facebook"><i class="bi bi-facebook"></i></a>
         </div>
     </div>
+</form>
     <script src="./javaScript/olhar-senha.js"></script>
 </body>
 
