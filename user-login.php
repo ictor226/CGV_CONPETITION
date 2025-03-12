@@ -28,21 +28,6 @@ $id_login = $banco->lastInsertId();
 echo $id_login;
 
 
-echo '<script>
-
-swal({
-    title: "Sucesso!",
-    text: "Produto cadastrado com sucesso!",
-    icon: "success",
-    button: "OK",
-    
-});
-
-</script>';
- 
-var_dump($box);
-?>
-
 
 
 <div class="col-12">
