@@ -18,8 +18,6 @@
 
 <body>
 
-    
-
     <div class="estrutura">
         <div class="login-form">
             <h2 class="titulo-login">Cadastrar-se</h2>
@@ -38,7 +36,7 @@
                         required>
                     <i class="bi bi-eye-fill" id="btn-senha" onclick="mostrarSenha()"></i>
                 </div>
-                <div class="form-group-duo">
+                
                 <div class="form-group">
                     <label for="telefone"></label>
                     <input type="tel" name="telefone" id="telefone" pattern="^\(\d{2}\) \d{9}$" placeholder="Telefone:" required
@@ -51,9 +49,7 @@
                         title="Escreva o seu CEP"
                         oninput="this.value = this.value.replace(/[^1-9]/g, '').replace(/(\d{5})(\d{0,3})/, '$1-$2');"
                         required>
-                </div>
-                </div>
-                
+                </div>   
                 <div class="form-group">
                     <label for="state"></label>
                     <select id="state" name="state" required
@@ -90,9 +86,15 @@
                 </div>
                 <div class="form-group">
                     <label for="numero"></label>
-                    <input type="number" id="numero" name="numero" placeholder="Número da casa"
+                    <input type="number" id="numero" name="numero" placeholder="Número da casa:"
                         title="Escreva o Numero da casa" required>
                 </div>
+                <div class="form-group">
+                    <label for="text"></label>
+                    <input type="text" id="complemento" name="complemento" placeholder="Complemento:" 
+                    title="Casa ou Apartamento? com Bloco" required>
+                </div>
+                
                 <div class="form-group">
                     <button type="submit">cadastrar</button>
                 </div>

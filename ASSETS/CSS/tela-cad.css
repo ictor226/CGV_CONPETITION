@@ -16,7 +16,6 @@ input[type="number"]::-webkit-outer-spin-button {
 
 /* Para Firefox */
 
-
 body, .estrutura{
     background: url(../img/login/cadastro.png) no-repeat center center;
     height: 100vh;
@@ -29,13 +28,7 @@ body, .estrutura{
 
 .estrutura h2{
     font-size: 35px;
-    margin-bottom: 30px;
-}
-
-.form-group-duo {
-    display: flex;
-    gap: 20px; /* Espaçamento entre os campos */
-    
+    margin-bottom: 15px;
 }
 
 .estrutura h4{
@@ -54,7 +47,7 @@ body, .estrutura{
 .login-form input{
     width: 300px;
     padding: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     margin-top: 5px;
     border-radius: 5px;
     border-color: transparent;
@@ -85,9 +78,9 @@ body, .estrutura{
 .editHr{ /*tira a linha de separacao da escrita "ou continue com:" */
     display: flex; 
     align-items: center;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
-    margin-top: 15px;
+    margin-top: 1px;
     margin-bottom: 10px;
 }
 
@@ -114,5 +107,4 @@ a {
     display: flex;
     font-size: 40px;
     margin-right: 1450px;
-    
 }
