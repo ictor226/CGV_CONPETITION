@@ -1,0 +1,94 @@
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    /* Alinha os itens em coluna */
+    align-items: center;
+    /* Centraliza os itens horizontalmente */
+    justify-content: center;
+    /* Centraliza os itens verticalmente */
+    margin-top: 100px;
+}
+
+.itens-info-img {
+    margin-right: 800px;
+}
+
+#figura {
+    width: 330px;
+    margin: 0 20px;
+    /* Adiciona margem lateral para os ícones */
+
+    border-radius: 10px;
+    /* Adiciona bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Adiciona sombra para profundidade */
+}
+
+.itens-info-img {
+    margin-bottom: 20px;
+    /* Adiciona espaço abaixo da imagem */
+}
+
+.buttons-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    /* Permite que os botões se movam para a próxima linha em telas menores */
+}
+
+.buttons-img {
+    border: 5px solid transparent;
+    /* Ajusta a borda para ser mais fina */
+    padding: 0;
+    background: transparent;
+    max-width: 250px;
+    width: 200px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 10px;
+    /* Espaçamento uniforme entre os botões */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Adiciona transição suave */
+}
+
+.buttons-img:hover {
+    transform: scale(1.05);
+    /* Aumenta o botão ao passar o mouse */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Adiciona sombra ao passar o mouse */
+}
+
+.buttons-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.sell-color {
+    color: #E20702;
+}
+
+.informacoes {
+    margin-top: -500px;
+    color: aliceblue;
+
+    background-color: tomato;
+    width: 40%;
+
+    margin-left : 750px;
+    padding: 100px;
+
+}
+
+.versao {
+    gap: 20px;
+    margin-right: 100PX;
+    text-align: center;
+    height: 30px;
+    width: 98%;
+}

@@ -20,7 +20,7 @@ include './INCLUDES/Header.php';
         <h1 class="produ">PRODUTOS EM DESTAQUE</h1>
 
         <section class="produtos">
-        <a href="./info-produto.php"><div class="container"></a> 
+        <a href="./info-produto.php"><div class="container">
                <a href="./info-produto.php"><button class="btn-produto-card">
                     <div class="item">
                         <figure>
@@ -30,7 +30,7 @@ include './INCLUDES/Header.php';
                             </figcaption>
                         </figure>
                     </div>
-                </button>
+                </button></a> 
             </div>
 
         </section>
