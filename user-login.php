@@ -1,11 +1,12 @@
 <?php
-echo "login de usuario";
 
-echo '<pre>';
+echo '<h1>auxilio login</h1>';
+
 var_dump($_POST);
 
-$emailFormulario = $_POST['email'];
-$senhaItemFormulario = $_POST['senha'];
+$emailForm = $_POST['email'];
+$passwordForm = $_POST['password'];
+
 
 
 $dsn = 'mysql:dbname=bd_cgv;host=127.0.0.1';
@@ -14,22 +15,14 @@ $password = '';
 
 $banco = new PDO($dsn, $user, $password);
 
-$insert = 'INSERT INTO login (email, senha) VALUES (:email, :senha)';
+$consultaUsuarioSenha = 'SELECT * FROM login  WHERE email = "' .$emailForm . '" AND senha = "' . $passwordForm . '"';
 
-$box = $banco->prepare($insert);
+$resultado = $banco->query($consultaUsuarioSenha)->fetch();
 
-$box->execute([
-    ':email' => $emailFormulario,
-    ':senha' => $senhaItemFormulario
-]);
+if(!empty($resultado)&& $resultado != false){
 
-$id_login = $banco->lastInsertId();
+    header(('location:index.php'));
 
-echo $id_login;
-
-
-
-
-<div class="col-12">
-    <a href="./index.php" class="btn btn-danger">Voltar</a>
-</div>
+}else{
+    header(('location:index.php'));
+}
