@@ -31,7 +31,7 @@
                 <input type="email" id="email" name="email" placeholder="Email:">
             </div>
             <div class="form-group" id="form-group-senha">
-                <input type="password" id="senha" name="senha" placeholder="Senha:" >
+                <input type="password" id="senha" name="password" placeholder="Senha:" >
                 <i class="bi bi-eye-fill" id="btn-senha" onclick="mostrarSenha()"></i>
             </div>
             <h4 class="titulo-login">Esqueceu sua senha? <a href="">Clique Aqui.</a></h4>
