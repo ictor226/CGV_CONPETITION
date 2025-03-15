@@ -30,8 +30,10 @@
     </section>
 
     <section class="informacoes">
-        <h2>[<span class="sell-color">VENDA-SE</span>]Par Roda Taluda Nismo Jdm Aro 18x10.5 5x114 Preto Acetinado</h2>
-        <select aria-label="Seleção de versão" class="versao">
+    <div class=".container-info"> 
+    <h2>[<span class="sell-color">VENDA-SE</span>]Par Roda Taluda Nismo Jdm Aro 18x10.5 5x114 Preto Acetinado</h2>
+      <p>versão</p>
+    <select aria-label="Seleção de versão" class="versao">
 
             <option value="2025">2025</option>
             <option value="2024">2024</option>
@@ -40,7 +42,14 @@
             
         </select>
         <p class="preco-info">R$ 3.543,00
-            ou por 12x de R$ 1.099,17 sem juros</p>
+            <br>
+            ou por 12x de R$ 1.099,17 sem juros</p> 
+            <br>
+              <div class="form-group">
+                <button type="submit">Entrar</button>
+            </div>
+        </div>  
+          
     </section>
     <?php
     include './includes/footer.php';
