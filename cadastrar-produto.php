@@ -24,6 +24,7 @@ echo "Cadastro de Produto";
 echo '<pre>';
 var_dump($_POST);
 
+// Recebendo os dados do formulário
 $nomeItemFormulario = $_POST['nome'];
 $precoItemFormulario = $_POST['preco'];
 $parcelamentoFormulario = $_POST['parcelamento'];
@@ -33,16 +34,26 @@ $versaoFormulario = $_POST['versao'];
 $quantidadeFormulario = $_POST['quantidade'];
 $imgFormulario = $_POST['imagem'];
 
+// Conexão com o banco de dados
 $dsn = 'mysql:dbname=bd_cgv;host=127.0.0.1';
 $user = 'root';
 $password = '';
 
-$banco = new PDO($dsn, $user, $password);
+try {
+    $banco = new PDO($dsn, $user, $password);
+    $banco->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    echo 'Falha na conexão com o banco: ' . $e->getMessage();
+    exit;
+}
 
-$insert = 'INSERT INTO cadastro_produto (nome_item, preco_item, parcelamento, versao, descricao, ano_lancamento, quantidade, img) VALUES (:nome_item, :preco_item, :parcelamento, :versao, :descricao, :ano_lancamento, :quantidade, :img)';
+// Preparando a query de inserção
+$insert = 'INSERT INTO cadastro_produto (nome_item, preco_item, parcelamento, versao, descricao, ano_lancamento, quantidade, img_produto) 
+           VALUES (:nome_item, :preco_item, :parcelamento, :versao, :descricao, :ano_lancamento, :quantidade, :img_produto)';
 
 $box = $banco->prepare($insert);
 
+// Executando a query com os dados
 $box->execute([
     ':nome_item' => $nomeItemFormulario,
     ':preco_item' => $precoItemFormulario,
@@ -50,32 +61,30 @@ $box->execute([
     ':versao' => $versaoFormulario,
     ':descricao' => $descricaoFormulario,
     ':ano_lancamento' => $lancamentoFormulario,
-    'quantidade'=> $quantidadeFormulario,
-    ':img' => $imgFormulario
+    ':quantidade' => $quantidadeFormulario,
+    ':img_produto' => $imgFormulario
 ]);
 
+// Pegando o ID do último produto inserido
 $id_produto = $banco->lastInsertId();
 
-echo $id_produto;
+// Exibindo o ID do produto cadastrado
+echo "O ID do produto cadastrado é: " . $id_produto;
 
-
+// Exibindo o alerta de sucesso com SweetAlert
 echo '<script>
-
 swal({
     title: "Sucesso!",
-    text: "Produto cadastrado com sucesso!",
+    text: "Produto cadastrado com sucesso! O ID do produto é: ' . $id_produto . '",
     icon: "success",
-    button: "OK",
-    
+    button: "OK"
 });
-
 </script>';
- 
+
+// Exibindo os dados de depuração da execução
 var_dump($box);
 ?>
 
-
-
 <div class="col-12">
-    <a href="./cad.php" class="btn btn-danger">Voltar</a>
+    <!-- Aqui você pode adicionar o conteúdo da página, se necessário -->
 </div>
