@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="./ASSETS/CSS/header.css">
     <link rel="stylesheet" href="./ASSETS/CSS/footer.css">
     <link rel="stylesheet" href="./ASSETS/CSS/info-produto.css">
-
+    
 </head>
 
 <body>
@@ -36,7 +36,7 @@
             </ul>
 
             <ul class="menu-icones">
-                <li><a href="#"><i class="bi bi-search"></i></a></li>
+                <li><a href=""><i class="bi bi-search"></i></a></li>
                 <li><a href="./cart.php"><i class="bi bi-cart"></i></a></li>
                 <li><a href="./tela-login.php"><i class="bi bi-person-circle"></i></a></li>
             </ul>
