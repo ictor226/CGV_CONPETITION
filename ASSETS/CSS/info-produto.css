@@ -7,7 +7,7 @@
 }
 
 .itens-info-img {
-    margin-right: 800px;
+    margin-right: 850px;
 }
 
 #figura {
@@ -18,7 +18,7 @@
 }
 
 .itens-info-img {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .buttons-row {
@@ -55,7 +55,7 @@ h2 {
 .form-group button[type="submit"] {
     padding: 10px 50px;
     border: none;
-    margin-top: 100px;
+    margin-top: 50px;
     text-transform: uppercase;
     border-radius: 10px;
     background-color: #0c9100;
@@ -63,10 +63,13 @@ h2 {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
+   
 }
 
 .form-group button[type="submit"]:hover {
     background-color: #0a7400;
+    
+
 }
 
 .buttons-img img {
@@ -89,9 +92,10 @@ h2 {
     border-width: 5px; /* Largura da borda */
     background-color: #343434;
     width: 40%;
-    margin-left: 750px;
-    padding: 90px;
-    margin-bottom: 200px;
+    margin-left: 850px;
+    padding: 60px;
+    margin-bottom: 20px;
+    background: #2d2d2d;
 }
 
 .versao {
@@ -104,4 +108,77 @@ h2 {
 
 .preco-info {
     margin-top: 50px;
+}
+
+.pronto-entrga{
+    background: none;
+    color: #00a000;
+    margin: 10px 0 0 0;
+    font-size: 12px;
+    text-align: left;
+}
+
+.frete{
+    background: none;
+    color: #00a000;
+    margin: 8px 0 0 0;
+    font-size: 12px;
+    text-align: left;
+
+    
+}
+
+.vendido-por{
+    background: none;
+    color: #bababa;
+    margin: 8px 0 0 0;
+    
+    text-align: left;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    margin-top: 100px;
+    position: relative; /* Permite o posicionamento absoluto das setas dentro do contêiner */
+}
+
+.seta-left, .seta-right {
+    cursor: pointer;
+    font-size: 24px; /* Tamanho do ícone */
+    position: absolute; /* Posiciona as setas em relação ao contêiner pai */
+    top: 50%; /* Alinha as setas ao meio da altura do contêiner */
+    transform: translateY(-50%); /* Ajusta as setas para que fiquem perfeitamente centradas verticalmente */
+}
+
+.seta-left {
+    margin-left: 400px;
+}
+
+.seta-right {
+ 
+    margin-right: 400px;
+}
+
+#figura {
+    width: 330px;
+    margin: 0 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.details{
+    cursor: pointer;
+    border-radius: 5px;
+    
+    height: 25px;
+    background: rgb(255, 255, 255);
+    width: 80%;
+    
+}
+.descricao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
