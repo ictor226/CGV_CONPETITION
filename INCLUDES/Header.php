@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="./ASSETS/CSS/header.css">
     <link rel="stylesheet" href="./ASSETS/CSS/footer.css">
     <link rel="stylesheet" href="./ASSETS/CSS/info-produto.css">
+    <link rel="stylesheet" href="./ASSETS/css/bara-pesquisa">
     
 </head>
 
@@ -36,7 +37,16 @@
             </ul>
 
             <ul class="menu-icones">
-                <li><a href=""><i class="bi bi-search"></i></a></li>
+            <li>
+    <a href="#" onclick="toggleSearch(event)">
+        <i class="bi bi-search"></i>
+    </a>
+
+    <div id="search-bar" class="search-bar">
+        <input type="text" placeholder="Pesquisar...">
+    </div>
+</li>
+
                 <li><a href="./cart.php"><i class="bi bi-cart"></i></a></li>
                 <li><a href="./tela-login.php"><i class="bi bi-person-circle"></i></a></li>
             </ul>
@@ -59,4 +69,5 @@
             </div>
         </nav>
     </header>
+    <script src="./JavaScript/icopesquisa.js"></script>
 </body>

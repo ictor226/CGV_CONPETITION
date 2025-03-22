@@ -37,49 +37,51 @@ nav {
   color: rgb(0, 0, 0); /* Cor do texto ao passar o mouse */
 }
 
-.search-container {
-  display: flex;
-  align-items: center; /* Alinha o campo de pesquisa e ícone verticalmente */
-  position: relative; /* Necessário para o posicionamento da barra */
-}
-
-#search-bar {
-  padding: 10px 15px; /* Espaçamento interno */
-  font-size: 14px; /* Tamanho da fonte */
-  border: 1px solid #ccc; /* Borda padrão */
-  border-radius: 5px; /* Bordas arredondadas */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+/* Container da barra de pesquisa */
+.search-bar {
+  position: absolute;
+  top: 50%; /* Posiciona a barra verticalmente alinhada ao ícone */
+  transform: translateY(-50%); /* Centraliza a barra verticalmente */
   width: 0; /* Começa com largura 0 */
-  transition: width 0.5s ease, visibility 0.5s ease; /* Transição suave para aumentar a largura */
-  margin-left: 10px; /* Espaço entre o campo de pesquisa e o ícone */
+  padding: 0;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 20px; /* Borda arredondada */
   visibility: hidden; /* Começa invisível */
+  transition: width 0.5s ease, visibility 0.5s ease, left 0.5s ease;
+  z-index: 999;
 }
 
-#search-icon {
-  background: #000; /* Cor de fundo do ícone */
-  color: white; /* Cor do ícone */
-  border: none; /* Remove a borda do botão */
-  border-radius: 5px; /* Bordas arredondadas */
-  padding: 10px; /* Espaçamento interno do botão */
-  cursor: pointer; /* Muda o cursor para indicar que é clicável */
-  transition: background-color 0.3s, transform 0.3s; /* Transição suave para a cor de fundo */
-  font-size: 1.5rem; /* Aumenta o tamanho do ícone */
-}
-
-#search-icon:hover {
-  background: #444; /* Cor de fundo ao passar o mouse */
+/* Campo de pesquisa com borda arredondada */
+.search-bar input {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  border-radius: 20px; /* Borda arredondada no campo de pesquisa */
 }
 
 /* Quando a barra de pesquisa for expandida */
-#search-bar.show {
-  width: 200px; /* Largura final quando a barra estiver expandida */
-  visibility: visible; /* Torna o campo visível */
+.search-bar.show {
+  width: 200px; /* Largura da barra ao abrir */
+  visibility: visible;
 }
 
-/* Quando a barra de pesquisa é mostrada, move o ícone para a esquerda */
-#search-bar.show + #search-icon {
-  margin-left: 10px; /* Ajuste o valor conforme necessário */
+
+
+/* Ícone de pesquisa */
+nav li a i {
+  font-size: 24px;
+  color: white;
+  transition: color 0.3s;
 }
+
+nav li a:hover i {
+  color: #ccc;
+}
+
 
 /* Ícones */
 nav li a {
