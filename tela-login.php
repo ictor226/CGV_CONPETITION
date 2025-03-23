@@ -34,7 +34,7 @@
                 <input type="password" id="senha" name="password" placeholder="Senha:" >
                 <i class="bi bi-eye-fill" id="btn-senha" onclick="mostrarSenha()"></i>
             </div>
-            <h4 class="titulo-login">Esqueceu sua senha? <a href="">Clique Aqui.</a></h4>
+            <h4 class="titulo-login">Esqueceu sua senha? <a href="./tela-alterar-senha.php">Clique Aqui.</a></h4>
             <div class="form-group">
                 <button type="submit">Entrar</button>
             </div>
