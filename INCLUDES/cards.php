@@ -33,7 +33,6 @@ $resultado = $banco->query($select)->fetchAll();
             </div>
 
         </section>
-    
 <?php } ?>
 
 
