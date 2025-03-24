@@ -1,4 +1,4 @@
-<?php
+<?php//rrrr
  
 $dsn = 'mysql:dbname=bd_cgv;host=127.0.0.1';
 $user = 'root';
