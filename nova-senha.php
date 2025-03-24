@@ -37,3 +37,6 @@ try {
     echo 'Erro de conexão: ' . $e->getMessage();
 }
 ?>
+echo '<script>
+window.location.replace("index.php");
+</script>';

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="ASSETS/CSS/tela-cad.css">
     <link rel="stylesheet" href="./ASSETS/CSS/ver-senha.css">
     <link rel="stylesheet" href="./javaScript/VerSenha.js">
+    <link rel="stylesheet" href="./ASSETS/CSS/add-arquivo.css">
 </head>
 
 <ul class="voltar-icon">
@@ -93,6 +94,22 @@
                     <input type="text" id="complemento" name="complemento" placeholder="Complemento:" 
                     title="Casa ou Apartamento? com Bloco" required>
                 </div>
+
+
+
+                <div class="form-group">
+                <div class="form-group">
+      <div class="upload-box">
+        <input type="file" id="imagem" name="img_perfil" accept="image/*" required>
+        <span class="upload-btn">Adicione uma foto de perfil</span>
+        <span class="file-name">Nenhum arquivo selecionado</span>
+       </div>
+</div>
+</div>
+
+
+
+
                 
                 <div class="form-group">
                     <button type="submit">cadastrar</button>
@@ -108,7 +125,15 @@
         </div>
     </div>
 </form>
+<script>//script para atualizar automaticamente o nome do arquivo selecionado
+    const fileInput = document.getElementById('imagem');
+    const fileName = document.querySelector('.file-name');
+
+    fileInput.addEventListener('change', (event) => {
+        const file = event.target.files[0];
+        fileName.textContent = file ? file.name : 'Nenhum arquivo selecionado';
+    });
+</script>
     <script src="./javaScript/olhar-senha.js"></script>
 </body>
-
 </html>
