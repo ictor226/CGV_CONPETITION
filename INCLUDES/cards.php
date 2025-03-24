@@ -1,8 +1,3 @@
-
-<h1>oiiiii</h1>
-
-<link rel="stylesheet" href="./Assets/css/comidas_cards.css">
- 
 <?php
  
 $dsn = 'mysql:dbname=bd_cgv;host=127.0.0.1';
@@ -17,13 +12,14 @@ $resultado = $banco->query($select)->fetchAll();
  
 ?>
 <?php foreach ($resultado as $linha) { ?>
-    <section class="produtos">
+    <div class="container">
+    <section class="produtos" >
         <a href="./info-produto.php?id=<?=$linha['id_produto'] ?>">
             <div class="container">
                <a href="./info-produto.php"><button class="btn-produto-card">
                     <div class="item">
                         <figure>
-                            <img src="./ASSETS/img/tela inicial/sobre nós.png" alt="KIT NITRO NOS COMPLETO" class="foto-produto">
+                            <img src="./ASSETS/img/produtos/<?php echo $linha ['img_produto1']?>" alt="KIT NITRO NOS COMPLETO" class="foto-produto">
                             <figcaption>
                                 <h4 class="h4-tela02"><?php echo $linha ['nome_item']  ?></h4>
                             </figcaption>
@@ -33,6 +29,7 @@ $resultado = $banco->query($select)->fetchAll();
             </div>
 
         </section>
+    </div>
 <?php } ?>
 
 

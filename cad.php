@@ -82,15 +82,13 @@ METODO DE ENVIO
         <h1>cadastro de produtos</h1>
 
         <input type="text" name="nome" placeholder="nome do produto" required>
-        <input type="number" name="preco" placeholder="preço do item" required>
+        <input type="text" name="preco" placeholder="preço do item" required>
         <input type="text" name="parcelamento" placeholder="parcelamento de produtos" required>
         <input type="text" name="descricao" placeholder="descricao do produtos" required>
         <input type="text" name="lancamento" placeholder="lancamento do produtos" required>
         <input type="text" name="versao" placeholder="versão do produto" required>
         <input type="number" name="quantidade" placeholder="quantidade de items" required>
         <input type="file" name="imagem1" placeholder="Imagem1" required>
-        <input type="file" name="imagem2" placeholder="Imagem2" required>
-        <input type="file" name="imagem3" placeholder="Imagem3" required>
         <input type="submit" value="Cadastrar">
 
         <div class="col-12">

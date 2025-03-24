@@ -1,6 +1,7 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
 /* Variáveis CSS para cores e fontes */
+/*inicio do produtos*/
 :root {
   --bg-color: rgb(175, 168, 168);
   --primary-color: #000;
@@ -52,6 +53,7 @@
   gap: 50px;
   margin-top: 80px;
   position: relative;
+  
 }
 
 .item, .item02, .item03 {
@@ -108,7 +110,7 @@
     text-align: center;
   }
 }
-
+/*termino do produtos*/
 /* TELA 03 */
 .hr-tela03 {
   margin-top: 250px;
@@ -193,4 +195,3 @@
   color: var(--text-color);
   line-height: 1.8;
 }
-
