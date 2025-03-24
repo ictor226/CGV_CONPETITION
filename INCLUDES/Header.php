@@ -32,7 +32,7 @@
             <ul class="menu">
                 <li><a href="./index.php">Início</a></li>
                 <li><a href="#sobre">Sobre</a></li>
-                <li><a href="./INCLUDES/cards.php">Produtos</a></li>
+                <li><a href="">Produtos</a></li>
             </ul>
 
             <ul class="menu-icones">
