@@ -1,4 +1,4 @@
-<?php//rrrr
+<?php
  
 $dsn = 'mysql:dbname=bd_cgv;host=127.0.0.1';
 $user = 'root';
@@ -31,5 +31,3 @@ $resultado = $banco->query($select)->fetchAll();
         </section>
     </div>
 <?php } ?>
-
-
