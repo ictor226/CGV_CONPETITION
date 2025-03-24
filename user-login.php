@@ -19,10 +19,7 @@ $consultaUsuarioSenha = 'SELECT * FROM login  WHERE email = "' .$emailForm . '" 
 
 $resultado = $banco->query($consultaUsuarioSenha)->fetch();
 
-if(!empty($resultado)&& $resultado != false){
-
-    header(('location:index.php'));
-
-}else{
-    header(('location:index.php'));
-}
+echo '<script>
+alert("✅ Login realizado com sucesso!");
+window.location.replace("index.php");
+</script>';

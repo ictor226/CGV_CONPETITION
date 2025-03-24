@@ -1,0 +1,52 @@
+/* Caixa de upload com borda tracejada e espaçamento */
+.upload-box {
+    position: relative; /* Permite o posicionamento do input sobre a caixa */
+    display: flex; /* Flexbox para alinhar itens na caixa */
+    align-items: center; /* Alinha itens verticalmente ao centro */
+    gap: 5px; /* Espaçamento entre os itens dentro da caixa */
+    border: 2px dashed #ccc; /* Borda tracejada de 2px e cor cinza */
+    padding: 5px; /* Espaçamento interno da caixa */
+    border-radius: 8px; /* Bordas arredondadas */
+    background-color: #f9f9f9; /* Cor de fundo clara */
+    cursor: pointer; /* Indica que é clicável */
+    transition: border-color 0.3s ease; /* Transição suave para a cor da borda */
+}
+
+/* Alteração da cor da borda quando o mouse passa sobre a caixa */
+.upload-box:hover {
+    border-color: #007bff; /* Cor da borda muda para azul */
+}
+
+/* Estilo para o input de arquivo invisível */
+input[type="file"] {
+    position: absolute; /* Posiciona o input sobre a caixa */
+    left: 0; /* Alinha o input à esquerda da caixa */
+    top: 0; /* Alinha o input ao topo da caixa */
+    width: 100%; /* Ocupa toda a largura da caixa */
+    height: 100%; /* Ocupa toda a altura da caixa */
+    opacity: 0; /* Torna o input invisível */
+    cursor: pointer; /* Exibe o cursor de mão, indicando que é clicável */
+}
+
+/* Estilo do botão de upload */
+.upload-btn {
+    background-color: #007bff; /* Cor de fundo azul */
+    color: white; /* Cor do texto em branco */
+    padding: 8px 16px; /* Espaçamento interno do botão */
+    border-radius: 6px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: 500; /* Peso da fonte */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+/* Alteração da cor do botão ao passar o mouse */
+.upload-btn:hover {
+    background-color: #0056b3; /* Cor do botão muda para um azul mais escuro */
+}
+
+/* Estilo do nome do arquivo exibido abaixo do botão */
+.file-name {
+    font-size: 16px; /* Tamanho da fonte do nome do arquivo */
+    color: #555; /* Cor cinza escura */
+    font-style: italic; /* Estilo itálico */
+}

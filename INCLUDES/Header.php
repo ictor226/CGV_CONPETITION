@@ -32,7 +32,7 @@
         <nav>
             <ul class="menu">
                 <li><a href="./index.php">Início</a></li>
-                <li><a href="#">Sobre</a></li>
+                <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#">Produtos</a></li>
             </ul>
 

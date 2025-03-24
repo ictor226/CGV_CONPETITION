@@ -50,7 +50,7 @@ include './INCLUDES/Header.php';
 
         <img src="./ASSETS/img/tela inicial/sobre nós.png" alt="" class="img-sobre">
         <div class="dit-h">
-            <h2 class="h2-tela04">SOBRE NÓS</h2>
+            <h2 class="h2-tela04" id="sobre">SOBRE NÓS</h2>
 
             <h6 id="h6-tela04">Somos a maior loja de Peças automotivas para super carros do mundo todo! Temos parceria com
                 uma das maiores preparadoras de carros de todos os tempos, a famosa G-POWER, todas as modificações com as
