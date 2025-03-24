@@ -65,9 +65,6 @@
 
         <li><a href="./cart.php"><i class="bi bi-cart"></i></a></li>
         <li><a href="./tela-login.php"><i class="bi bi-person-circle"></i></a></li>
-
-
-
     </nav>
 </header>
 
