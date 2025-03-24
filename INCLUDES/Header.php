@@ -23,10 +23,8 @@
     <link rel="stylesheet" href="./ASSETS/CSS/header.css">
     <link rel="stylesheet" href="./ASSETS/CSS/footer.css">
     <link rel="stylesheet" href="./ASSETS/CSS/info-produto.css">
-    <link rel="stylesheet" href="./ASSETS/css/bara-pesquisa">
 
 </head>
-
 
 <header>
     <nav>
