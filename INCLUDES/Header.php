@@ -24,7 +24,6 @@
     <link rel="stylesheet" href="./ASSETS/CSS/footer.css">
     <link rel="stylesheet" href="./ASSETS/CSS/info-produto.css">
     <link rel="stylesheet" href="./ASSETS/css/bara-pesquisa">
-    
 </head>
 
 <body>
@@ -33,7 +32,7 @@
             <ul class="menu">
                 <li><a href="./index.php">Início</a></li>
                 <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#">Produtos</a></li>
+                <li><a href="./INCLUDES/cards.php">Produtos</a></li>
             </ul>
 
             <ul class="menu-icones">

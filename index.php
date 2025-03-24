@@ -18,22 +18,12 @@ include './INCLUDES/Header.php';
         </main>
 
         <h1 class="produ">PRODUTOS EM DESTAQUE</h1>
+        <?php
 
-        <section class="produtos">
-        <a href="./info-produto.php"><div class="container">
-               <a href="./info-produto.php"><button class="btn-produto-card">
-                    <div class="item">
-                        <figure>
-                            <img src="./ASSETS/img/tela inicial/nitro.png" alt="KIT NITRO NOS COMPLETO" class="foto-produto">
-                            <figcaption>
-                                <h4 class="h4-tela02">KIT NITRO NOS COMPLETO</h4>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </button></a> 
-            </div>
+ include './INCLUDES/cards.php'
+?>
 
-        </section>
+       
 
         <hr class="hr-tela03">
         <section class="tela-envio">
