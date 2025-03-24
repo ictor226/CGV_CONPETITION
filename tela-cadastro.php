@@ -85,6 +85,15 @@
                     </select>
                 </div>
                 <div class="form-group">
+                    <label for="text"></label>
+                    <input type="text" id="rua" name="rua" placeholder="rua:" 
+                    
+                </div>
+                <div class="form-group">
+                    <label for="text"></label>
+                    <input type="text" id="Bairro" name="Bairro" placeholder="Bairro:" required>
+                </div>
+                <div class="form-group">
                     <label for="numero"></label>
                     <input type="number" id="numero" name="numero" placeholder="Número da casa:"
                         title="Escreva o Numero da casa" required>
