@@ -16,7 +16,7 @@
     <section class="itens-info-img">
         <div class="buttons-container">
             <span class="seta-right" id="seta-esquerda">&#9664;</span> <!-- Seta esquerda -->
-            <img src="./ASSETS/img/produtos/roda.png" alt="foto produto" id="figura">
+            <img src="./ASSETS/img/produtos/Jogo de rodas.png" alt="foto produto" id="figura">
             <span class="seta-left" id="seta-direita">&#9654;</span> <!-- Seta direita -->
         
             <div class="buttons-row">
@@ -76,7 +76,7 @@
             const botoesImg = document.querySelectorAll('.buttons-img');
             const setaEsquerda = document.getElementById('seta-esquerda');
             const setaDireita = document.getElementById('seta-direita');
-            const imagemOriginal = './ASSETS/img/produtos/roda.png'; // Caminho da imagem original
+            const imagemOriginal = './ASSETS/img/produtos/Jogo de rodas.png'; // Caminho da imagem original
             const imagensAlternativas = [
                 './ASSETS/img/produtos/rodaInfo1.png',
                 './ASSETS/img/produtos/rodaInfo2.png'
