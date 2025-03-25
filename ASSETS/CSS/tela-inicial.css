@@ -3,113 +3,115 @@
 /* Variáveis CSS para cores e fontes */
 /*inicio do produtos*/
 :root {
-  --bg-color: rgb(175, 168, 168);
-  --primary-color: #000;
-  --text-color: white;
-  --highlight-color: #f3f3f3;
-  --font-size-large: 50px;
-  --font-size-medium: 20px;
-  --font-size-small: 18px;
+  --bg-color: rgb(175, 168, 168); /* Define a variável de cor de fundo do site */
+  --primary-color: #000; /* Define a cor primária como preto */
+  --text-color: white; /* Define a cor do texto como branco */
+  --highlight-color: #f3f3f3; /* Define a cor de destaque como um tom claro de cinza */
+  --font-size-large: 50px; /* Define o tamanho da fonte grande */
+  --font-size-medium: 20px; /* Define o tamanho da fonte média */
+  --font-size-small: 18px; /* Define o tamanho da fonte pequena */
 }
 
 .background-site {
-  background-color: var(--bg-color);
+  background-color: var(--bg-color); /* Aplica a cor de fundo definida em :root no site */
 }
 
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; /* Para garantir que padding e borda não afetem o layout */
+  margin: 0; /* Remove as margens padrão de todos os elementos */
+  padding: 0; /* Remove o preenchimento (padding) padrão de todos os elementos */
+  box-sizing: border-box; /* Faz com que padding e borda sejam incluídos nas dimensões do elemento */
 }
 
 .video-inicio {
-  width: 100%;
-  height: 21%;
+  width: 100%; /* Faz o vídeo ocupar 100% da largura do elemento pai */
+  height: 21%; /* Define a altura do vídeo como 21% da altura do elemento pai */
 }
 
 .video-inicio video {
-  width: 100%;
-  height: 100%;
+  width: 100%; /* Faz o vídeo ocupar 100% da largura da sua caixa contêiner */
+  height: 100%; /* Faz o vídeo ocupar 100% da altura da sua caixa contêiner */
 }
 
 .produ {
-  text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 60px;
-  padding-bottom: 30px;
-  text-align: center;
-  font-weight: 700;
+  text-transform: uppercase; /* Transforma o texto para letras maiúsculas */
+  display: flex; /* Define o layout de flexbox */
+  justify-content: center; /* Centraliza os itens no eixo horizontal */
+  align-items: center; /* Centraliza os itens no eixo vertical */
+  padding-top: 60px; /* Adiciona 60px de preenchimento no topo do elemento */
+  padding-bottom: 30px; /* Adiciona 30px de preenchimento na parte inferior */
+  text-align: center; /* Centraliza o texto */
+  font-weight: 700; /* Aplica peso de fonte negrito */
 }
 
 /* Layout de containers de produtos */
 .container, .container02, .container03 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 50px;
-  margin-top: 80px;
-  position: relative;
-  
+  display: grid; /* Usar apenas grid para organizar os itens */
+  grid-template-columns: repeat(4, 1fr); /* Cria 4 colunas de tamanho igual */
+  gap: 10px; /* Define o espaçamento entre os itens */
+  margin-top: 80px; /* Adiciona 80px de margem no topo do contêiner */
+  position: relative; /* Permite posicionamento relativo se necessário */
+  gap: 100px;
 }
 
 .item, .item02, .item03 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 250px;
-  background-color: var(--primary-color);
-  color: var(--text-color);
-  padding: 14px;
-  border: 2px solid var(--text-color);
-  border-radius: 10px;
+  display: flex; /* Define o layout de flexbox para os itens */
+  justify-content: center; /* Centraliza o conteúdo no eixo horizontal */
+  align-items: center; /* Centraliza o conteúdo no eixo vertical */
+  width: 250px; /* Define a largura de cada item como 250px */
+  background-color: var(--primary-color); /* Aplica a cor de fundo preta para o item */
+  color: var(--text-color); /* Aplica a cor do texto branca para o item */
+  padding: 14px; /* Adiciona 14px de preenchimento dentro de cada item */
+  border: 2px solid var(--text-color); /* Define uma borda de 2px ao redor de cada item, com cor branca */
+  border-radius: 10px; /* Aplica bordas arredondadas de 10px */
 }
 
 .foto-produto {
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
+  width: 100%; /* Faz a imagem ocupar toda a largura disponível do contêiner */
+  height: 200px; /* Define uma altura fixa para todas as imagens */
+  object-fit: cover; /* Faz a imagem cobrir todo o espaço do contêiner, mantendo a proporção */
+  border-radius: 10px; /* Borda arredondada para a imagem */
+  margin-bottom: 10px; /* Espaço abaixo da imagem */
 }
 
-.btn-produto-card{
-  background-color: var(--primary-color);
-  border: #000;
-  cursor: pointer;
-  border-radius: 10px;
-  transition: 1s;
+.btn-produto-card {
+  background-color: var(--primary-color); /* Define a cor de fundo do botão como preto */
+  border: #000; /* Define a borda do botão como preta */
+  cursor: pointer; /* Muda o cursor para um ponteiro ao passar sobre o botão */
+  border-radius: 10px; /* Aplica bordas arredondadas de 10px no botão */
+  transition: 1s; /* Define a transição de 1 segundo para efeitos de hover */
 }
 
 .btn-produto-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao hover */
+  transform: scale(1.02); /* Ao passar o mouse, aumenta o tamanho do botão em 2% */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra ao botão ao passar o mouse */
 }
 
 @media (max-width: 768px) {
   .nav-inicio, .button-container {
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: column; /* Muda a direção do layout para coluna (vertical) em telas pequenas */
+    gap: 10px; /* Adiciona 10px de espaçamento entre os itens */
   }
 
   .container, .container02, .container03 {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Muda a direção do layout para coluna (vertical) em telas pequenas */
+    align-items: center; /* Centraliza os itens no eixo horizontal */
   }
 
   .item, .item02, .item03 {
-    width: 90%;
+    width: 90%; /* Define a largura dos itens como 90% da largura do elemento pai em telas pequenas */
   }
 
   .tela-envio {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Em telas pequenas, define a tela de envio para ter apenas uma coluna */
   }
 
   .h2-tela-03, .h4-tela-03 {
-    text-align: center;
+    text-align: center; /* Centraliza o texto nos títulos h2 e h4 nas telas pequenas */
   }
 }
+
 /*termino do produtos*/
 /* TELA 03 */
 .hr-tela03 {
