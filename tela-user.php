@@ -68,7 +68,7 @@ $conn->close();
             <p>Telefone</p>
             <input type="text" value="<?= isset($dados['telefone']) ? $dados['telefone'] : ''; ?>" disabled >
         </div>
-        <a href="" class="editar-user"><i class="bi bi-pencil-square"></i></a>
+        <a href="./edit-user.php" class="editar-user"><i class="bi bi-pencil-square"></i></a>
     </section>
 
     <section class="area-user">
