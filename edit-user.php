@@ -50,13 +50,11 @@ $conn->close();
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./ASSETS/CSS/edit-user.css">
 </head>
-
 <body>
     <section class="informaçoes-user">  
         <img src="../CGV_CONPETITION/ASSETS/img/login/patinho.jpg" alt="foto de perfil" class="foto-user">
@@ -64,41 +62,38 @@ $conn->close();
 
         <div class="color-text">
             <p>Nome</p>
-            <input type="text" value="<?= isset($dados['NomeSobrenome']) ? $dados['NomeSobrenome'] : ''; ?>"  >
+            <input type="text" name="NomeSobrenome" value="<?= isset($dados['NomeSobrenome']) ? $dados['NomeSobrenome'] : ''; ?>"  >
             <p>Telefone</p>
-            <input type="text" value="<?= isset($dados['telefone']) ? $dados['telefone'] : ''; ?>"  >
+            <input type="text" name="telefone" value="<?= isset($dados['telefone']) ? $dados['telefone'] : ''; ?>"  >
         </div>
-        <a href="./tela-user.php" class="editar-user">Voltar</i></a>
-        
+        <a href="./tela-user.php" class="editar-user">Voltar</a>
     </section>
 
-    <section class="area-user" >
-    
+    <form action="./edit-user-processar.php" method="post" class="area-user">
         <h1 class="title-users">Área de Usuario</h1>
 
         <div class="input-container">
             <div class="alinha-inputs">
-                <input  type="text" value="<?= isset($dados['NomeSobrenome']) ? $dados['NomeSobrenome'] : ''; ?>" placeholder="Nome e Sobrenome">
-                <input  type="text" value="<?= isset($dados['email']) ? $dados['email'] : ''; ?>" placeholder="Email">
-                <input type="text" value="<?= isset($dados['telefone']) ? $dados['telefone'] : ''; ?>"  >
-                <input type="text" value="<?= isset($dados['cep']) ? $dados['cep'] : ''; ?>"  >
-                <input  type="text" value="<?= isset($dados['cidade_estado']) ? $dados['cidade_estado'] : ''; ?>" placeholder="Estado">
+                <input type="text" name="NomeSobrenome" value="<?= isset($dados['NomeSobrenome']) ? $dados['NomeSobrenome'] : ''; ?>" placeholder="Nome e Sobrenome">
+                <input type="text" name="email" value="<?= isset($dados['email']) ? $dados['email'] : ''; ?>" placeholder="Email">
+                <input type="text" name="telefone" value="<?= isset($dados['telefone']) ? $dados['telefone'] : ''; ?>" >
+                <input type="text" name="cep" value="<?= isset($dados['cep']) ? $dados['cep'] : ''; ?>"  >
+                <input type="text" name="cidade_estado" value="<?= isset($dados['cidade_estado']) ? $dados['cidade_estado'] : ''; ?>" placeholder="Estado">
             </div>
             
             <div class="alinha-inputs-2">
-                <input  type="text" value="<?= isset($dados['cidade_estado']) ? $dados['cidade_estado'] : ''; ?>" placeholder="Cidade">
-                <input  type="text" value="<?= isset($dados['Bairro']) ? $dados['Bairro'] : ''; ?>" placeholder="Bairro">
-                <input  type="text" value="<?= isset($dados['rua']) ? $dados['rua'] : ''; ?>" placeholder="rua ">
-                <input  type="number" value="<?= isset($dados['numero']) ? $dados['numero'] : ''; ?>" placeholder="Número">
-                <input  type="text" value="<?= isset($dados['complemento']) ? $dados['complemento'] : ''; ?>" placeholder="Complemento">
-              
+                <input type="text" name="cidade_estado" value="<?= isset($dados['cidade_estado']) ? $dados['cidade_estado'] : ''; ?>" placeholder="Cidade">
+                <input type="text" name="bairro" value="<?= isset($dados['Bairro']) ? $dados['Bairro'] : ''; ?>" placeholder="Bairro">
+                <input type="text" name="rua" value="<?= isset($dados['rua']) ? $dados['rua'] : ''; ?>" placeholder="Rua">
+                <input type="number" name="numero" value="<?= isset($dados['numero']) ? $dados['numero'] : ''; ?>" placeholder="Número">
+                <input type="text" name="complemento" value="<?= isset($dados['complemento']) ? $dados['complemento'] : ''; ?>" placeholder="Complemento">
             </div>
-            
         </div>
-        <a href="./edit-user-processar.php" class="salvar-user">Salvar</i></a>
-        
-    </section>
-   
-</body>
 
+        <!-- Campo oculto para o id_cadastro -->
+        <input type="hidden" name="id_cadastro" value="<?= isset($dados['id_cadastro']) ? $dados['id_cadastro'] : ''; ?>">
+
+        <button type="submit" class="salvar-user">Salvar</button>
+    </form>
+</body>
 </html>
