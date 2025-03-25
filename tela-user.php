@@ -22,6 +22,7 @@ $sql = "
         area_de_cadastro.NomeSobrenome, 
         area_de_cadastro.telefone, 
         area_de_cadastro.rua, 
+        area_de_cadastro.Bairro, 
         area_de_cadastro.cep, 
         area_de_cadastro.numero, 
         area_de_cadastro.cidade_estado, 
@@ -37,8 +38,9 @@ $sql = "
 $result = $conn->query($sql);
 
 // Verifica se existem dados na consulta
+$dados = [];
 if ($result->num_rows > 0) {
-    // Pega a primeira linha de dados
+    // Armazena todos os resultados em um array
     $dados = $result->fetch_assoc();
 } else {
     echo "Nenhum dado encontrado.";
@@ -78,20 +80,19 @@ $conn->close();
             <div class="alinha-inputs">
                 <input disabled type="text" value="<?= isset($dados['NomeSobrenome']) ? $dados['NomeSobrenome'] : ''; ?>" placeholder="Nome e Sobrenome">
                 <input disabled type="text" value="<?= isset($dados['email']) ? $dados['email'] : ''; ?>" placeholder="Email">
-                <input type="text" value="<?= isset($dados['telefone']) ? $dados['telefone'] : ''; ?>" disabled >
-                <input type="text" value="<?= isset($dados['cep']) ? $dados['cep'] : ''; ?>" disabled >
+                <input disabled type="text" value="<?= isset($dados['telefone']) ? $dados['telefone'] : ''; ?>" placeholder="Telefone">
+                <input disabled type="text" value="<?= isset($dados['cep']) ? $dados['cep'] : ''; ?>" placeholder="CEP">
                 <input disabled type="text" value="<?= isset($dados['cidade_estado']) ? $dados['cidade_estado'] : ''; ?>" placeholder="Estado">
             </div>
             
             <div class="alinha-inputs-2">
                 <input disabled type="text" value="<?= isset($dados['cidade_estado']) ? $dados['cidade_estado'] : ''; ?>" placeholder="Cidade">
                 <input disabled type="text" value="<?= isset($dados['Bairro']) ? $dados['Bairro'] : ''; ?>" placeholder="Bairro">
-                <input disabled type="text" value="<?= isset($dados['rua']) ? $dados['rua'] : ''; ?>" placeholder="rua ">
+                <input disabled type="text" value="<?= isset($dados['rua']) ? $dados['rua'] : ''; ?>" placeholder="Rua">
                 <input disabled type="number" value="<?= isset($dados['numero']) ? $dados['numero'] : ''; ?>" placeholder="Número">
                 <input disabled type="text" value="<?= isset($dados['complemento']) ? $dados['complemento'] : ''; ?>" placeholder="Complemento">
             </div>
         </div>
-       
     </section>
 </body>
 
