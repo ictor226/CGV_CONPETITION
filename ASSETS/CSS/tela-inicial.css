@@ -54,6 +54,7 @@
   margin-top: 80px; /* Adiciona 80px de margem no topo do contêiner */
   position: relative; /* Permite posicionamento relativo se necessário */
   gap: 100px;
+  margin-left: 50px;
 }
 
 .item, .item02, .item03 {
@@ -197,4 +198,21 @@
   text-decoration: none;
   color: var(--text-color);
   line-height: 1.8;
+}
+
+
+.add-to-cart-button {
+  background-color: #28a745;  /* Cor de fundo verde */
+  color: white;               /* Cor do texto */
+  font-size: 16px;            /* Tamanho da fonte */
+  padding: 10px 20px;         /* Espaçamento interno */
+  border: none;               /* Sem borda */
+  border-radius: 5px;         /* Bordas arredondadas */
+  cursor: pointer;           /* Apontador de mão quando passar o mouse */
+  transition: background-color 0.3s ease; /* Transição suave na cor de fundo */
+  width: 250px;
+}
+
+.add-to-cart-button:hover {
+  background-color: #218838;  /* Cor de fundo mais escura quando passar o mouse */
 }
