@@ -31,7 +31,13 @@ $produtosExibidos = array_slice($resultado, 0, $limite);
             </a>
 
             <!-- Link para adicionar ao carrinho -->
-            <a href="cart.php?id=<?php echo $linha['id_produto']; ?>">Adicionar ao Carrinho</a>
+
+            <form action="cart.php" method="GET">
+    <input type="hidden" name="id" value="<?php echo $linha['id_produto']; ?>">
+    <button type="submit" class="add-to-cart-button">Adicionar ao Carrinho</button>
+</form>
+
+        
         </section>
     <?php } ?>
 </div>
