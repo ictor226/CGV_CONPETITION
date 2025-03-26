@@ -61,4 +61,7 @@ echo "<div class='total-carrinho'>
       </div>";
 
 echo "</section>";
+
+    include './includes/footer.php';
+    
 ?>

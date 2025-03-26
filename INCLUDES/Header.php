@@ -27,15 +27,20 @@
 </head>
 
 <body>
-    <header>
+<header>
         <nav>
+             <!-- Botão para abrir o menu oculto -->
+             <button class="menu-oculto" onclick="Javascript:abrirNav()">
+                <i class="bi bi-list"></i>
+            </button>
+
             <ul class="menu">
-                <li><a href="./index.php">Início</a></li>
+            <li><a href="./index.php">Início</a></li>
                 <li><a href="#sobre">Sobre</a></li>
-                <li><a href="">Produtos</a></li>
+                <li><a href="./produtos.php">Produtos</a></li>
             </ul>
 
-            <ul class="menu-icones">
+            <ul class="icones">
             <li>
     <a href="#" onclick="toggleSearch(event)">
         <i class="bi bi-search"></i>
@@ -50,11 +55,6 @@
                 <li><a href="./tela-login.php"><i class="bi bi-person-circle"></i></a></li>
             </ul>
 
-            <!-- Botão para abrir o menu oculto -->
-            <button class="menu-oculto" onclick="Javascript:abrirNav()">
-                <i class="bi bi-list"></i>
-            </button>
-
             <!-- Menu oculto -->
             <div id="offcanvas" class="menu-oculto">
                 <button class="fechar" onclick="Javascript:fecharNav()">
@@ -62,7 +62,7 @@
                 </button>
                 <li><a href="./index.php">Início</a></li>
                 <li><a href="#">Sobre</a></li>
-                <li><a href="#">Produtos</a></li>
+                <li><a href="./produtos.php">Produtos</a></li>
                 <hr>
                 <li><a href="./cad.php">Cadastrar Produto</a></li>
             </div>

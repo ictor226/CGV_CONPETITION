@@ -10,7 +10,7 @@
         list-style: none;
 }
 
-header nav {
+header nav{
     padding: 30px 50px;
     display: flex;
     justify-content: space-between;
@@ -42,18 +42,23 @@ header nav {
     border-radius: 10px;
 }
 
-.icones{
+.icones {
     display: flex;
     font-size: 30px;
-    gap:40px;
+    gap: 20px;  /* Reduzi o espaço entre os ícones */
+    justify-content: flex-end;  /* Alinha os ícones à direita */
+    margin-right: 20px;  /* Adiciona um pequeno espaçamento à direita para evitar que os ícones toquem a borda da tela */
 }
 
-.icones li a{
+.icones li a {
     color: white;
-    position: relative; /* Permite mover o ícone em relação à sua posição original */
-    right: -150px;
+    position: relative; /* Removi o right negativo */
+    transition: 0.3s;
 }
 
+.icones li a:hover {
+    color: #f1f1f1;
+}
 
 
 
