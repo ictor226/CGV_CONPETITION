@@ -16,7 +16,6 @@ echo "<section class='container-cart'>
         </div>
         <div class='carrinho-container'>";
 
-        
 foreach ($_SESSION['carrinho'] as $key => $item) {
     // Obtém a imagem do produto, ou uma imagem padrão
     // Verificando se a imagem existe ou se precisa usar a imagem padrão
@@ -37,7 +36,7 @@ foreach ($_SESSION['carrinho'] as $key => $item) {
     echo "<form action='atualizar_carrinho.php' method='POST'>
             <section class='carrinho'>
                 <div class='produtos-cart'>
-                    <img class='img-cart-1' src='./ASSETS/img/produtos/{$img_produto}' alt='{$item['nome_item']}'>
+                    
                     <div class='cart-texts'>
                         <p class='cart-text1'>{$item['nome_item']}</p>
                         <p class='cart-text1' style='font-size: 12px;'>versão 2024</p>
