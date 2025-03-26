@@ -1,0 +1,146 @@
+body {
+    background-color: #343434;
+}
+
+.container-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2%;
+    gap: 50px;
+}
+
+.text-cart {
+
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 32px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(0, 0, 0, 0.30);
+    font-family: "jacques Francois";
+    font-style: normal;
+    font-weight: 380;
+    line-height: normal;
+}
+
+.text-cart-1 {
+    color: #e20702;
+}
+
+
+
+.carrinho {
+    background-color: #515155;
+    height: auto;
+    width: 100%; /* Ajustando a largura dos itens do carrinho */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinha os itens no topo */
+    padding: 25px;
+    margin-top: 10px;
+    border-radius: 5px;
+  
+}
+.carrinho-container {
+    display: flex;
+    flex-direction: column; /* Exibe os itens em uma coluna */
+    justify-content: flex-start;
+    width: 70%;
+    gap: 30px; /* Espaçamento entre os itens */
+    
+}
+
+.produtos-cart {
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    background-color: #FFFFFF;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    overflow: hidden; /* Impede que o conteúdo ultrapasse o limite */
+    justify-content: space-between; /* Garantir que o conteúdo esteja bem distribuído */
+    gap: 50px;
+}
+
+.produtos-cart img {
+    margin-right: 20px; /* Espaçamento entre a imagem e o texto */
+    width: 120px; /* Definindo um tamanho fixo para a imagem */
+    height: 120px; /* Definindo um tamanho fixo para a imagem */
+    object-fit: cover; /* Ajuste da imagem para cobrir o tamanho sem distorcer */
+}
+
+.cart-texts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 10px;
+    flex: 1; /* Para garantir que o texto ocupe o restante do espaço disponível */
+   
+}
+
+.cart-text1 {
+    text-align: left;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.quantity-input {
+    width: 100px; /* Tamanho fixo da quantidade */
+    height: 35px;
+    border: none;
+    text-align: center;
+    margin-left: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.price-cart {
+    padding: 10px;
+    font-size: 18px;
+}
+
+.update-btn {
+    background-color: #e20702;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    
+}
+
+.update-btn:hover {
+    background-color: #d10600;
+}
+
+h1 {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: red;
+}
+
+h1 i {
+    font-size: 20px;
+}
+
+.total-carrinho {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+    padding-top: 20px;
+    
+}
+
+.total-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
