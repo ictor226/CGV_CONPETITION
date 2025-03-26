@@ -42,6 +42,7 @@
   padding-top: 60px; /* Adiciona 60px de preenchimento no topo do elemento */
   padding-bottom: 30px; /* Adiciona 30px de preenchimento na parte inferior */
   text-align: center; /* Centraliza o texto */
+  color: #f3f3f3;
   font-weight: 700; /* Aplica peso de fonte negrito */
 }
 
