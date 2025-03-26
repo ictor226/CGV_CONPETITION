@@ -27,7 +27,7 @@
 
 <br>
 
-- [ ] **rodapé** 
+- [x] **rodapé** 
 -  botoes das redes sociais (facebook, instagram e gmail)
 -  infos sobre suporte ao cliente (gmail, numero de telefone e Whatsapp)
 - links (politicas de privacidade, termos de uso politica de devolução e troca)
