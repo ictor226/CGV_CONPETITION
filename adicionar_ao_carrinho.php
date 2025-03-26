@@ -1,10 +1,4 @@
 <?php
-    include './INCLUDES/Header.php';
-
-?>
-<body>
-    <section class="container-cart">
-    <?php
 session_start();
 
 // Inclua o arquivo de conexão corretamente, fornecendo o caminho correto
@@ -49,11 +43,3 @@ if (isset($_GET['id'])) {
     echo "ID do produto não fornecido.";
 }
 ?>
-
-    </section>
-</body>
-<?php
-    include './INCLUDES/footer.php';
-?>
-<script src="./javaScript/icopesquisa.js"></script>
-<script src="./javaScript/offCanvas.js"></script>
