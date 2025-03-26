@@ -33,6 +33,8 @@ $lancamentoFormulario = $_POST['lancamento'];
 $versaoFormulario = $_POST['versao'];
 $quantidadeFormulario = $_POST['quantidade'];
 $imgFormulario1 = $_POST['imagem1'];
+$imgFormulario2 = $_POST['imagem2'];
+$imgFormulario3 = $_POST['imagem3'];
 
 // Conexão com o banco de dados
 $dsn = 'mysql:dbname=bd_cgv;host=127.0.0.1';
@@ -48,8 +50,8 @@ try {
 }
 
 // Preparando a query de inserção
-$insert = 'INSERT INTO cadastro_produto (nome_item, preco_item, parcelamento, versao, descricao, ano_lancamento, quantidade, img_produto1) 
-           VALUES (:nome_item, :preco_item, :parcelamento, :versao, :descricao, :ano_lancamento, :quantidade, :img_produto1)';
+$insert = 'INSERT INTO cadastro_produto (nome_item, preco_item, parcelamento, versao, descricao, ano_lancamento, quantidade, img_produto1, img_produto2, img_produto3) 
+           VALUES (:nome_item, :preco_item, :parcelamento, :versao, :descricao, :ano_lancamento, :quantidade, :img_produto1, :img_produto2, :img_produto3)';
 
 $box = $banco->prepare($insert);
 
@@ -62,7 +64,9 @@ $box->execute([
     ':descricao' => $descricaoFormulario,
     ':ano_lancamento' => $lancamentoFormulario,
     ':quantidade' => $quantidadeFormulario,
-    ':img_produto1' => $imgFormulario1
+    ':img_produto1' => $imgFormulario1,
+    ':img_produto2' => $imgFormulario2,
+    ':img_produto3' => $imgFormulario3
 ]);
 
 // Pegando o ID do último produto inserido
@@ -83,6 +87,8 @@ swal({
 
 // Exibindo os dados de depuração da execução
 var_dump($box);
+header('Location:index.php');
+    exit();
 ?>
 
 <div class="col-12">

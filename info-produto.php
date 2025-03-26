@@ -47,12 +47,12 @@
             <span class="seta-left" id="seta-direita">&#9654;</span> <!-- Seta direita -->
         
             <div class="buttons-row">
-                <button class="buttons-img" data-src="ASSETS/img/produtos/rodaInfo1.png">
-                    <img src="ASSETS/img/produtos/rodaInfo1.png" alt="">
+                <button class="buttons-img" data-src="./ASSETS/img/produtos-detalhes/<?php echo $resultado['img_produto2']; ?>">
+                    <img src="./ASSETS/img/produtos-detalhes/<?php echo $resultado['img_produto2']; ?>" alt="">
                 </button>
 
-                <button class="buttons-img" data-src="ASSETS/img/produtos/rodaInfo2.png">
-                    <img src="ASSETS/img/produtos/rodaInfo2.png" alt="">
+                <button class="buttons-img" data-src="./ASSETS/img/produtos-detalhes/<?php echo $resultado['img_produto3']; ?>">
+                    <img src="./ASSETS/img/produtos-detalhes/<?php echo $resultado['img_produto3']; ?>" alt="">
                 </button>
             </div>
         </div>
@@ -82,7 +82,7 @@
             <p><span class="vendido-por">vendido por: </span>cgv competition</p>
             
             <div class="form-group">
-                <button type="submit">Entrar</button>
+                <button type="submit">comprar</button>
             </div>
         </div>
     </section>
@@ -108,10 +108,11 @@
             const botoesImg = document.querySelectorAll('.buttons-img');
             const setaEsquerda = document.getElementById('seta-esquerda');
             const setaDireita = document.getElementById('seta-direita');
-            const imagemOriginal = './ASSETS/img/produtos/Jogo de rodas.png'; // Caminho da imagem original
+
+            // Adapte o caminho para o PHP para carregar as imagens corretamente
             const imagensAlternativas = [
-                './ASSETS/img/produtos/rodaInfo1.png',
-                './ASSETS/img/produtos/rodaInfo2.png'
+                './ASSETS/img/produtos-detalhes/<?php echo $resultado['img_produto2']; ?>',
+                './ASSETS/img/produtos-detalhes/<?php echo $resultado['img_produto3']; ?>'
             ];
             let indiceAtual = -1; // Índice da imagem atual (-1 significa que estamos na imagem original)
             let contadorCliqueDireita = 0; // Contador de cliques na seta direita
@@ -119,7 +120,7 @@
             // Função para atualizar a imagem principal
             function atualizarImagem() {
                 if (indiceAtual === -1) {
-                    imgPrincipal.src = imagemOriginal; // Se o índice for -1, mostra a imagem original
+                    imgPrincipal.src = './ASSETS/img/produtos/<?php echo $resultado['img_produto1']; ?>'; // Se o índice for -1, mostra a imagem original
                 } else {
                     imgPrincipal.src = imagensAlternativas[indiceAtual]; // Caso contrário, mostra a imagem alternativa
                 }
