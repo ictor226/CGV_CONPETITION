@@ -12,11 +12,38 @@
 
     <?php
     include './includes/header.php';
+
+    // Verifica se o ID do produto foi passado via URL
+    if (isset($_GET['id'])) {
+        $idProduto = $_GET['id']; // Pegando o ID do produto
+    } else {
+        // Caso não tenha um ID, redireciona ou exibe erro
+        echo "Produto não encontrado!";
+        exit;
+    }
+
+    $dsn = 'mysql:dbname=bd_cgv;host=127.0.0.1';
+    $user = 'root';
+    $password = '';
+
+    try {
+        $banco = new PDO($dsn, $user, $password);
+        // Consulta para pegar o produto pelo ID
+        $select = 'SELECT * FROM cadastro_produto WHERE id_produto = :id';
+        $stmt = $banco->prepare($select);
+        $stmt->bindParam(':id', $idProduto, PDO::PARAM_INT);
+        $stmt->execute();
+        $resultado = $stmt->fetch(PDO::FETCH_ASSOC); // Recupera os dados do produto específico
+    } catch (PDOException $e) {
+        echo 'Falha ao conectar com o banco de dados: ' . $e->getMessage();
+    }
     ?>
+
+    <?php if (!empty($resultado)): ?>
     <section class="itens-info-img">
         <div class="buttons-container">
             <span class="seta-right" id="seta-esquerda">&#9664;</span> <!-- Seta esquerda -->
-            <img src="./ASSETS/img/produtos/Jogo de rodas.png" alt="foto produto" id="figura">
+            <img src="./ASSETS/img/produtos/<?php echo $resultado['img_produto1']; ?>" alt="foto produto" id="figura">
             <span class="seta-left" id="seta-direita">&#9654;</span> <!-- Seta direita -->
         
             <div class="buttons-row">
@@ -28,13 +55,13 @@
                     <img src="ASSETS/img/produtos/rodaInfo2.png" alt="">
                 </button>
             </div>
-
         </div>
     </section>
 
     <section class="informacoes">
         <div class="container-info">
-            <h2>[<span class="sell-color">VENDA-SE</span>] Par Roda Taluda Nismo Jdm Aro 18x10.5 5x114 Preto Acetinado</h2>
+            <h2>[<span class="sell-color">VENDA-SE</span>] <?php echo $resultado['nome_item']; ?></h2>
+
             <p>versão</p>
             <select aria-label="Seleção de versão" class="versao">
                 <option value="2025">2025</option>
@@ -42,10 +69,11 @@
                 <option value="2023">2023</option>
                 <option value="2022">2022</option>
             </select>
-            <p class="preco-info">R$ 3.543,00
-                <br>
-                ou por 12x de R$ 1.099,17 sem juros
+            <p class="preco-info">
+                <?php echo '<h2>' . $resultado['parcelamento'] . '</h2>'; ?>
+                <?php echo '<h2>' . $resultado['preco_item'] . '</h2>'; ?> sem juros
             </p>
+
             <br>
             <p class="pronto-entrga">pronto para entrega</p>
             <br>
@@ -62,10 +90,14 @@
     <div class="descricao">
     <details class="details">
         <summary>Descrição</summary>
-        <p>Descrição do produto</p>
-        
+        <p><?php echo $resultado['descricao']; ?></p>
     </details>
     </div>
+
+    <?php else: ?>
+        <p>Produto não encontrado!</p>
+    <?php endif; ?>
+
     <?php
     include './includes/footer.php';
     ?>
