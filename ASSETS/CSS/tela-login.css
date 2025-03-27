@@ -19,21 +19,21 @@ body, .estrutura{
 
 .estrutura h2{
     font-size: 35px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .estrutura h4{
-    font-size: 15px;
-    margin-bottom: 15px;
+    font-size: 18px;
+    margin-bottom: 30px;
     font-weight: 700;
 }
 
 .estrutura{ /* esta criando o container do formulario, no caso o quadrado que fica no meio da tela*/
-    background: rgba(211, 211, 211, 0.74);
+    background: rgba(211, 211, 211, 0.774);
     border-radius: 12px;
     text-align: center;
-    width: 500px;
-    height: 450px;
+    width: 700px;
+    height: 500px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -48,39 +48,22 @@ body, .estrutura{
 }
 
 .form-group button[type="submit"] {
-    padding: 10px 50px;
+    padding: 10px 70px;
     border: none;
-    margin-top: 5px;
     text-transform: uppercase;
     border-radius: 10px;
     background-color: #0c9100;
     color: white;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-.form-group button[type="submit"]:hover {
-    background-color: #0a7400;
-}
 
 .form-group {
-    margin-bottom: 5px; /* Espaço entre os campos */
+    margin-bottom: 10px; /* Espaço entre os campos */
 }
 
-.login-google{
-    color: rgb(243, 243, 243);
-    font-size: 35px;
-}
-
-.login-facebook{
-    color: rgb(0, 12, 187);
-    font-size: 35px;
-}
-
-.login-facebook, .login-google{
-    margin: 6px;
-}
 
 .editHr{ /*tira a linha de separacao da escrita "ou continue com:" */
     display: flex; 
@@ -101,4 +84,12 @@ a {
     font-size: 40px;
     margin-right: 1450px;
     margin-top: -200px;
+}
+
+.form-group span {
+    font-size: 16px;
+    position: absolute;
+    margin-top: 12px;
+    margin-left: 5px;
+    white-space: nowrap; /* Impede quebra de linha */
 }

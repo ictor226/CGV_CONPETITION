@@ -20,10 +20,10 @@ header nav{
 
 .menu{
     display: flex;
-    gap:50px;
+    gap: 60px;
     font-size: 22px;
     position: relative;
-    right: -55px;
+    right: -100px;
 }
 
 .menu li a{
@@ -45,7 +45,7 @@ header nav{
 .icones {
     display: flex;
     font-size: 30px;
-    gap: 20px;  /* Reduzi o espaço entre os ícones */
+    gap: 50px;  /* Reduzi o espaço entre os ícones */
     justify-content: flex-end;  /* Alinha os ícones à direita */
     margin-right: 20px;  /* Adiciona um pequeno espaçamento à direita para evitar que os ícones toquem a borda da tela */
 }

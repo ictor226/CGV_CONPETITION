@@ -24,6 +24,7 @@ body, .estrutura{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    
 }
 
 .estrutura h2{
@@ -33,20 +34,21 @@ body, .estrutura{
 
 .estrutura h4{
     margin-bottom: 20px;
+    font-size: 18px;
 }
 
 .estrutura{ /* esta criando o container do formulario, no caso o quadrado que fica no meio da tela*/
-    background: rgba(211, 211, 211, 0.74);
+    background: rgba(211, 211, 211, 0.774);
     border-radius: 12px;
     text-align: center;
-    width: 600px;
-    height: 700px;
+    width: 850px;
+    height: 750px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 .login-form input{
     width: 300px;
-    padding: 5px;
+    padding: 7px;
     margin-bottom: 10px;
     margin-top: 5px;
     border-radius: 5px;
@@ -57,7 +59,6 @@ body, .estrutura{
 .form-group button[type="submit"] {
     padding: 10px 50px;
     border: none;
-    margin-top: 5px;
     text-transform: uppercase;
     border-radius: 10px;
     background-color: #0c9100;
@@ -75,28 +76,6 @@ body, .estrutura{
     margin-bottom: 5px; /* Espaço entre os campos */
 }
 
-.editHr{ /*tira a linha de separacao da escrita "ou continue com:" */
-    display: flex; 
-    align-items: center;
-    font-size: 18px;
-    font-weight: 700;
-    margin-top: 1px;
-    margin-bottom: 10px;
-}
-
-.login-google{
-    color: rgb(243, 243, 243);
-    font-size: 35px;
-}
-
-.login-facebook{
-    color: rgb(0, 12, 187);
-    font-size: 35px;
-}
-
-.login-facebook, .login-google{
-    margin: 6px;
-}
 
 a {
     color: #0066cc; /* Altera a cor do link */
@@ -107,4 +86,12 @@ a {
     display: flex;
     font-size: 40px;
     margin-right: 1450px;
+}
+
+.form-group span {
+    font-size: 16px;
+    position: absolute;
+    margin-top: 12px;
+    margin-left: 5px;
+    white-space: nowrap; /* Impede quebra de linha */
 }
