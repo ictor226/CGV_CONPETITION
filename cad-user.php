@@ -21,18 +21,21 @@ $cepItemFormulario          = $_POST['cep'];
 $estadoItemFormulario       = $_POST['estado'];
 $numeroItemFormulario       = $_POST['numero'];
 $complementoItemFormulario  = $_POST['complemento'];
-$imgFormulario1             = $_POST['img_perfil'];
 
 // Tratamento para garantir que Bairro e Rua não sejam NULL
 $bairroItemFormulario       = !empty($_POST['Bairro']) ? $_POST['Bairro'] : 'Desconhecido';
 $ruaItemFormulario          = !empty($_POST['rua']) ? $_POST['rua'] : 'Desconhecida';
 
+// Definindo a variável $imgFormulario1, caso não haja uma imagem enviada
+$imgFormulario1 = null; // ou atribua um valor caso necessário
+
 // Inserção dos dados na tabela 'area_de_cadastro'
-$insert = 'INSERT INTO area_de_cadastro (NomeSobrenome, telefone, cep, cidade_estado, numero, complemento, img_perfil, bairro, rua) 
-           VALUES (:NomeSobrenome, :telefone, :cep, :cidade_estado, :numero, :complemento, :img_perfil, :bairro, :rua)';
+$insert = 'INSERT INTO area_de_cadastro (NomeSobrenome, telefone, cep, cidade_estado, numero, complemento, bairro, rua) 
+           VALUES (:NomeSobrenome, :telefone, :cep, :cidade_estado, :numero, :complemento, :bairro, :rua)';
 
 $box = $banco->prepare($insert);
 
+// Executando a inserção
 $box->execute([
     ':NomeSobrenome' => $nomeFormulario,   
     ':telefone' => $telefoneItemFormulario,
@@ -40,7 +43,6 @@ $box->execute([
     ':cidade_estado' => $estadoItemFormulario,
     ':numero' => $numeroItemFormulario,
     ':complemento' => $complementoItemFormulario,
-    ':img_perfil' => $imgFormulario1,
     ':bairro' => $bairroItemFormulario,  // Passando valor para o Bairro
     ':rua' => $ruaItemFormulario        // Passando valor para a Rua
 ]);
@@ -58,6 +60,8 @@ echo $id_cad;
 
 // Debugging para verificar se a execução foi bem-sucedida
 var_dump($box);
+header('Location:tela-user.php');
+    exit();
 ?>
 
 <div class="col-12">
