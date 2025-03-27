@@ -83,7 +83,7 @@ $conn->close();
             
             <div class="alinha-inputs-2">
                 <input type="text" name="cidade_estado" value="<?= isset($dados['cidade_estado']) ? $dados['cidade_estado'] : ''; ?>" placeholder="Cidade">
-                <input disabled type="text" value="<?= isset($dados['Bairro']) ? $dados['Bairro'] : ''; ?>" placeholder="Bairro">
+                <input type="text" name="bairro" value="<?= isset($dados['Bairro']) ? $dados['Bairro'] : ''; ?>" placeholder="Bairro">
                 <input type="text" name="rua" value="<?= isset($dados['rua']) ? $dados['rua'] : ''; ?>" placeholder="Rua">
                 <input type="number" name="numero" value="<?= isset($dados['numero']) ? $dados['numero'] : ''; ?>" placeholder="Número">
                 <input type="text" name="complemento" value="<?= isset($dados['complemento']) ? $dados['complemento'] : ''; ?>" placeholder="Complemento">
