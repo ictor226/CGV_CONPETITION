@@ -63,11 +63,9 @@
             <h2>[<span class="sell-color">VENDA-SE</span>] <?php echo $resultado['nome_item']; ?></h2>
 
             <p>versão</p>
-            <select aria-label="Seleção de versão" class="versao">
-                <option value="2025">2025</option>
-                <option value="2024">2024</option>
-                <option value="2023">2023</option>
-                <option value="2022">2022</option>
+            <select aria-label="Seleção de versão" class="versao" disabled>
+                <option value=" <?php echo $resultado['versao']; ?>"><?php echo $resultado['versao']; ?></option >
+               
             </select>
             <p class="preco-info">
                 <?php echo '<h2>' . $resultado['parcelamento'] . '</h2>'; ?>

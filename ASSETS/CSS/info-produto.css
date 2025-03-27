@@ -182,3 +182,48 @@ h2 {
     justify-content: center;
     align-items: center;
 }
+
+/* Ajuste na imagem principal */
+#figura {
+    width: 330px;  /* Largura fixa para a imagem principal */
+    height: 330px; /* Altura fixa para a imagem principal */
+    margin: 0 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorção */
+}
+
+/* Ajuste nas imagens dentro dos botões */
+.buttons-img img {
+    width: 100%;   /* Faz a imagem ocupar toda a largura do botão */
+    height: 100%;  /* Faz a imagem ocupar toda a altura do botão */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorção */
+    border-radius: 7px;
+}
+
+/* Ajustes responsivos para imagens */
+@media (max-width: 768px) {
+    /* Para telas menores, podemos ajustar o tamanho das imagens */
+    #figura {
+        width: 250px;
+        height: 250px;
+    }
+
+    .buttons-img {
+        width: 180px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Para telas muito pequenas, ajustamos ainda mais o tamanho das imagens */
+    #figura {
+        width: 200px;
+        height: 200px;
+    }
+
+    .buttons-img {
+        width: 150px;
+        height: 170px;
+    }
+}
