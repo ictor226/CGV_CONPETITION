@@ -1,7 +1,8 @@
 function verificarNome() {
     const nome = document.getElementById("nome").value;
     const nomeError = document.getElementById('mensagem-erro-nome');
-    
+    const regexLetras = /^[a-zA-Z\s]+$/; // Expressão regular para validar apenas letras e espaços
+
     if (nome === "") {
         nomeError.textContent = "Não pode estar vazio!";
         nomeError.style.color = "red";
@@ -14,11 +15,16 @@ function verificarNome() {
         nomeError.textContent = "Ter no máximo 60 caracteres.";
         nomeError.style.color = "red";
         document.getElementById("nome").focus();
+    } else if (!regexLetras.test(nome)) {
+        nomeError.textContent = "Somente letras são permitidos.";
+        nomeError.style.color = "red";
+        document.getElementById("nome").focus();
     } else {
         nomeError.textContent = "OK";
         nomeError.style.color = "green";
     }
 }
+
 
 function verificarEmail() {
     const email = document.getElementById('email').value;
@@ -29,7 +35,8 @@ function verificarEmail() {
         emailError.textContent = "E-mail é obrigatório.";
         emailError.style.color = "red";
         document.getElementById("email").focus();
-    } else if (email.length < 5) {
+    } 
+    else if (email.length < 5) {
         emailError.textContent = "Ter no mínimo 5 caracteres.";
         emailError.style.color = "red";
         document.getElementById("email").focus();
@@ -67,15 +74,11 @@ function validaSenha() {
         senhaError.style.color = "red";
         document.getElementById("senha").focus();
     } else if (!regexMaiusculo.test(senha)) {
-        senhaError.textContent = "Deve conter pelo menos uma letra maiúscula";
+        senhaError.textContent = "Deve ter no minimo uma letra maiúscula";
         senhaError.style.color = "red";
         document.getElementById("senha").focus();
-    } else if (!regexEspecial.test(senha)) {
-        senhaError.textContent = "Deve conter pelo menos um caractere especial";
-        senhaError.style.color = "red";
-        document.getElementById("senha").focus();
-    } else if (!regexNumero.test(senha)) {
-        senhaError.textContent = "Deve conter pelo menos um número";
+    }  else if (!regexNumero.test(senha)) {
+        senhaError.textContent = "Deve ter no minmimo um número";
         senhaError.style.color = "red";
         document.getElementById("senha").focus();
     } else {
@@ -84,12 +87,18 @@ function validaSenha() {
     }
 }
 
+// Função para aplicar a máscara no telefone
 function aplicarMascaraTelefone(event) {
     let input = event.target;
     let valor = input.value;
 
     // Remove todos os caracteres não numéricos
     valor = valor.replace(/\D/g, '');
+
+    // Limita a 11 números (máximo)
+    if (valor.length > 11) {
+        valor = valor.substring(0, 11); // Limita o valor a 11 dígitos
+    }
 
     // Aplica a máscara (formato: (XX)XXXXX-XXXX)
     if (valor.length <= 10) {
@@ -102,13 +111,13 @@ function aplicarMascaraTelefone(event) {
 }
 
 // Validação do Telefone com Máscara
-function validateTelefone() {
+function validatelefone() {
     const telefone = document.getElementById('telefone').value;
     const mensagemErroTelefone = document.getElementById('mensagem-erro-telefone');
 
-    // Valida se o telefone tem 14 dígitos
+    // Valida se o telefone tem 14 caracteres, considerando a máscara
     if (telefone.length !== 14) {
-        mensagemErroTelefone.textContent = 'Telefone inválido! Deve ter 14 caracteres.';
+        mensagemErroTelefone.textContent = 'Telefone inválido!';
         mensagemErroTelefone.style.color = 'red';
         document.getElementById("telefone").focus();
     } else {
@@ -117,6 +126,8 @@ function validateTelefone() {
     }
 }
 
+
+// Função para aplicar a máscara no CEP
 function aplicarMascaraCep(event) {
     let input = event.target;
     let valor = input.value;
@@ -139,17 +150,49 @@ function aplicarMascaraCep(event) {
     input.value = valor;
 }
 
+// Função para validar o CEP
 function validaCep() {
     const cep = document.getElementById('cep').value;
     const mensagemCep = document.getElementById('mensagem-erro-cep');
     
-    if (cep.length !== 8) {
+    // Remove a máscara, deixando apenas os números
+    const cepNumerico = cep.replace(/\D/g, ''); 
+
+    // Verifica se o CEP tem exatamente 8 números
+    if (cepNumerico.length !== 8) {
         mensagemCep.textContent = "CEP deve ter exatamente 8 dígitos.";
         mensagemCep.style.color = "red";
         document.getElementById("cep").focus();
     } else {
         mensagemCep.textContent = "OK";
         mensagemCep.style.color = "green";
+    }
+}
+
+function validaNumero() {
+    const numero = document.getElementById('numero').value;
+    const mensagemErroNumero = document.getElementById('mensagem-erro-numero');
+    const campoNumero = document.getElementById('numero');
+
+    // Limpar mensagem de erro ao começar a digitar
+    mensagemErroNumero.textContent = '';
+
+    // Verifica se o número está vazio
+    if (numero.length === 0) {
+        mensagemErroNumero.textContent = 'Insira o número da casa.';
+        mensagemErroNumero.style.color = 'red';
+        campoNumero.focus(); // Coloca o foco no campo, apenas uma vez
+    }
+    // Verifica se o número tem mais de 5 caracteres
+    else if (numero.length > 5) {
+        mensagemErroNumero.textContent = 'O número não pode ter mais de 5 dígitos.';
+        mensagemErroNumero.style.color = 'red';
+        campoNumero.focus(); // Foca no campo apenas quando a validação for inválida
+    }
+    // Número válido (com 1 a 5 caracteres)
+    else {
+        mensagemErroNumero.textContent = "OK";
+        mensagemErroNumero.style.color = "green";
     }
 }
 
@@ -169,22 +212,4 @@ function aplicarMascaraNumero(event) {
     input.value = valor;
 }
 
-// Validação do Número da Casa
-function validaNumero() {
-    const numero = document.getElementById('numero').value;
-    const mensagemErroNumero = document.getElementById('mensagem-erro-numero');
 
-    // Verifica se o número tem entre 1 e 5 caracteres
-    if (numero.length === 0) {
-        mensagemErroNumero.textContent = 'Insira o número da casa.';
-        mensagemErroNumero.style.color = 'red';
-        document.getElementById("numero").focus();
-    } else if (numero.length > 5) {
-        mensagemErroNumero.textContent = 'O número não pode ter mais de 5 dígitos.';
-        mensagemErroNumero.style.color = 'red';
-        document.getElementById("numero").focus();
-    } else {
-        mensagemErroNumero.textContent = "OK";
-        mensagemErroNumero.style.color = "green";
-    }
-}

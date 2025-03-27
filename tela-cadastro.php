@@ -50,7 +50,7 @@
                 </div>
                 <div class="form-group">
 
-                    <input type="text" id="cep" class="form-control" name="cep" placeholder="cep:" onblur="validacep()" oninput="aplicarMascaraCep(event)" required>
+                    <input type="text" id="cep" class="form-control" name="cep" placeholder="cep:" onblur="validaCep()" oninput="aplicarMascaraCep(event)" required>
                     <span id="mensagem-erro-cep"></span>
                 </div>
                 <div class="form-group">
@@ -96,10 +96,10 @@
                     <input type="text" class="form-control" id="Bairro" name="Bairro" placeholder="Bairro:" required>
                 </div>
                 <div class="form-group">
+                <input type="text" class="form-control" id="numero" name="numero" onblur="validaNumero()" oninput="aplicarMascaraNumero(event)" 
+                placeholder="Número Casa:" required>
+                <span id="mensagem-erro-numero"></span>
 
-                    <input type="number" class="form-control" id="numero" name="numero" onblur="validanumero()" oninput="aplicarMascaraNumero(event)"
-                        placeholder="Numero Casa:">
-                    <span id="9"></span>
                 </div>
                 <div class="form-group">
 
