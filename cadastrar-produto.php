@@ -85,10 +85,9 @@ swal({
 });
 </script>';
 
-// Exibindo os dados de depuração da execução
-var_dump($box);
-header('Location:index.php');
-    exit();
+echo '<script>
+window.location.replace("cad.php");
+</script>';
 ?>
 
 <div class="col-12">
