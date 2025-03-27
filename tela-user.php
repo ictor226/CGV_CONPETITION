@@ -1,6 +1,11 @@
 <?php
 include './INCLUDES/Header.php';
 
+?>
+
+
+<?php
+
 // Configuração da conexão com o banco de dados
 $servername = "localhost";
 $username = "root"; // Seu usuário do banco de dados
@@ -51,7 +56,7 @@ $conn->close();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
