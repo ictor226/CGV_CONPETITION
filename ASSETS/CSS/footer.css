@@ -11,11 +11,45 @@
 }
 
 /* Footer */
-.img-rodape-02 {
-    width: 100%;
-    height: 400px;
-    margin-top: 140px;
-    object-fit: cover; 
+
+/* Estilo para o campo de e-mail */
+footer .newsletter input.email-input {
+    padding: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 80%;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    margin-right: 10px;
+    transition: border-color 0.3s ease;
+}
+
+/* Efeito de foco no campo de e-mail */
+footer .newsletter input.email-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Estilo para o botão de envio */
+footer .newsletter button.submit-btn {
+    padding: 15px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito de hover no botão */
+footer .newsletter button.submit-btn:hover {
+    background-color: #0056b3;
 }
 
 .info {
@@ -26,6 +60,7 @@
     color: #fff;  /* Usando hexadecimal para simplificar */
     line-height: 1.8;
     padding: 0 80px;    
+    
 }
 
 .info h5, 
