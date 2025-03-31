@@ -46,7 +46,7 @@
 
 
 
--[ ] **tela Cadastro**
+- [ ] **tela Cadastro**
 -  icone -> icone de voltar para a tela inicial (fica na esquerda)
 - formulario de nome e sobrenome (validação de só letras)
 - formulario de Email (validação de email correto)    
@@ -61,7 +61,7 @@
 
 <br>
 
--[ ] **tela Usuario**
+- [ ] **tela Usuario**
 - icone de voltar para a tela inicial (na esquerda)
 - formulario de nome e sobrenome (validação de só letras)    
 - formulario de Email (validação de email correto) 
@@ -74,12 +74,12 @@
 
 <br>
 
--[ ] **tela produto**
+- [ ] **tela produto**
 - 4 colunas com cards de produtos e sendo clicaveis (vai mandar para a tela de cada produto)
 
 <br>
 
--[ ] **tela cadastro de produtos**
+- [ ] **tela cadastro de produtos**
 - formulario de nome do produto (validação de nao ter caracteres especiais)
 - formulario de preço (validação de nao ter letras)
 - formulario de parcelamento (validação de quantidade maxima de parcelas)
