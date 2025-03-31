@@ -1,90 +1,105 @@
-# ***tela inicial*** 
-        
-- [ ] **barra de navegação -> 4 icones**
-<br>
-- 1 icone de menu com outras infos quando clicar nele
-- 1 icone de barra de pesquisa
-- 1 icone de carrinho, para ver os produtos adicionados
-- 1 icone   de login para ver a sua conta, login e cadstro
+# **CGV COMPETITION**
+
+- [x] **Barra de Navegação** (com 4 ícones)  
+    - Ícone de menu: Exibe informações adicionais ao ser clicado.  
+    - Ícone de barra de pesquisa: Para procurar produtos.  
+    - Ícone de carrinho: Exibe os produtos adicionados ao carrinho.  
+    - Ícone de login: Acessa a conta do usuário, com opções de login e cadastro.  
+
+<br>  
+
+- [x] **Sessão de Produtos**  
+    - Título: "Produtos em Destaque"  
+    - Exibição de três colunas com cards de produtos, clicáveis, redirecionando para a página de detalhes do produto.  
+    - Cada card de produto inclui um botão para adicionar ao carrinho.  
+
+<br>  
+
+- [x] **Seção de Envio**  
+    - Título: "Envio Imediato!"  
+    - Texto explicativo sobre o envio rápido de produtos.  
+
+<br>  
+
+- [x] **Seção "Sobre Nós"**  
+    - Título: "Sobre Nós"  
+    - Texto breve sobre a empresa e a loja.  
+
+<br>  
+
+- [x] **Rodapé**  
+    - Botões de redes sociais (Facebook, Instagram e Gmail).  
+    - Informações de suporte ao cliente (Gmail, número de telefone e WhatsApp).  
+    - Links importantes (Política de Privacidade, Termos de Uso, Política de Devolução e Troca).  
+    - Seção para notícias e atualizações da loja (com opção de cadastro de e-mail para receber notificações).  
+
+<br>  
+
+- [ ] **Tela de Login/Validação**  
+    - Ícone de seta para voltar à tela inicial (localizado à esquerda).  
+    - Formulário de email (com validação de formato correto e email cadastrado).  
+    - Formulário de senha (com validação de senha correta).  
+    - Ícone de login via Google (redireciona para a tela de contas Google).  
+    - Ícone de login via Facebook (redireciona para a tela de contas Facebook).  
+
+<br>  
+
+- [ ] **Tela de Cadastro/Validação** (tela-cadastro.php)  
+    - Ícone de seta para voltar à tela inicial (localizado à esquerda).  
+    - Formulário de nome e sobrenome (validação para permitir apenas letras).  
+    - Formulário de email (validação de formato correto).  
+    - Formulário de senha (validação de senha forte: mínimo 8 caracteres, 1 letra maiúscula, 1 caractere especial).  
+    - Formulário de telefone (validação de número de telefone válido com máscara).  
+    - Formulário de CEP (validação de CEP válido com máscara).  
+    - Formulário de cidade (validação para cidade existente).  
+    - Formulário de rua (validação de comprimento máximo de caracteres).  
+    - Formulário de número da casa (apenas números).  
+    - Formulário de complemento.  
+    - Botão "Cadastrar" (habilitado apenas quando todos os campos estiverem preenchidos corretamente).  
+
+<br>  
+
+- [ ] **Tela do Usuário**  
+    - Ícone de seta para voltar à tela inicial (localizado à esquerda).  
+    - Formulário de nome e sobrenome (validação para permitir apenas letras).  
+    - Formulário de email (validação de formato correto).  
+    - Formulário de senha (validação de senha correta).  
+    - Formulário de telefone (validação de número de telefone válido).  
+    - Formulário de cidade (validação para cidade existente).  
+    - Formulário de rua (validação de rua existente).  
+    - Formulário de CEP (validação de correspondência com outros campos).  
+    - Botão "Salvar Mudanças" (habilitado apenas se houver alterações nos formulários).  
+
+<br>  
+
+- [x] **Tela de Produto**  
+    - Exibição de 4 colunas com cards de produtos, clicáveis, redirecionando para a página de detalhes de cada produto.  
+    - Cada card possui um botão para adicionar ao carrinho.  
+
+<br>  
+
+- [x] **Tela de Cadastro de Produtos**  
+    - Formulário de nome do produto (validação para garantir que não haja caracteres especiais).  
+    - Formulário de preço (validação para garantir que não haja letras).  
+    - Formulário de parcelamento (validação para garantir quantidade máxima de parcelas).  
+    - Formulário de versão do produto.  
+    - Formulário de descrição do produto.  
+    - Botão "Cadastrar Produto" (habilitado quando todos os campos estiverem preenchidos corretamente).  
 
 <br>
-       
-- [ ]   **sessão de produtos**  
--  1 titulo "Produtos em destaque"
--  três colunas de cards de cada produto, sendo clicaveis e indo para a pagina de cada um deles e um botão de carrinho   
-<br>
 
-
-- [ ] **section envio**  
--  titulo "Envio imediato!"
--  mini-texto sobre o nosso envio rapido
-
-<br>
-
-- [ ] **section sinopse**  
-- titulo "Sobre nós"
-- mini-texto sobre a nossa loja
+- [x] **Tela de Informações do Produto**  
+    - 3 imagens clicáveis que mudam conforme a seleção.  
+    - Nome do item.  
+    - Preço do item.  
+    - Versão do item.  
+    - Opções de parcelamento do item.  
+    - Botão de "Adicionar ao Carrinho".  
+    - Menu de descrição com mais informações sobre o produto.
 
 <br>
 
-- [x] **rodapé** 
--  botoes das redes sociais (facebook, instagram e gmail)
--  infos sobre suporte ao cliente (gmail, numero de telefone e Whatsapp)
-- links (politicas de privacidade, termos de uso politica de devolução e troca)
-- noticias e atualizações da loja (colocar email para receber notificações)
-
-<br>
-
-- [ ] **tela login/validação**
-- icone de seta para voltar para a tela inicial (vai ficar na esquerda)
-- formulario de email (tendo validação se o email esta correto e cadastrado)
-- formulario de senha (validação se é valido a senha e se esta correta)
-- icone do google para fazer login, ele manda na tela do google contas
-- icone do facebook para faer login, ele manda na tela do facebook contas
-  
-
-<br>
-
-
-
-- [ ] **tela Cadastro/validação tela-cadastro.php**
--  icone -> icone de voltar para a tela inicial (fica na esquerda)
-- formulario de nome e sobrenome (validação de só letras)
-- formulario de Email (validação de email correto)    
-- formulario de senha (validação de senha correta, minimo 8 caracteres, 1 letra maiuscula, 1 caractere especial)
-- formulario de Telefone (validação de telefone existente com mascara)
-- formulario de cep (validação de cep e com mascara)
-- formulario de cidade (validação de cidade existente)
-- formulario de rua (validação de maximo de caracteres)
-- formulario de numero de casa (apenas numero)
-- formulario de cep (validação se o cep bate com as outras infos)
-- formulario de complemento 
-- botão de se CADASTRAR se os formularios estiverem tudo certo
-
-<br>
-
-- [ ] **tela Usuario**
-- icone de voltar para a tela inicial (na esquerda)
-- formulario de nome e sobrenome (validação de só letras)    
-- formulario de Email (validação de email correto) 
-- formulario de senha (validação de senha correta)
-- formulario de Telefone (validação de telefone existente)
-- formulario de cidade (validação de cidade existente)
-- formulario de rua (validação de rua existente)
-- formulario de cep (validação se o cep bate com as outras infos)
-- botão de SALVAR MUDANÇAS se os formularios forem alterados 
-
-<br>
-
-- [ ] **tela produto**
-- 4 colunas com cards de produtos e sendo clicaveis (vai mandar para a tela com mais informaçoes de cada produto e adicionar ao carrinho)
-
-<br>
-
-- [ ] **tela cadastro de produtos**
-- formulario de nome do produto (validação de nao ter caracteres especiais)
-- formulario de preço (validação de nao ter letras)
-- formulario de parcelamento (validação de quantidade maxima de parcelas)
-- formulario de versão do produto 
-- formulario de decrição
-- botão de cadastrar produto
+- [ ] **Área de Usuário**  
+    - A área do usuário irá listar as informações do usuário cadastrado.  
+    - Também haverá a opção de sair da conta cadastrada.  
+    - E uma opção para editar as informações.
