@@ -68,8 +68,7 @@ $conn->close();
 </head>
 <body>
     <section class="informaçoes-user">  
-        <img src="../CGV_CONPETITION/ASSETS/img/login/patinho.jpg" alt="foto de perfil" class="foto-user">
-        <h1 class="perfil-text">Foto De Perfil</h1>
+       
 
         <div class="color-text">
             <p>Nome</p>
