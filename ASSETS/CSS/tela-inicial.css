@@ -150,6 +150,7 @@
 .img-sobre {
   width: 100%;
   height: 21%;
+
 }
 
 .hr-tela04 {
@@ -174,6 +175,7 @@
   align-items: center;
   width: 1000px;
   margin-left: 150px;
+  margin-bottom: -56px;
 }
 
 /* TELA 05 */

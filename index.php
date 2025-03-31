@@ -33,7 +33,6 @@ include './INCLUDES/Header.php';
                 compra de cada item, isso tudo para passar confiança para os nossos clientes, e para mostrar a nossa
                 qualidade impecavél desde o site, até mesmo no item chego em casa!
             </h4>
-
         </section>
         <!-- tla 04 -->
         <hr class="hr-tela04">

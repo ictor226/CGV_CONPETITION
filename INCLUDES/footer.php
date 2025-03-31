@@ -12,6 +12,7 @@
         <div class="customer-support">
             <h5>SUPORTE AO CLIENTE</h5>
             <a href="#" class="support-link"><i class="bi bi-chat-left-dots-fill"></i> Entre em contato</a>
+            <br>
             <a href="#" class="support-link"><i class="bi bi-telephone-fill"></i> Telefone - Suporte ao cliente e Dúvidas</a>
             <a href="#" class="support-link"><i class="bi bi-whatsapp"></i> WhatsApp - Suporte ao cliente e Dúvidas</a>
         </div>
