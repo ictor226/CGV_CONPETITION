@@ -1,30 +1,49 @@
 <?php
+
 if ($_SERVER["REQUEST_METHOD"] == 'POST' && !empty($_POST)) {
 
-    $emailForm = $_POST['email'];
-    $passwordForm = $_POST['password'];
+// Recebe os dados do formulário de login
+$emailUsuario = $_POST['email'];
+$senhaUsuario = $_POST['senha'];
 
-    $dsn = 'mysql:dbname=bd_cgv;host=127.0.0.1';
-    $user = 'root';
-    $password = '';
+// Conectando ao banco de dados
+$dsn = 'mysql:dbname=bd_cgv;host=127.0.0.1';
+$user = 'root';
+$password = '';
 
-    $banco = new PDO($dsn, $user, $password);
+$banco = new PDO($dsn, $user, $password);
 
-    $script = "SELECT * FROM 'login' WHERE email = '{$emailForm}' AND senha = '{$passwordForm}'";
+// Verifica se o email e a senha batem com os dados no banco
+$script = "SELECT * FROM login WHERE email = '{$emailUsuario}'  AND senha = '{$senhaUsuario}'";
 
-    $result = $banco->query($script)->fetch();
+$resultado = $banco->query($script)->fetch();
 
-    if (!empty($result) && $result != false) {
+if (!empty($resultado) && $resultado != false) {
 
-        $selectUsuario = "SELECT * FROM 'login' WHERE id = {$result['id_pessoa']}";
+    $selectUsuario = "SELECT * FROM area_de_cadastro WHERE id_cadastro = {$resultado['id_pessoa']}";
+    $dadosUsuario = $banco->query($selectUsuario)->fetch();
 
-        $dadosUsuario = $banco->query($selectUsuario)->fetch();
+    session_start();
 
-        session_start();
+    $_SESSION['id_pessoa']      = $dadosUsuario['id_pessoa'];
+    $_SESSION['NomeSobrenome']  = $dadosUsuario['NomeSobrenome'];
+    $_SESSION['email']          = $dadosUsuario['email'];
+    $_SESSION['telefone']       = $dadosUsuario['telefone'];
+    $_SESSION['cep']            = $dadosUsuario['cep'];
+    $_SESSION['cidade_estado']  = $dadosUsuario['cidade_estado'];
+    $_SESSION['Bairro']         = $dadosUsuario['Bairro'];
+    $_SESSION['rua']            = $dadosUsuario['rua'];
+    $_SESSION['numero']         = $dadosUsuario['numero'];
+    $_SESSION['complemento']    = $dadosUsuario['complemento'];
 
-        $_SESSION['id_pessoa']  = $dadosUsuario['id'];
-        $_SESSION['status']     = $result['status'];
-
-        header('location:status.php');
+    header('location:tela-user.php');
+    } else{
+        echo '<script>
+        alert("❌ Dados de login inválidos.");
+        window.location.replace("user-login.php");
+        </script>';
     }
 }
+
+include './tela-login.php';
+
