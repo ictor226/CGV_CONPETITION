@@ -68,10 +68,22 @@
                
             </select>
             <p class="preco-info">
-                <?php echo '<h2>' . $resultado['parcelamento'] . '</h2>'; ?>
-                <?php echo '<h2>' . $resultado['preco_item'] . '</h2>'; ?> sem juros
-            </p>
+    <?php
+    // Preço do item (sem a máscara de "R$")
+    $preco_item = $resultado['preco_item'];
+    
+    // Remover "R$" e pontos (se houver) para garantir que o valor seja tratado corretamente
+    $preco_item = str_replace(['R$', '.'], '', $preco_item); // Remove "R$" e pontos
+    $preco_item = str_replace(',', '.', $preco_item); // Substitui vírgula por ponto
+    $preco_item = (float)$preco_item; // Converte para float
 
+    // Exibe o parcelamento (sem alteração, apenas como está)
+    echo '<h2>' . $resultado['parcelamento'] . '</h2>';
+
+    // Exibe o preço formatado corretamente
+    echo '<h2>R$ ' . number_format($preco_item, 2, ',', '.') . '</h2>';
+    ?> sem juros
+</p>
             <br>
             <p class="pronto-entrga">pronto para entrega</p>
             <br>
@@ -80,7 +92,7 @@
             <p><span class="vendido-por">vendido por: </span>cgv competition</p>
             
             <div class="form-group">
-                <button type="submit">comprar</button>
+                <button type="submit">adicionar</button>
             </div>
         </div>
     </section>
