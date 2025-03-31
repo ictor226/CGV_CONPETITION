@@ -127,3 +127,8 @@ input:focus {
     border-color: #FF0600; /* Cor de foco em vermelho mais intenso */
     box-shadow: 0 0 5px rgba(255, 6, 0, 0.5); /* Sombra de destaque para o foco */
 }
+
+#button-sair-conta{
+    margin-top: 40px;
+    margin-right: 40px;
+}
