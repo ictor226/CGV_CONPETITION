@@ -20,7 +20,7 @@
     </ul>
 
 
-    <form action="./user-login.php"  method="POST">
+    <form action="./tela-user.php"  method="POST">
 
 <div class="estrutura">
     <div class="login-form">

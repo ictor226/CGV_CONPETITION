@@ -1,25 +1,30 @@
 <?php
+if ($_SERVER["REQUEST_METHOD"] == 'POST' && !empty($_POST)) {
 
-echo '<h1>auxilio login</h1>';
+    $emailForm = $_POST['email'];
+    $passwordForm = $_POST['password'];
 
-var_dump($_POST);
+    $dsn = 'mysql:dbname=bd_cgv;host=127.0.0.1';
+    $user = 'root';
+    $password = '';
 
-$emailForm = $_POST['email'];
-$passwordForm = $_POST['password'];
+    $banco = new PDO($dsn, $user, $password);
 
+    $script = "SELECT * FROM 'login' WHERE email = '{$emailForm}' AND senha = '{$passwordForm}'";
 
+    $result = $banco->query($script)->fetch();
 
-$dsn = 'mysql:dbname=bd_cgv;host=127.0.0.1';
-$user = 'root';
-$password = '';
+    if (!empty($result) && $result != false) {
 
-$banco = new PDO($dsn, $user, $password);
+        $selectUsuario = "SELECT * FROM 'login' WHERE id = {$result['id_pessoa']}";
 
-$consultaUsuarioSenha = 'SELECT * FROM login  WHERE email = "' .$emailForm . '" AND senha = "' . $passwordForm . '"';
+        $dadosUsuario = $banco->query($selectUsuario)->fetch();
 
-$resultado = $banco->query($consultaUsuarioSenha)->fetch();
+        session_start();
 
-echo '<script>
-alert("✅ Login realizado com sucesso!");
-window.location.replace("index.php");
-</script>';
+        $_SESSION['id_pessoa']  = $dadosUsuario['id'];
+        $_SESSION['status']     = $result['status'];
+
+        header('location:status.php');
+    }
+}

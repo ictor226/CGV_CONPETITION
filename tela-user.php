@@ -1,7 +1,15 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <?php
 include './INCLUDES/Header.php';
-
 ?>
+
+<style>
+    #button-sair-conta{
+        margin-top: 40px;
+        margin-right: 40px;
+        font-size: 16px;
+    }
+</style>
 
 
 <?php
@@ -98,6 +106,7 @@ $conn->close();
                 <input disabled type="text" value="<?= isset($dados['complemento']) ? $dados['complemento'] : ''; ?>" placeholder="Complemento">
             </div>
         </div>
+        <button type="button" id="button-sair-conta" class="btn btn-danger">Sair da conta</button>
     </section>
 </body>
 

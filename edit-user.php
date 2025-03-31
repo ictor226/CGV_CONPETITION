@@ -1,3 +1,14 @@
+<style>
+    #button-salvar{
+        margin-top: 40px;
+        margin-right: 50px;
+        width: 80px;
+        font-size: 16px;
+    }
+</style>
+
+
+
 <?php
 include './INCLUDES/Header.php';
 
@@ -93,7 +104,7 @@ $conn->close();
         <!-- Campo oculto para o id_cadastro -->
         <input type="hidden" name="id_cadastro" value="<?= isset($dados['id_cadastro']) ? $dados['id_cadastro'] : ''; ?>">
 
-        <button type="submit" class="salvar-user">Salvar</button>
+        <button type="submit" id="button-salvar" class="salvar-user">Salvar</button>
     </form>
 </body>
 </html>
