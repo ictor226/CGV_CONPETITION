@@ -4,9 +4,9 @@
     <section class="info">
         <div class="social-media">
             <h5>REDES SOCIAIS</h5>
-            <a href="#" class="social-icon"><i class="bi bi-instagram"></i> Instagram</a>
-            <a href="#" class="social-icon"><i class="bi bi-google"></i> Google</a>
-            <a href="#" class="social-icon"><i class="bi bi-facebook"></i> Facebook</a>
+            <a href="https://www.instagram.com/" class="social-icon"><i class="bi bi-instagram"></i> Instagram</a>
+            <a href="https://www.google.com.br/" class="social-icon"><i class="bi bi-google"></i> Google</a>
+            <a href="https://pt-br.facebook.com/" class="social-icon"><i class="bi bi-facebook"></i> Facebook</a>
         </div>
 
         <div class="customer-support">
@@ -29,6 +29,7 @@
             <p>Inscreva-se agora com o e-mail para receber as novidades da loja em tempo real!</p>
             <input type="email" placeholder="Digite seu e-mail" class="email-input">
             <button class="submit-btn">Enviar</button>
+
         </div>
     </section>
 </footer>

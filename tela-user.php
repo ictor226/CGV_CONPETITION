@@ -1,4 +1,5 @@
 <?php
+include './INCLUDES/Header.php';
 session_start(); // Iniciar a sessão
 
 // Verifica se o usuário está logado

@@ -26,6 +26,8 @@ if (isset($_GET['id'])) {
     // Verifique se o produto existe
     $produto = $query->fetch(PDO::FETCH_ASSOC);
     
+
+    
     if ($produto) {
         // Verifique se o carrinho já existe na sessão
         if (!isset($_SESSION['carrinho'])) {
