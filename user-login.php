@@ -1,5 +1,6 @@
 <?php
 
+
 if ($_SERVER["REQUEST_METHOD"] == 'POST' && !empty($_POST)) {
 
 // Recebe os dados do formulário de login
@@ -25,7 +26,7 @@ if (!empty($resultado) && $resultado != false) {
 
     session_start();
 
-    $_SESSION['id_pessoa']      = $dadosUsuario['id_pessoa'];
+    $_SESSION['id_pessoa']      = $dadosUsuario['id_cadastro'];
     $_SESSION['NomeSobrenome']  = $dadosUsuario['NomeSobrenome'];
     $_SESSION['email']          = $dadosUsuario['email'];
     $_SESSION['telefone']       = $dadosUsuario['telefone'];
