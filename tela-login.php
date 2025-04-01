@@ -1,3 +1,38 @@
+<?php
+session_start();
+if (isset($_SESSION['id_pessoa'])) {
+    header("Location: tela-user.php");  // Redireciona caso o usuário já esteja logado
+    exit;
+}
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+    // Conectar ao banco de dados
+    $conexao = new mysqli('localhost', 'root', '', 'bd_cgv');
+    
+    if ($conexao->connect_error) {
+        die('Falha na conexão: ' . $conexao->connect_error);
+    }
+    // Preparar a consulta para buscar o usuário
+    $sql = "SELECT * FROM login WHERE email = ? AND senha = ?";
+    $stmt = $conexao->prepare($sql);
+    $stmt->bind_param('ss', $email, $senha); // Senha sem MD5
+    $stmt->execute();
+    $result = $stmt->get_result();
+    if ($result->num_rows === 1) {
+        $usuario = $result->fetch_assoc();
+        $_SESSION['id_pessoa'] = $usuario['id'];  // Armazena o ID do usuário na sessão
+        header("Location: tela-user.php");  // Redireciona para a página principal
+        exit;
+    } else {
+        $erro = "E-mail ou senha incorretos.";
+    }
+    $stmt->close();
+    $conexao->close();
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
