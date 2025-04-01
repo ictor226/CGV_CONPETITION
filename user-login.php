@@ -1,50 +1,44 @@
 <?php
-
-
 if ($_SERVER["REQUEST_METHOD"] == 'POST' && !empty($_POST)) {
+    // Recebe os dados do formulário de login
+    $emailUsuario = $_POST['email'];
+    $senhaUsuario = $_POST['senha'];
 
-// Recebe os dados do formulário de login
-$emailUsuario = $_POST['email'];
-$senhaUsuario = $_POST['senha'];
+    // Conectando ao banco de dados (com PDO)
+    $dsn = 'mysql:dbname=bd_cgv;host=127.0.0.1';
+    $user = 'root';
+    $password = '';
+    try {
+        $banco = new PDO($dsn, $user, $password);
+        $banco->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-// Conectando ao banco de dados
-$dsn = 'mysql:dbname=bd_cgv;host=127.0.0.1';
-$user = 'root';
-$password = '';
+        // Verifica se o email e a senha batem com os dados no banco
+        $script = "SELECT * FROM login WHERE email = '{$emailUsuario}' AND senha = '{$senhaUsuario}'";
+        $resultado = $banco->query($script)->fetch();
 
-$banco = new PDO($dsn, $user, $password);
+        if (!empty($resultado) && $resultado != false) {
+            // Busca mais informações do usuário (se necessário)
+            $selectUsuario = "SELECT * FROM area_de_cadastro WHERE id_cadastro = {$resultado['id_pessoa']}";
+            $dadosUsuario = $banco->query($selectUsuario)->fetch();
 
-// Verifica se o email e a senha batem com os dados no banco
-$script = "SELECT * FROM login WHERE email = '{$emailUsuario}'  AND senha = '{$senhaUsuario}'";
+            // Inicia a sessão
+            session_start();
+            $_SESSION['id_pessoa'] = $dadosUsuario['id_cadastro'];
 
-$resultado = $banco->query($script)->fetch();
-
-if (!empty($resultado) && $resultado != false) {
-
-    $selectUsuario = "SELECT * FROM area_de_cadastro WHERE id_cadastro = {$resultado['id_pessoa']}";
-    $dadosUsuario = $banco->query($selectUsuario)->fetch();
-
-    session_start();
-
-    $_SESSION['id_pessoa']      = $dadosUsuario['id_cadastro'];
-    $_SESSION['NomeSobrenome']  = $dadosUsuario['NomeSobrenome'];
-    $_SESSION['email']          = $dadosUsuario['email'];
-    $_SESSION['telefone']       = $dadosUsuario['telefone'];
-    $_SESSION['cep']            = $dadosUsuario['cep'];
-    $_SESSION['cidade_estado']  = $dadosUsuario['cidade_estado'];
-    $_SESSION['Bairro']         = $dadosUsuario['Bairro'];
-    $_SESSION['rua']            = $dadosUsuario['rua'];
-    $_SESSION['numero']         = $dadosUsuario['numero'];
-    $_SESSION['complemento']    = $dadosUsuario['complemento'];
-
-    header('location:tela-user.php');
-    } else{
-        echo '<script>
-        alert("❌ Dados de login inválidos.");
-        window.location.replace("user-login.php");
-        </script>';
+            // Redireciona para a página do painel
+            header('location: tela-user.php');
+            exit;
+        } else {
+            // Se os dados estiverem incorretos
+            echo '<script>
+                alert("❌ Dados de login inválidos.");
+                window.location.replace("user-login.php");
+            </script>';
+        }
+    } catch (PDOException $e) {
+        echo "Erro de conexão: " . $e->getMessage();
     }
 }
 
-include './tela-login.php';
-
+include './tela-login.php'; // Inclui o formulário de login
+?>

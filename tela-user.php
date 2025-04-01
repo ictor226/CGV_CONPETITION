@@ -1,56 +1,57 @@
 <?php
 include './INCLUDES/Header.php';
-session_start(); // Iniciar a sessão
 
-// Verifica se o usuário está logado
-if (!isset($_SESSION['id_usuario'])) {
-    header("Location: tela-login.php"); // Se não estiver logado, redireciona para login
-    exit();
+session_start();
+if (!isset($_SESSION['id_pessoa'])) {
+    header("Location: user-login.php");  // Se o usuário não estiver logado, redireciona para login
+    exit;
 }
-
-$id_usuario = $_SESSION['id_usuario'];
+$usuario_id = $_SESSION['id_pessoa'];
 
 // Conectar ao banco de dados
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "bd_cgv";
+$dsn = 'mysql:dbname=bd_cgv;host=127.0.0.1';
+$user = 'root';
+$password = '';
+try {
+    $banco = new PDO($dsn, $user, $password);
+    $banco->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+    // Buscar os dados do usuário logado no banco de dados
+    $sql = "
+        SELECT 
+            area_de_cadastro.NomeSobrenome, 
+            area_de_cadastro.telefone, 
+            area_de_cadastro.rua, 
+            area_de_cadastro.Bairro, 
+            area_de_cadastro.cep, 
+            area_de_cadastro.numero, 
+            area_de_cadastro.cidade_estado, 
+            area_de_cadastro.complemento, 
+            area_de_cadastro.img_perfil, 
+            login.email
+        FROM 
+            area_de_cadastro
+        INNER JOIN 
+            login ON area_de_cadastro.id_cadastro = login.id_pessoa
+        WHERE 
+            area_de_cadastro.id_cadastro = ?";  // Filtra pelo usuário logado
 
-if ($conn->connect_error) {
-    die("Conexão falhou: " . $conn->connect_error);
+    $stmt = $banco->prepare($sql);
+    $stmt->bindParam(1, $usuario_id, PDO::PARAM_INT);
+    $stmt->execute();
+    $dados = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    // Verifica se há dados do usuário
+    if (!$dados) {
+        echo 'Erro ao buscar informações do usuário!';
+        exit;
+    }
+
+    $banco = null; // Fecha a conexão com o banco
+} catch (PDOException $e) {
+    echo "Erro de conexão: " . $e->getMessage();
+    exit;
 }
-
-// Buscar os dados do usuário logado
-$sql = "
-    SELECT 
-        area_de_cadastro.NomeSobrenome, 
-        area_de_cadastro.telefone, 
-        area_de_cadastro.rua, 
-        area_de_cadastro.Bairro, 
-        area_de_cadastro.cep, 
-        area_de_cadastro.numero, 
-        area_de_cadastro.cidade_estado, 
-        area_de_cadastro.complemento, 
-        area_de_cadastro.img_perfil, 
-        login.email
-    FROM 
-        area_de_cadastro
-    INNER JOIN 
-        login ON area_de_cadastro.id_cadastro = login.id_pessoa
-    WHERE 
-        area_de_cadastro.id_cadastro = ?"; // Filtra pelo usuário logado
-
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("i", $id_usuario);
-$stmt->execute();
-$result = $stmt->get_result();
-
-$dados = $result->fetch_assoc();
-
-$stmt->close();
-$conn->close();
 ?>
 
 <!DOCTYPE html>
@@ -59,6 +60,7 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Usuário</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./ASSETS/CSS/tela-users.css">
 </head>
@@ -93,7 +95,7 @@ $conn->close();
                 <input disabled type="text" value="<?= isset($dados['complemento']) ? $dados['complemento'] : ''; ?>" placeholder="Complemento">
             </div>
         </div>
-        <a href="sair-do-user.php" id="button-sair-conta" class="btn btn-danger">Sair da Conta</a>
+        <a href="logout.php" id="button-sair-conta" class="btn btn-danger">Sair da Conta</a>
     </section>
 </body>
 
