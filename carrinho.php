@@ -77,16 +77,27 @@ include('conexao.php');
 // Inicializando a variável para o valor total
 $total = 0;
 
+// Verificar se a chave 'carrinho' existe na sessão, caso contrário, inicializar como array vazio
+if (!isset($_SESSION['carrinho'])) {
+    $_SESSION['carrinho'] = array();
+}
+
 echo "<section class='container-cart'>
         <div class='text-cart'>
-            <h5 class='text-cart-1'>CARRINHO DE COMPRAS </h5>
-            <h6>VOCÊ TEM " . count($_SESSION['carrinho']) . " ITENS</h6>
-        </div>
+            <h5 class='text-cart-1'>CARRINHO DE COMPRAS </h5>";
+            
+// Verificar se o carrinho está vazio e exibir a quantidade de itens
+if (count($_SESSION['carrinho']) > 0) {
+    echo "<h6>VOCÊ TEM " . count($_SESSION['carrinho']) . " ITENS</h6>";
+} else {
+    echo "<h6>SEU CARRINHO ESTÁ VAZIO</h6>";
+}
+
+echo "</div>
         <div class='carrinho-container'>";
 
 foreach ($_SESSION['carrinho'] as $key => $item) {
     // Obtém a imagem do produto, ou uma imagem padrão
-    // Verificando se a imagem existe ou se precisa usar a imagem padrão
     $img_produto = !empty($item['img_produto']) ? $item['img_produto'] : 'imagem_padrao.jpg';
     
     // Garantir que o preço seja tratado como float (removendo "R$" e substituindo vírgula por ponto)
@@ -104,7 +115,6 @@ foreach ($_SESSION['carrinho'] as $key => $item) {
     echo "<form action='atualizar_carrinho.php' method='POST'>
             <section class='carrinho'>
                 <div class='produtos-cart'>
-                    
                     <div class='cart-texts'>
                         <p class='cart-text1'>{$item['nome_item']}</p>
                         <p class='cart-text1' style='font-size: 12px;'>versão 2024</p>
@@ -130,6 +140,5 @@ echo "<div class='total-carrinho'>
 
 echo "</section>";
 
-    include './includes/footer.php';
-    
+include './includes/footer.php';
 ?>
