@@ -25,7 +25,6 @@ function verificarNome() {
     }
 }
 
-
 function verificarEmail() {
     const email = document.getElementById('email').value;
     const emailError = document.getElementById('mensagem-erro-email');

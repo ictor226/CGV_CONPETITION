@@ -52,7 +52,7 @@
 </li>
 
                 <li><a href="./carrinho.php"><i class="bi bi-cart"></i></a></li>
-                <li><a href="./tela-login.php"><i class="bi bi-person-circle"></i></a></li>
+                <li><a href="./user-login.php"><i class="bi bi-person-circle"></i></a></li>
             </ul>
 
             <!-- Menu oculto -->
