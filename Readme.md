@@ -103,3 +103,51 @@
     - A área do usuário irá listar as informações do usuário cadastrado.  
     - Também haverá a opção de sair da conta cadastrada.  
     - E uma opção para editar as informações.
+
+<hr>
+<BR>
+
+ # devemos melhorar <img align="right" height="110" alt="coding-time" src="https://media.tenor.com/mcpNuaDanYwAAAAj/duck-ducky.gif" >
+      
+ <BR>
+ 
+ # Avaliação 1
+
+- [x] Campo senha sem validação de caracter especial.
+- [x] Campo complemento não precisa ser obrigatório, pois minha casa não tem complemento.
+- [x] Ao acessar a área do usuário, o botão **EDITAR** está com problema. 
+- Ao acessar com meu usuário na tela de login, eu não sou redirecionado para a tela inicial.  / caua
+  
+---
+
+# Avaliação 2
+
+- Sem botão para efetuar a compra assim que o item é adicionado ao carrinho. /victor 
+- Rodapé onde tem um campo para digitar o e-mail está apenas para texto, não envia e não recarrega a página para simular nenhum "falso envio".
+- Ícones de redes sociais apenas visuais, sem função.
+- Ainda está faltando descrição dos produtos.
+- Alguns erros de escrita, como vírgulas, letras minúsculas e maiúsculas, tanto nos cards (onde alguns estão em caps lock e outros em minúsculas) quanto no rodapé.
+- Ícone de pesquisa sem função, não pesquisa os produtos presentes no site.
+- Sidebar e cabeçalho estão com as mesmas informações.
+- "Sobre" do sidebar não funciona.
+- Um bug na hora de adicionar produtos ao carrinho: às vezes funciona, mas outras vezes dá fatal error.
+
+---
+
+# Avaliação 3
+
+- Página de login: Quando entro com o usuário e senha corretos, não vai para lugar nenhum.
+
+---
+
+# Avaliação 4
+
+- **Edit user** não funciona, ele mostra os dados de um tal de Gustavo (quem será que é? Kkkkk).
+- Login não funciona, mesmo escrevendo a senha e o usuário corretamente.
+- Ao adicionar um item no carrinho pela página **info-produto.php**, ele dá erro do MySQL, mas funciona pelo **index**.
+- A estilização, cores e o banner ficaram bem legais, combinou muito com o site ^^.
+
+---
+
+# Avaliação 5
+
