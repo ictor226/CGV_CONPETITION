@@ -116,7 +116,7 @@
 - [x] Campo senha sem validação de caracter especial.
 - [x] Campo complemento não precisa ser obrigatório, pois minha casa não tem complemento.
 - [x] Ao acessar a área do usuário, o botão **EDITAR** está com problema. 
-- Ao acessar com meu usuário na tela de login, eu não sou redirecionado para a tela inicial.  / caua
+- [x] Ao acessar com meu usuário na tela de login, eu não sou redirecionado para a tela inicial.  / caua
   
 ---
 
@@ -126,7 +126,7 @@
 - [x] Rodapé onde tem um campo para digitar o e-mail está apenas para texto, não envia e não recarrega a página para simular nenhum "falso envio".
 - [x] Ícones de redes sociais apenas visuais, sem função.
 - [x] Ainda está faltando descrição dos produtos.
-- Alguns erros de escrita, como vírgulas, letras minúsculas e maiúsculas, tanto nos cards (onde alguns estão em caps lock e outros em minúsculas) quanto no rodapé.
+- [x] Alguns erros de escrita, como vírgulas, letras minúsculas e maiúsculas, tanto nos cards (onde alguns estão em caps lock e outros em minúsculas) quanto no rodapé.
 - Ícone de pesquisa sem função, não pesquisa os produtos presentes no site.
 - [x] "Sobre" do sidebar não funciona.
 
@@ -134,13 +134,13 @@
 
 # Avaliação 3
 
-- Página de login: Quando entro com o usuário e senha corretos, não vai para lugar nenhum. / caua 
+- [x] Página de login: Quando entro com o usuário e senha corretos, não vai para lugar nenhum. 
 
 ---
 
 # Avaliação 4
 
 - [x] **Edit user** não funciona, ele mostra os dados de um tal de Gustavo (quem será que é? Kkkkk).
-- Login não funciona, mesmo escrevendo a senha e o usuário corretamente. / caua
+- [x] Login não funciona, mesmo escrevendo a senha e o usuário corretamente. / caua
  
 
