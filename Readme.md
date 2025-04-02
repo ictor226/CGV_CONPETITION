@@ -35,7 +35,7 @@
 
 <br>  
 
-- [ ] **Tela de Login/Validação**  
+- [x] **Tela de Login/Validação**  
     - Ícone de seta para voltar à tela inicial (localizado à esquerda).  
     - Formulário de email (com validação de formato correto e email cadastrado).  
     - Formulário de senha (com validação de senha correta).  
@@ -44,7 +44,7 @@
 
 <br>  
 
-- [ ] **Tela de Cadastro/Validação** (tela-cadastro.php)  
+- [x] **Tela de Cadastro/Validação** (tela-cadastro.php)  
     - Ícone de seta para voltar à tela inicial (localizado à esquerda).  
     - Formulário de nome e sobrenome (validação para permitir apenas letras).  
     - Formulário de email (validação de formato correto).  
@@ -59,7 +59,7 @@
 
 <br>  
 
-- [ ] **Tela do Usuário**  
+- [x] **Tela do Usuário**  
     - Ícone de seta para voltar à tela inicial (localizado à esquerda).  
     - Formulário de nome e sobrenome (validação para permitir apenas letras).  
     - Formulário de email (validação de formato correto).  
@@ -99,7 +99,7 @@
 
 <br>
 
-- [ ] **Área de Usuário**  
+- [x] **Área de Usuário**  
     - A área do usuário irá listar as informações do usuário cadastrado.  
     - Também haverá a opção de sair da conta cadastrada.  
     - E uma opção para editar as informações.
@@ -127,7 +127,7 @@
 - [x] Ícones de redes sociais apenas visuais, sem função.
 - [x] Ainda está faltando descrição dos produtos.
 - [x] Alguns erros de escrita, como vírgulas, letras minúsculas e maiúsculas, tanto nos cards (onde alguns estão em caps lock e outros em minúsculas) quanto no rodapé.
-- Ícone de pesquisa sem função, não pesquisa os produtos presentes no site.
+- [x] Ícone de pesquisa sem função, não pesquisa os produtos presentes no site.
 - [x] "Sobre" do sidebar não funciona.
 
 ---

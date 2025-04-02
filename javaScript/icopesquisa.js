@@ -23,3 +23,16 @@ function toggleSearch(event) {
         searchBar.querySelector('input').focus(); // Foca automaticamente no campo
     }
 }
+
+
+var search = document.getElementById('pesquisar');
+
+search.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        searchData();
+    }
+});
+
+function searchData() {
+    window.location = 'produtos.php?search=' + search.value;
+}
