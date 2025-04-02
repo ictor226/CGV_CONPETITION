@@ -1,40 +1,29 @@
-<style>
-    #button-salvar{
-        margin-top: 40px;
-        margin-right: 50px;
-        width: 80px;
-        font-size: 16px;
-    }
-</style>
- 
 <?php
 include './INCLUDES/Header.php';
- 
+
 // Iniciar a sessão
 session_start();
- 
-// Verifica se o usuário está logado
-if (!isset($_SESSION['id_usuario'])) {
-    header("Location: tela-login.php"); // Redireciona se o usuário não estiver logado
-    exit();
+if (!isset($_SESSION['id_pessoa'])) {
+    header("Location: user-login.php");
+    exit;
 }
- 
-$id_usuario = $_SESSION['id_usuario'];
- 
+
+$id_pessoa = $_SESSION['id_pessoa'];
+
 // Configuração de conexão com o banco de dados
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "bd_cgv";
- 
+
 // Criação da conexão
 $conn = new mysqli($servername, $username, $password, $dbname);
- 
+
 // Verifica se houve erro na conexão
 if ($conn->connect_error) {
     die("Conexão falhou: " . $conn->connect_error);
 }
- 
+
 // Consulta SQL com INNER JOIN para unir as tabelas 'area_de_cadastro' e 'login'
 $sql = "
     SELECT
@@ -54,24 +43,24 @@ $sql = "
         login ON area_de_cadastro.id_cadastro = login.id_pessoa
     WHERE
         area_de_cadastro.id_cadastro = ?"; // Filtra pelo id_cadastro
- 
+
 // Prepara a consulta
 $stmt = $conn->prepare($sql);
- 
+
 // Verifica se a preparação da consulta falhou
 if ($stmt === false) {
     die('Erro na preparação da consulta SQL: ' . $conn->error);
 }
- 
-// Vincula os parâmetros (id_usuario) à consulta
-$stmt->bind_param("i", $id_usuario);
- 
+
+// Vincula os parâmetros (id_pessoa) à consulta
+$stmt->bind_param("i", $id_pessoa);
+
 // Executa a consulta
 $stmt->execute();
- 
+
 // Obtém o resultado da consulta
 $result = $stmt->get_result();
- 
+
 // Verifica se existem dados
 if ($result->num_rows > 0) {
     // Pega a primeira linha de dados
@@ -79,18 +68,27 @@ if ($result->num_rows > 0) {
 } else {
     echo "Nenhum dado encontrado.";
 }
- 
+
 // Fecha a consulta e a conexão
 $stmt->close();
 $conn->close();
 ?>
- 
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./ASSETS/CSS/edit-user.css">
+
+    <style>
+        #button-salvar {
+            margin-top: 40px;
+            margin-right: 50px;
+            width: 80px;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
     <section class="informaçoes-user">  
@@ -102,10 +100,10 @@ $conn->close();
         </div>
         <a href="./tela-user.php" class="editar-user">Voltar</a>
     </section>
- 
+
     <form action="./edit-user-processar.php" method="post" class="area-user">
         <h1 class="title-users">Área de Usuario</h1>
- 
+
         <div class="input-container">
             <div class="alinha-inputs">
                 <input type="text" name="NomeSobrenome" value="<?= isset($dados['NomeSobrenome']) ? $dados['NomeSobrenome'] : ''; ?>" placeholder="Nome e Sobrenome">
@@ -122,10 +120,10 @@ $conn->close();
                 <input type="text" name="complemento" value="<?= isset($dados['complemento']) ? $dados['complemento'] : ''; ?>" placeholder="Complemento">
             </div>
         </div>
- 
+
         <!-- Campo oculto para o id_cadastro -->
         <input type="hidden" name="id_cadastro" value="<?= isset($dados['id_cadastro']) ? $dados['id_cadastro'] : ''; ?>">
- 
+
         <button type="submit" id="button-salvar" class="salvar-user">Salvar</button>
     </form>
 </body>

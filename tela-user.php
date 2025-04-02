@@ -26,8 +26,7 @@ try {
             area_de_cadastro.cep, 
             area_de_cadastro.numero, 
             area_de_cadastro.cidade_estado, 
-            area_de_cadastro.complemento, 
-            area_de_cadastro.img_perfil, 
+            area_de_cadastro.complemento,  
             login.email
         FROM 
             area_de_cadastro
@@ -73,7 +72,7 @@ try {
             <p>Telefone</p>
             <input type="text" value="<?= isset($dados['telefone']) ? $dados['telefone'] : ''; ?>" disabled>
         </div>
-        <a href="./edit-user.php" class="editar-user"><i class="bi bi-pencil-square"></i></a>
+        <!-- botao de editar-user --><a href="./edit-user.php" class="editar-user"><i class="bi bi-pencil-square"></i></a>
     </section>
 
     <section class="area-user">

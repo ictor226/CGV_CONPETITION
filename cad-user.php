@@ -16,7 +16,7 @@ try {
 // Pegando os dados do formulário
 $nomeFormulario             = $_POST['nome'];
 $emailFormulario            = $_POST['email'];
-$senhaItemFormulario        = password_hash($_POST['senha'], PASSWORD_DEFAULT); // Hash da senha
+$senhaItemFormulario        = $_POST['senha'];
 $telefoneItemFormulario     = $_POST['telefone'];
 $cepItemFormulario          = $_POST['cep'];
 $estadoItemFormulario       = $_POST['estado'];
@@ -52,6 +52,7 @@ $user->execute([$emailFormulario, $senhaItemFormulario, $id_pessoa]);
 $_SESSION['id_usuario'] = $id_pessoa;
 
 // Redireciona para a tela do usuário
-header('Location: tela-user.php');
-exit();
+var_dump($box);
+header('Location:tela-user.php');
+    exit();
 ?>
