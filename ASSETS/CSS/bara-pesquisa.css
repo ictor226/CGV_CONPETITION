@@ -24,6 +24,7 @@ nav {
   flex-grow: 1; /* Permite que o menu ocupe o espaço disponível */
 }
 
+
 .menu li a {
   text-decoration: none; /* Remove o sublinhado do link */
   color: #ffffff; /* Cor do texto dos links */
