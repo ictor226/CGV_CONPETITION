@@ -51,7 +51,7 @@
                     <i class="bi bi-x"></i>
                 </button>
                 <li><a href="./index.php">Início</a></li>
-                <li><a href="#">Sobre</a></li>
+                <li><a href="./sobre">Sobre</a></li>
                 <li><a href="./produtos.php">Produtos</a></li>
                 <hr>
                 <li><a href="./cad.php">Cadastrar Produto</a></li>
