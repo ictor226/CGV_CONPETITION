@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 if ($_SERVER["REQUEST_METHOD"] == 'POST' && !empty($_POST)) {
     // Recebe os dados do formulário de login
     $emailUsuario = $_POST['email'];
@@ -22,8 +25,11 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST' && !empty($_POST)) {
             $dadosUsuario = $banco->query($selectUsuario)->fetch();
 
             // Inicia a sessão
-            session_start();
+          
             $_SESSION['id_pessoa'] = $dadosUsuario['id_cadastro'];
+            $_SESSION['status'] = 'ADMIN';
+            // Verifica o status do usuário
+            
 
             // Redireciona para a página do painel
             header('location: tela-user.php');
@@ -41,4 +47,3 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST' && !empty($_POST)) {
 }
 
 include './tela-login.php'; // Inclui o formulário de login
-?>
