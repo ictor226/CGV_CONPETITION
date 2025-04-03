@@ -1,7 +1,7 @@
 <?php
-include './INCLUDES/Header.php';
 
-session_start();
+require './INCLUDES/Header.php';
+
 if (!isset($_SESSION['id_pessoa'])) {
     header("Location: user-login.php");  // Se o usuário não estiver logado, redireciona para login
     exit;
