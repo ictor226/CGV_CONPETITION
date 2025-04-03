@@ -1,114 +1,88 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    font-family: "inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-    list-style: none;
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
 }
 
-/* Footer */
-
-/* Estilo para o campo de e-mail */
-footer .newsletter input.email-input {
-    padding: 15px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    width: 80%;
-    font-size: 1rem;
-    border: 2px solid #ccc;
-    margin-right: 10px;
-    transition: border-color 0.3s ease;
+.footer-content {
+    margin-bottom: 10px;
 }
 
-/* Efeito de foco no campo de e-mail */
-footer .newsletter input.email-input:focus {
-    border-color: #007bff;
-    outline: none;
-}
-
-/* Estilo para o botão de envio */
-footer .newsletter button.submit-btn {
-    padding: 15px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background-color: #007bff;
-    color: white;
-    font-size: 1rem;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-/* Efeito de hover no botão */
-footer .newsletter button.submit-btn:hover {
-    background-color: #0056b3;
-}
-
-.info {
-    margin-top: -290px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    color: #fff;  /* Usando hexadecimal para simplificar */
-    line-height: 1.8;
-    padding: 0 80px;    
-    
-}
-
-.info h5, 
-.info a, 
-.quick-links {
-    color: inherit; 
+.footer a {
+    color: #fff;
     text-decoration: none;
 }
 
-.social-media {
-    display: flex;              
-    flex-direction: column;             
-    gap: 10px;                   
-    margin-top: 20px;           
+.footer a:hover {
+    text-decoration: underline;
 }
 
-.social-media a {
-    color: #fff;               
-    text-decoration: none;      
-    transition: color 0.3s ease; 
+.footer-bottom {
+    font-size: 14px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
 }
 
-.quick-links {
-    font-size: var(--font-size-medium); 
+
+.info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cria 4 colunas de igual largura */
+  
+    color: rgb(255, 255, 255);
+    padding: 20px; /* Adiciona padding ao redor do rodapé */
+    
 }
 
-#edt-icons {
-    line-height: 1.8;
-    transition: color 0.3s ease; 
+.footer-section {
+    margin: 10px; /* Adiciona margem entre as seções */
 }
 
-#edt-icons:hover {
-    color: var(--highlight-color); 
+.footer-section h5 {
+    margin-bottom: 10px; /* Espaço abaixo do título */
 }
 
+.footer-section h6 {
+    margin-bottom: 5px; /* Espaço abaixo dos itens */
+}
+
+.footer-section a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: rgb(0, 0, 0); /* Cor do texto dos links */
+    transition: 1s;
+}
+
+.footer-section a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    color: #ffffff; /* Muda a cor ao passar o mouse */
+}
+
+/* Media Queries para responsividade */
 @media (max-width: 768px) {
     .info {
-        grid-template-columns: 1fr 1fr; 
-        margin-top: -150px;
+        grid-template-columns: repeat(2, 1fr); /* Muda para 2 colunas em telas menores */
     }
 }
 
 @media (max-width: 480px) {
     .info {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Muda para 1 coluna em telas muito pequenas */
     }
+}
+.simule {
+   
+    font-size: 20px; /* Tamanho da fonte */
+    border-radius: 4px; /* Bordas arredondadas */
+    background-color: #757474; /* Cor de fundo */
+    color: rgb(0, 0, 0); /* Cor do texto */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Adiciona transição suave */
+    padding: 20px 30px; /* Adiciona espaçamento interno (padding) */
+    display: inline-block; /* Permite que o elemento tenha largura e altura definidas */
+}
 
-    .img-rodape-02 {
-        height: 400px; 
-    }
+/* Exemplo de estado hover para demonstrar a transição */
+.simule:hover {
+    background-color: rgb(32, 77, 161); /* Muda a cor de fundo ao passar o mouse */
+    color: rgb(255, 255, 255); /* Muda a cor do texto ao passar o mouse */
 }
