@@ -39,13 +39,6 @@
 
             <ul class="icones">
             <li>
-    <a href="#" onclick="toggleSearch(event)">
-        <i class="bi bi-search"></i>
-    </a>
-
-    <div id="search-bar" class="search-bar">
-        <input type="text" placeholder="Pesquisar...">
-    </div>
 </li>
 
 
