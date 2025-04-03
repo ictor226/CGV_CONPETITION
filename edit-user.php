@@ -93,9 +93,9 @@ $conn->close();
     <section class="informaçoes-user">  
         <div class="color-text">
             <p>Nome</p>
-            <input type="text" name="NomeSobrenome" value="<?= isset($dados['NomeSobrenome']) ? $dados['NomeSobrenome'] : ''; ?>" placeholder="Nome e Sobrenome">   
+            <input type="text" name="NomeSobrenome" value="<?= isset($dados['NomeSobrenome']) ? $dados['NomeSobrenome'] : ''; ?>" placeholder="Nome e Sobrenome" disabled> 
             <p>Telefone</p>
-            <input type="text" name="telefone" value="<?= isset($dados['telefone']) ? $dados['telefone'] : ''; ?>"  >
+            <input type="text" name="telefone" value="<?= isset($dados['telefone']) ? $dados['telefone'] : ''; ?>" disabled >
         </div>
         <a href="./tela-user.php" class="editar-user">Voltar</a>
     </section>
