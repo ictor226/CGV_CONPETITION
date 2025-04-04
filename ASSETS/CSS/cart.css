@@ -144,3 +144,30 @@ h1 i {
     font-weight: bold;
     color: white;
 }
+
+.finalizar-compra-btn {
+    background-color: #28a745; /* Verde elegante */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.finalizar-compra-btn:hover {
+    background-color: #218838; /* Tom mais escuro no hover */
+    transform: scale(1.05);
+}
+
+.finalizar-compra-btn:active {
+    background-color: #1e7e34;
+    transform: scale(0.98);
+}
