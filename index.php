@@ -1,13 +1,17 @@
-
-
 <?php
 include './INCLUDES/Header.php';
+
+// Defina as credenciais do banco de dados
+$dsn = 'mysql:dbname=bd_cgv;host=127.0.0.1';
+$user = 'root';
+$password = '';
+
+
+
 ?>
 
 <body>
     <div class="background-site">
-
-
         <div class="video-inicio" utoplay loop muted playsinline>
             <figure class="video-container">
                 <video autoplay loop muted playsinline>
@@ -19,12 +23,17 @@ include './INCLUDES/Header.php';
         </main>
 
         <h1 class="produ">PRODUTOS EM DESTAQUE</h1>
-        <?php
 
- include './INCLUDES/cards.php'
+        <?php 
+        // Incluindo a classe ProdutoCard
+include './INCLUDES/ProdutoCard.php';
+
+// Instanciando a classe
+$produtoCard = new ProdutoCard($dsn, $user, $password);
+
+// Exibindo os cards de produtos
+$produtoCard->exibirCards();
 ?>
-
-       
 
         <hr class="hr-tela03">
         <section class="tela-envio">
