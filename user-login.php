@@ -24,11 +24,11 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST' && !empty($_POST)) {
             $selectUsuario = "SELECT * FROM area_de_cadastro WHERE id_cadastro = {$resultado['id_pessoa']}";
             $dadosUsuario = $banco->query($selectUsuario)->fetch();
 
-            // Inicia a sessão
-          
-            $_SESSION['id_pessoa'] = $dadosUsuario['id_cadastro'];
-            $_SESSION['status'] = 'ADMIN';
-            // Verifica o status do usuário
+            $status = $resultado['status']; // O status está aqui na tabela 'login'
+
+            // Inicia a sessão com o id da pessoa e o status correto
+            $_SESSION['id_pessoa'] = $resultado['id_pessoa']; // id_pessoa de 'login'
+            $_SESSION['status'] = $status; // Status da tabela 'login'
             
 
             // Redireciona para a página do painel

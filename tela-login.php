@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 
 if (isset($_SESSION['id_pessoa'])) {
     header("Location: tela-user.php");  // Redireciona caso o usuário já esteja logado
