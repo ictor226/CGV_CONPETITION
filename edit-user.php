@@ -1,7 +1,6 @@
 <?php
 include './INCLUDES/Header.php';
 
-
 if (!isset($_SESSION['id_pessoa'])) {
     header("Location: user-login.php");
     exit;
@@ -87,11 +86,16 @@ $conn->close();
             width: 80px;
             font-size: 16px;
         }
+        .error {
+            color: red;
+            font-size: 12px;
+            display: none;
+        }
     </style>
 </head>
 <body>
     <section class="informaçoes-user">  
-        <div class="color-text">
+    <div class="color-text">
             <p>Nome</p>
             <input type="text" name="NomeSobrenome" value="<?= isset($dados['NomeSobrenome']) ? $dados['NomeSobrenome'] : ''; ?>" placeholder="Nome e Sobrenome" disabled> 
             <p>Telefone</p>
@@ -105,18 +109,23 @@ $conn->close();
 
         <div class="input-container">
             <div class="alinha-inputs">
-                <input type="text" name="NomeSobrenome" value="<?= isset($dados['NomeSobrenome']) ? $dados['NomeSobrenome'] : ''; ?>" placeholder="Nome e Sobrenome">
-                <input type="text" name="email" value="<?= isset($dados['email']) ? $dados['email'] : ''; ?>" placeholder="Email">
-                <input type="text" name="telefone" value="<?= isset($dados['telefone']) ? $dados['telefone'] : ''; ?>" >
-                <input type="text" name="cep" value="<?= isset($dados['cep']) ? $dados['cep'] : ''; ?>"  >
-                <input type="text" name="cidade_estado" value="<?= isset($dados['cidade_estado']) ? $dados['cidade_estado'] : ''; ?>" placeholder="Estado">
+                <input type="text" id="nome" name="NomeSobrenome" value="<?= isset($dados['NomeSobrenome']) ? $dados['NomeSobrenome'] : ''; ?>" placeholder="Nome e Sobrenome" maxlength="100">
+                <div id="erro-nome" class="error">Nome inválido! Apenas letras e espaços são permitidos.</div>
+                <input type="email" id="email" name="email" value="<?= isset($dados['email']) ? $dados['email'] : ''; ?>" placeholder="Email" maxlength="100">
+                <div id="erro-email" class="error">Email inválido! Verifique o formato (exemplo@dominio.com).</div>
+                <input type="text" id="telefone" name="telefone" value="<?= isset($dados['telefone']) ? $dados['telefone'] : ''; ?>" placeholder="Telefone" maxlength="15">
+                <div id="erro-telefone" class="error">Telefone inválido! Utilize o formato (XX)XXXXX-XXXX.</div>
+                <input type="text" id="cep" name="cep" value="<?= isset($dados['cep']) ? $dados['cep'] : ''; ?>" placeholder="CEP" maxlength="10">
+                <div id="erro-cep" class="error">CEP inválido! Utilize o formato XXXXX-XXX.</div>
+            <input type="text" name="cidade_estado" value="<?= isset($dados['cidade_estado']) ? $dados['cidade_estado'] : ''; ?>" placeholder="Estado">
             </div>
-           
+
             <div class="alinha-inputs-2">
-                <input type="text" name="bairro" value="<?= isset($dados['Bairro']) ? $dados['Bairro'] : ''; ?>" placeholder="Bairro">
-                <input type="text" name="rua" value="<?= isset($dados['rua']) ? $dados['rua'] : ''; ?>" placeholder="Rua">
-                <input type="number" name="numero" value="<?= isset($dados['numero']) ? $dados['numero'] : ''; ?>" placeholder="Número">
-                <input type="text" name="complemento" value="<?= isset($dados['complemento']) ? $dados['complemento'] : ''; ?>" placeholder="Complemento">
+                <input type="text" id="bairro" name="bairro" value="<?= isset($dados['Bairro']) ? $dados['Bairro'] : ''; ?>" placeholder="Bairro">
+                <input type="text" id="rua" name="rua" value="<?= isset($dados['rua']) ? $dados['rua'] : ''; ?>" placeholder="Rua">
+                <input type="number" id="numero" name="numero" value="<?= isset($dados['numero']) ? $dados['numero'] : ''; ?>" placeholder="Número" maxlength="5">
+                <div id="erro-numero" class="error">Número inválido! Insira apenas números (máximo 5 caracteres).</div>
+                <input type="text" id="complemento" name="complemento" value="<?= isset($dados['complemento']) ? $dados['complemento'] : ''; ?>" placeholder="Complemento">
             </div>
         </div>
 
@@ -125,5 +134,94 @@ $conn->close();
 
         <button type="submit" id="button-salvar" class="salvar-user">Salvar</button>
     </form>
+
+    <script>
+    // Máscaras de input
+    function aplicarMascaraTelefone(telefone) {
+        telefone = telefone.replace(/\D/g, ''); // Remove tudo que não for número
+        if (telefone.length <= 10) {
+            return telefone.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3'); // Formato (XX)XXXXX-XXXX
+        } else {
+            return telefone.substring(0, 11).replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3'); // Limita a 11 caracteres
+        }
+    }
+
+    function aplicarMascaraCep(cep) {
+        cep = cep.replace(/\D/g, ''); // Remove tudo que não for número
+        return cep.length <= 8 ? cep.replace(/^(\d{5})(\d{3})$/, '$1-$2') : cep.substring(0, 8).replace(/^(\d{5})(\d{3})$/, '$1-$2'); // Formato XXXXX-XXX
+    }
+
+    // Validação de Nome
+    function validarNome(nome) {
+        const regexNome = /^[a-zA-Z\s]+$/;  // Aceita apenas letras e espaços
+        if (!regexNome.test(nome)) {
+            document.getElementById('erro-nome').style.display = "inline";
+            return false;
+        } else {
+            document.getElementById('erro-nome').style.display = "none";
+            return true;
+        }
+    }
+
+    // Validação de Telefone
+    function validarTelefone(telefone) {
+        const telefoneFormatado = aplicarMascaraTelefone(telefone);
+        document.getElementById('telefone').value = telefoneFormatado;
+        const regexTelefone = /^\(\d{2}\)\d{5}-\d{4}$/;
+        if (!regexTelefone.test(telefoneFormatado)) {
+            document.getElementById('erro-telefone').style.display = "inline";
+            return false;
+        } else {
+            document.getElementById('erro-telefone').style.display = "none";
+            return true;
+        }
+    }
+
+    // Validação de CEP
+    function validarCep(cep) {
+        const cepFormatado = aplicarMascaraCep(cep);
+        document.getElementById('cep').value = cepFormatado;
+        const regexCep = /^\d{5}-\d{3}$/;
+        if (!regexCep.test(cepFormatado)) {
+            document.getElementById('erro-cep').style.display = "inline";
+            return false;
+        } else {
+            document.getElementById('erro-cep').style.display = "none";
+            return true;
+        }
+    }
+
+    // Validação do número
+    function validarNumero(numero) {
+        const regexNumero = /^[0-9]{1,5}$/; // Apenas números (máximo de 5 caracteres)
+        if (!regexNumero.test(numero)) {
+            document.getElementById('erro-numero').style.display = "inline";
+            return false;
+        } else {
+            document.getElementById('erro-numero').style.display = "none";
+            return true;
+        }
+    }
+
+    // Validar campos em tempo real
+    document.getElementById('nome').addEventListener('input', function() {
+        validarNome(this.value);
+    });
+
+    document.getElementById('telefone').addEventListener('input', function() {
+        validarTelefone(this.value);
+    });
+
+    document.getElementById('cep').addEventListener('input', function() {
+        validarCep(this.value);
+    });
+
+    document.getElementById('numero').addEventListener('input', function() {
+        validarNumero(this.value);
+    });
+</script>
+
 </body>
 </html>
+
+

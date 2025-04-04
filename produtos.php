@@ -67,8 +67,8 @@ $isAdmin = isset($_SESSION['status']) && $_SESSION['status'] === 'ADMIN';
                         <i class="bi bi-x"></i>
                     </button>
                     <li><a href="./index.php">Início</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="./produtos.php">Produtos</a></li>
+                    
+                    
                     <li><a href="./tela-user.php">tela de usuario</a></li>
                     <hr>
 
