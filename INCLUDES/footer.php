@@ -5,31 +5,30 @@
         <div class="footer-section">
             <h5>Atendimento Ao Cliente</h5>
             <h6>Telefone - Pedidos, Suporte Técnico e Dúvidas: +55 (19) 99731-0108</h6>
-            <h3><a href="#" class="simule">Simule um financiamento</a></h3>
+            
             <h6>Whatsapp - Pedidos, Suporte Técnico e Dúvidas: +55 (19) 99731-0108</h6>
 
         </div>
         <div class="footer-section">
             <h5>Redes Sociais</h5>
-            <h6><a href="https://www.bmw-motorrad.com.br/pt/public-pool/content-pool/contact.html">Contado</a></h6>
-            <h6><a href="https://www.bmw.com.br/pt/more-bmw/fale-com-a-bmw.html">Fale com a BMW </a></h6>
-            <h6><a href="https://www.bmw-motorrad.com.br/pt/public-pool/content-pool/aviso-legal.html">Aviso legal</a>
+            <h6><a href="https://fueltech.com.br/pages/contato">Contado</a></h6>
+            <h6><a href="https://www.fteducation.com.br/">FT EDUCATION</a></h6>
+            <h6><a href="https://fueltech.com.br/pages/politica-de-troca-e-devolucao">Aviso legal</a>
             </h6>
         </div>
         <div class="footer-section">
             <h5>Links Rápidos</h5>
-            <h6><a href="https://www.bmwriderexperience.com.br/">BMW Rider Experience</a></h6>
+            <h6><a href="https://fueltech.com.br/pages/brand-resource">BRAND RESOURCES</a></h6>
             <h6><a
-                    href="https://www.bmwselect.com.br/?utm_medium=produto&utm_source=motorrad&utm_campaign=simule-seu-financiamento">Simule
-                    seu Financiamento</a></h6>
-            <h6><a href="https://www.bmwgroup.com/en.html">BMW Group </a></h6>
+                    href="https://fueltech.com.br/pages/software">software</a></h6>
+            <h6><a href="https://api.whatsapp.com/send?1=pt_BR&phone=555130190500">CGV Group </a></h6>
         </div>
         <div class="footer-section">
             <h5>Novos Produtos</h5>
-            <h6><a href="https://www.bmw.com.br/pt/index.html">BMW Carros </a></h6>
-            <h6><a href="https://www.bmw-motorrad.com.br/pt/service/financial-service/financing.html">BMW Serviços
+            <h6><a href="https://fueltech.com.br/pages/duplicadores-de-vaga">CGV Carros </a></h6>
+            <h6><a href="https://fueltech.com.br/pages/revendedores">CGV Serviços
                     Financeiros</a></h6>
-            <h6><a href="https://www.bmw.com.br/pt_BR/topics/fascination-bmw/visita-planta-bmw.html">Visita à
+            <h6><a href="https://fueltech.com.br/pages/oficinas-parceiras">Visita à
                     fábrica</a></h6>
         </div>
     </section>
