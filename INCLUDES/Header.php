@@ -1,9 +1,11 @@
 <?php
 session_start(); // Inicia a sessão
 
-// Verifica o status do usuário
+// Verifica se o status do usuário está presente na sessão
 $isAdmin = isset($_SESSION['status']) && $_SESSION['status'] === 'ADMIN';
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -73,13 +75,9 @@ $isAdmin = isset($_SESSION['status']) && $_SESSION['status'] === 'ADMIN';
                     <li><a href="./tela-user.php">tela de usuario</a></li>
                     <hr>
 
-
                     <?php if ($isAdmin) { ?>
                         <li><a href="./cad.php">Cadastrar Produto</a></li>
                     <?php }  ?>
-
-
-
 
                 </div>
 
