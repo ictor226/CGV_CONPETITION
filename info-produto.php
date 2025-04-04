@@ -93,8 +93,11 @@
             <p><span class="vendido-por">vendido por: </span>cgv competition</p>
             
             <div class="form-group">
-                <button type="submit">adicionar</button>
-            </div>
+    <form action="cart.php" method="GET">
+        <input type="hidden" name="id" value="<?php echo $resultado['id_produto']; ?>">
+        <button type="submit">Adicionar ao Carrinho</button>
+    </form>
+</div>
         </div>
     </section>
 
