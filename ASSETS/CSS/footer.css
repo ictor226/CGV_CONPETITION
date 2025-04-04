@@ -4,6 +4,7 @@
     color: #fff;
     padding: 20px;
     text-align: center;
+    
 }
 
 .footer-content {
@@ -33,6 +34,8 @@
     color: rgb(255, 255, 255);
     padding: 20px; /* Adiciona padding ao redor do rodapé */
     
+    font-size: 25px;
+    margin-left: 50px ;
 }
 
 .footer-section {
@@ -49,13 +52,31 @@
 
 .footer-section a {
     text-decoration: none; /* Remove o sublinhado dos links */
-    color: rgb(0, 0, 0); /* Cor do texto dos links */
+    color: rgb(255, 255, 255); /* Cor do texto dos links */
     transition: 1s;
 }
 
 .footer-section a:hover {
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+  
     color: #ffffff; /* Muda a cor ao passar o mouse */
+    transition: 0.3s; /* Transição suave */
+    font-weight: bold; /* Deixa o texto em negrito ao passar o mouse */
+    font-size: 20px; /* Aumenta o tamanho da fonte ao passar o mouse */
+    text-shadow: 0 0 5px #ffffff; /* Adiciona sombra ao texto */
+    background-color: #757474; /* Cor de fundo ao passar o mouse */
+    border-radius: 4px; /* Bordas arredondadas */
+    padding: 5px; /* Adiciona espaçamento interno (padding) */
+    display: inline-block; /* Permite que o elemento tenha largura e altura definidas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao redor do elemento */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    font-family: 'Inter', sans-serif; /* Define a fonte */
+    font-weight: 400; /* Define o peso da fonte */
+    font-style: normal; /* Define o estilo da fonte */
+    font-size: 16px; /* Tamanho da fonte */
+    line-height: 1.5; /* Altura da linha */
+    
+    text-align: center; /* Centraliza o texto */
+
 }
 
 /* Media Queries para responsividade */

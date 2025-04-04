@@ -70,7 +70,7 @@ $isAdmin = isset($_SESSION['status']) && $_SESSION['status'] === 'ADMIN';
                         <i class="bi bi-x"></i>
                     </button>
                     <li><a href="./index.php">Início</a></li>
-                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
                     <li><a href="./produtos.php">Produtos</a></li>
                     <li><a href="./tela-user.php">tela de usuario</a></li>
                     <hr>
@@ -82,12 +82,13 @@ $isAdmin = isset($_SESSION['status']) && $_SESSION['status'] === 'ADMIN';
                 </div>
 
                 <li><a href="./carrinho.php"><i class="bi bi-cart"></i></a></li>
-                <li><a href="./user-login.php"><i class="bi bi-person-circle"></i></a></li>
+                <li><a href="./user-login.php"><i class="bi bi-person-circle" id="click"></i></a></li>
             </ul>
         </nav>
     </header>
 
     <script src="./JavaScript/icopesquisa.js"></script>
+
     <script src="../javaScript/offCanvas.js"></script>
 </body>
 
