@@ -25,7 +25,7 @@ $password = '';
         <h1 class="produ">PRODUTOS EM DESTAQUE</h1>
 
         <?php 
-        // Incluindo a classe ProdutoCard
+        // QUEM LEU ISSO AQUI VAI DAR O BUMBUM PRO CALVO
 include './INCLUDES/ProdutoCard.php';
 
 // Instanciando a classe
