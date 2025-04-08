@@ -61,23 +61,23 @@ function validaSenha() {
     const regexNumero = /\d/;
 
     if (senha === "") {
-        senhaError.textContent = "Senha não pode ser vazia";
+        senhaError.textContent = "Não pode ser vazia";
         senhaError.style.color = "red";
         document.getElementById("senha").focus();
     } else if (senha.length < 8) {
-        senhaError.textContent = "Ter no mínimo 8 caracteres";
+        senhaError.textContent = "Mínimo de 8 caracteres";
         senhaError.style.color = "red";
         document.getElementById("senha").focus();
     } else if (senha.length > 60) {
-        senhaError.textContent = "Ter no máximo 60 caracteres";
+        senhaError.textContent = "Máximo de 60 caracteres";
         senhaError.style.color = "red";
         document.getElementById("senha").focus();
     } else if (!regexMaiusculo.test(senha)) {
-        senhaError.textContent = "Deve ter no minimo uma letra maiúscula";
+        senhaError.textContent = "No minimo uma letra maiúscula";
         senhaError.style.color = "red";
         document.getElementById("senha").focus();
     }  else if (!regexNumero.test(senha)) {
-        senhaError.textContent = "Deve ter no minmimo um número";
+        senhaError.textContent = "No minmimo um número";
         senhaError.style.color = "red";
         document.getElementById("senha").focus();
     } else {
@@ -159,7 +159,7 @@ function validaCep() {
 
     // Verifica se o CEP tem exatamente 8 números
     if (cepNumerico.length !== 8) {
-        mensagemCep.textContent = "CEP deve ter exatamente 8 dígitos.";
+        mensagemCep.textContent = "Ter exatamente 8 dígitos.";
         mensagemCep.style.color = "red";
         document.getElementById("cep").focus();
     } else {
@@ -184,7 +184,7 @@ function validaNumero() {
     }
     // Verifica se o número tem mais de 5 caracteres
     else if (numero.length > 5) {
-        mensagemErroNumero.textContent = 'O número não pode ter mais de 5 dígitos.';
+        mensagemErroNumero.textContent = 'Deve ter no maximo 5 dígitos.';
         mensagemErroNumero.style.color = 'red';
         campoNumero.focus(); // Foca no campo apenas quando a validação for inválida
     }
