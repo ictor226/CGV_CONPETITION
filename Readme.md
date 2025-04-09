@@ -107,40 +107,33 @@
 <hr>
 <BR>
 
- # devemos melhorar <img align="right" height="110" alt="coding-time" src="https://media.tenor.com/mcpNuaDanYwAAAAj/duck-ducky.gif" >
-      
- <BR>
- 
- # Avaliação 1
+ # c#
+Tela login: 
 
-- [x] Campo senha sem validação de caracter especial.
-- [x] Campo complemento não precisa ser obrigatório, pois minha casa não tem complemento.
-- [x] Ao acessar a área do usuário, o botão **EDITAR** está com problema. 
-- [x] Ao acessar com meu usuário na tela de login, eu não sou redirecionado para a tela inicial.  / caua
+Adicionar nome de usuário:  validação para ver se tem algum caractere e validação no campo senha e usuário com duas opções de limpar campo e mostrar senha. 
+
   
----
 
-# Avaliação 2
+Tela administração/menu:  
 
-- Sem botão para efetuar a compra assim que o item é adicionado ao carrinho. /victor 
-- [x] Rodapé onde tem um campo para digitar o e-mail está apenas para texto, não envia e não recarrega a página para simular nenhum "falso envio".
-- [x] Ícones de redes sociais apenas visuais, sem função.
-- [x] Ainda está faltando descrição dos produtos.
-- [x] Alguns erros de escrita, como vírgulas, letras minúsculas e maiúsculas, tanto nos cards (onde alguns estão em caps lock e outros em minúsculas) quanto no rodapé.
-- [x] Ícone de pesquisa sem função, não pesquisa os produtos presentes no site.
-- [x] "Sobre" do sidebar não funciona.
+Bom nessa tela tem duas opções:  gerenciar cliente e gerenciar produto. 
 
----
-
-# Avaliação 3
-
-- [x] Página de login: Quando entro com o usuário e senha corretos, não vai para lugar nenhum. 
-
----
-
-# Avaliação 4
-
-- [x] **Edit user** não funciona, ele mostra os dados de um tal de Gustavo (quem será que é? Kkkkk).
-- [x] Login não funciona, mesmo escrevendo a senha e o usuário corretamente. / caua
  
 
+listar produto:    
+
+No listar produto temos um botão de pesquisar cliente e apagar cliente e temos um campo onde o nome dele é “DataGridView” ele é o responsável por listar todos os produtos cadastrados no banco de dados, e uma dica: As informações do banco de dados no campo de “descricao” no banco era de blob porem estava dando erro no “DataGridView” pois ele não estava aguentando tantos caracteres para listar nele, por causa da descrição ela estava passando dos cinco mil caracteres, por causa disso tive que optar por mudar o campo de “Blob” para “text” pois é mais viável por ter muitos caracteres e não dar conflito com o “DataGridView” e com isso se eu optasse por continuar usando o “blob” ainda sim continuaria dando erro pois o DataGridView estava entendendo que era uma imagem e estava tentando ler, porem na verdade era caracteres de textos, com isso tirei a conclusão que era mais viável usar o text . 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Listar clientes:   
+
+Bom no listar cliente é a mesma função do listar do produto, temos um botão onde lista os clientes e apaga e temos um campo onde o nome dele é “DataGridView” ele é o responsável por listar todos os clientes cadastrados no banco de dados. 
+
+ 
