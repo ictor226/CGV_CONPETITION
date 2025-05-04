@@ -7,7 +7,6 @@
     - Ícone de login: Acessa a conta do usuário, com opções de login e cadastro.  
 
 <br>  
-
 - [x] **Sessão de Produtos**  
     - Título: "Produtos em Destaque"  
     - Exibição de três colunas com cards de produtos, clicáveis, redirecionando para a página de detalhes do produto.  
