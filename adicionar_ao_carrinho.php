@@ -40,6 +40,8 @@ if (isset($_GET['id'])) {
         echo "Produto não encontrado.";
     }
 } else {
+    
     echo "ID do produto não fornecido.";
 }
 ?>
+
